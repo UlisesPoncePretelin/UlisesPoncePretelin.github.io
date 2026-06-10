@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ulises Ponce Pretelin — Fisioterapeuta y desarrollador full-stack. Proyecto destacado: PoncePretelin, gestor clínico open source con terminología CIF/OMS y perspectiva centrada en la persona."
+      content="Ulises Ponce Pretelin — Fisioterapeuta y desarrollador. PoncePretelin: pruebas diagnósticas con sensibilidad/especificidad (Magee, Cook), corrector de terminología 2026, CIF OMS. Open source MiduDev."
     />
     <title>Ulises Ponce Pretelin · Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,9 +38,10 @@
         Hola, soy <span class="gradient-text">Ulises Ponce Pretelin</span>
       </h1>
       <p class="hero-sub">
-        Fisioterapeuta y desarrollador full-stack. Construyo software clínico con
-        <strong>terminología actualizada</strong>, enfoque <strong>centrado en la persona</strong> y UX pensada
-        para el terapeuta en consulta — no solo pantallas bonitas.
+        Fisioterapeuta y desarrollador full-stack. El núcleo de mi proyecto no es “otro EMR”:
+        <strong>automatizaciones clínicas</strong> con pruebas y técnicas basadas en
+        <strong>Magee</strong> y <strong>Cook &amp; Hegedus</strong> (sensibilidad y especificidad reales, no inventadas),
+        más un <strong>corrector de terminología 2026</strong> (~980 términos, IASP, CIF, lenguaje centrado en la persona).
       </p>
           <div class="hero-actions">
             <a class="btn primary" href="#project">Ver proyecto principal</a>
@@ -86,10 +87,15 @@
           <p class="eyebrow">Proyecto destacado</p>
           <h2>PoncePretelin — Gestor clínico de fisioterapia</h2>
           <p class="section-lead">
-            Monolito modular open source: expediente electrónico, intake adaptativo, bibliotecas por área,
-            agenda, finanzas (CFDI México), portal paciente y herramientas opcionales de IA.
-            <strong>v2</strong> rediseñó la interfaz tras feedback de terapeutas que encontraban la v1 compleja;
-            la <strong>v1</strong> sigue publicada como referencia.
+            Gestor clínico open source. Lo que más importa: <strong>banco de pruebas diagnósticas</strong> con
+            sensibilidad/especificidad citadas en fuente bibliográfica, <strong>presets y clusters clínicos</strong>,
+            <strong>calculadoras de escalas con EBP</strong> y motor de <strong>terminología versionada 2026</strong>.
+            v2 rediseñó la UX tras feedback de terapeutas; v1 queda como referencia.
+          </p>
+          <p class="note" style="margin-top: 0.75rem;">
+            <strong>Cómo probarlo (MiduDev):</strong> no hay URL pública en la nube — clona el repo, ejecuta
+            <code>docker compose -f infra/docker-compose.v2.yml up --build</code> y abre
+            <code>http://localhost:3002</code> (login demo en el README). Un video demo de 2–5 min ayuda mucho al jurado.
           </p>
           <div class="hero-actions" style="margin-top: 1rem;">
             <a class="btn primary" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">v2 (activa)</a>
@@ -130,12 +136,12 @@
             <article class="point card highlight">
               <h3>Lo que no se ve a simple vista</h3>
               <ul>
-                <li>Motor de terminología clínica versionado (<code>2026-05-23.7</code>)</li>
+                <li>Pruebas diagnósticas con <strong>Sn/Sp de Magee / Cook &amp; Hegedus</strong> — no valores inventados</li>
+                <li>Motor de terminología clínica versionado (<code>2026-05-23.7</code>, ~980 entradas)</li>
                 <li>Catálogo CIF OMS importado con calificadores en episodio</li>
                 <li>Sugerencias de lenguaje centrado en la persona y términos a evitar</li>
+                <li>Presets de patologías, clusters y reglas de recomendación clínica</li>
                 <li>Multi-tenant + RBAC + auditoría por organización</li>
-                <li>Semáforo clínico, reglas de signos vitales y alertas farmacológicas</li>
-                <li>~10k ejercicios curados + sincronización wger/ExerciseDB</li>
               </ul>
             </article>
           </div>
@@ -235,8 +241,8 @@
         <div class="card contact-card">
           <h2>¿Revisas este proyecto?</h2>
           <p>
-            Repo público, demo con Docker, documentación de arquitectura y código listo para auditar.
-            Me interesa feedback sobre UX clínica y calidad de ingeniería.
+            Repo público, demo con Docker en <strong>localhost:3002</strong> (v2) o <strong>:3000</strong> (v1),
+            documentación de arquitectura y guía <a href="https://github.com/UlisesPoncePretelin/Poncepretelin/blob/main/docs/DEMO_MIDUDEV.md" target="_blank" rel="noopener noreferrer">DEMO_MIDUDEV.md</a>.
           </p>
           <div class="hero-actions">
             <a class="btn primary" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">
