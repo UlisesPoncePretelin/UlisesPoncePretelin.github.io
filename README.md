@@ -1,32 +1,35 @@
-# Portafolio — Ulises Ponce Pretelin
+# Portafolio — Ulises Antonio Ponce Pretelin
 
-Sitio para concurso MiduDev / revisión de proyectos. Destaca **PoncePretelin** con el detalle clínico-técnico que no se ve solo mirando la UI.
+Sitio personal minimalista. Destaca **PoncePretelin**, gestor clínico open source para fisioterapia.
 
-## Deploy en Vercel (recomendado para el concurso)
-
-1. Sube este repo a GitHub (`poncepretelin.github.io` o `portfolio-midudev`)
-2. Entra a [vercel.com/new](https://vercel.com/new)
-3. Importa el repo → Framework: **Other** → Deploy
-4. URL tipo: `https://tu-proyecto.vercel.app`
+- **Sitio:** [poncepretelin.com](https://poncepretelin.com) (dominio en configuración)
+- **GitHub Pages:** [ulisesponcepretelin.github.io](https://ulisesponcepretelin.github.io)
+- **Demo PoncePretelin:** [poncepretelin-web.onrender.com](https://poncepretelin-web.onrender.com)
 
 ## GitHub Pages
 
-Settings → Pages → Source: branch `main`, folder `/ (root)`.
+1. Push a `main` en este repo
+2. Settings → Pages → Source: branch `main`, folder `/ (root)`
+3. Opcional: Settings → Pages → Custom domain → `poncepretelin.com`
 
-## Enlace al código del proyecto
+## Dominio personalizado (poncepretelin.com)
 
-- [clinical-system](https://github.com/poncepretelin/clinical-system) — gestor clínico completo
+En el registrador de dominio, crea estos registros DNS:
 
-## Autenticación GitHub CLI
+| Tipo | Host | Valor |
+|------|------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `UlisesPoncePretelin.github.io` |
 
-El login en github.com **no** autentica `gh` en terminal. Ejecuta:
+Luego en GitHub: repo → Settings → Pages → Custom domain → `poncepretelin.com` → Save → Enable HTTPS.
 
-```powershell
-gh auth login
-```
+## Vercel (alternativa)
 
-Luego, desde el proyecto clínico:
+Importa el repo en [vercel.com/new](https://vercel.com/new) → Framework: **Other** → añade dominio `poncepretelin.com`.
 
-```powershell
-.\scripts\publish-github.ps1
-```
+## Proyecto clínico
+
+- [Poncepretelin v2](https://github.com/UlisesPoncePretelin/Poncepretelin)

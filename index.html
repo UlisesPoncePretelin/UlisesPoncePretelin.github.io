@@ -5,262 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ulises Ponce Pretelin — Fisioterapeuta y desarrollador. PoncePretelin: pruebas diagnósticas con sensibilidad/especificidad (Magee, Cook), corrector de terminología 2026, CIF OMS. Open source MiduDev."
+      content="Ulises Antonio Ponce Pretelin — fisioterapeuta y desarrollador de software clínico. Creador de PoncePretelin, gestor open source para fisioterapia."
     />
-    <title>Ulises Ponce Pretelin · Portfolio</title>
+    <link rel="canonical" href="https://poncepretelin.com/" />
+    <title>Ulises Ponce Pretelin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="nav" id="top">
-      <a class="logo" href="#top">UPP<span class="accent">.</span></a>
-      <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links">
-        <a href="#about">Sobre mí</a>
-        <a href="#project">Proyecto</a>
-        <a href="#deep">Detalle técnico</a>
-        <a href="#stack">Stack</a>
-        <a class="nav-cta" href="#contact">Contacto</a>
-      </div>
-    </nav>
+    <div class="page">
+      <header class="site-header">
+        <a class="wordmark" href="#top">upp</a>
+        <nav class="site-nav" aria-label="Principal">
+          <a href="#work">Proyecto</a>
+          <a href="mailto:poncepretelin@gmail.com">Contacto</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </header>
 
-    <header class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <p class="badge">Portfolio · Concurso MiduDev</p>
-      <h1>
-        Hola, soy <span class="gradient-text">Ulises Ponce Pretelin</span>
-      </h1>
-      <p class="hero-sub">
-        Fisioterapeuta y desarrollador full-stack. El núcleo de mi proyecto no es “otro EMR”:
-        <strong>automatizaciones clínicas</strong> con pruebas y técnicas basadas en
-        <strong>Magee</strong> y <strong>Cook &amp; Hegedus</strong> (sensibilidad y especificidad reales, no inventadas),
-        más un <strong>corrector de terminología 2026</strong> (~980 términos, IASP, CIF, lenguaje centrado en la persona).
-      </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="https://poncepretelin-web.onrender.com" target="_blank" rel="noopener noreferrer">Demo en vivo</a>
-            <a class="btn ghost" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">GitHub v2</a>
-            <a class="btn ghost" href="https://github.com/UlisesPoncePretelin/Poncepretelin-v1" target="_blank" rel="noopener noreferrer">GitHub v1</a>
-          </div>
-      <dl class="hero-stats">
-        <div><dt>~980</dt><dd>Términos clínicos versionados</dd></div>
-        <div><dt>594+</dt><dd>Archivos en el monorepo</dd></div>
-        <div><dt>12+</dt><dd>Módulos adaptativos de intake</dd></div>
-      </dl>
-    </header>
+      <main id="top">
+        <section class="hero">
+          <p class="hero-mark">upp</p>
+          <h1 class="hero-name">Ulises</h1>
+          <p class="hero-fullname">Ulises Antonio Ponce Pretelin</p>
+          <p class="hero-role">Fisioterapeuta · desarrollador de software clínico</p>
+          <p class="hero-lead">
+            Construyo herramientas para rehabilitación donde la clínica y el código comparten el mismo
+            expediente — CIF, terminología basada en evidencia y flujos que respetan la consulta real.
+          </p>
+          <p class="hero-domain">
+            <a href="https://poncepretelin.com" rel="noopener noreferrer">poncepretelin.com</a>
+            <span class="domain-note">— dominio en configuración</span>
+          </p>
+        </section>
 
-    <main>
-      <section id="about" class="section">
-        <div class="section-head">
-          <p class="eyebrow">Sobre mí</p>
-          <h2>Clínica + código en el mismo expediente</h2>
-        </div>
-        <div class="about-grid">
-          <div class="card">
-            <p>
-              Soy fisioterapeuta que programó su propio EMR porque los gestores genéricos no hablan el
-              lenguaje de la rehabilitación ni respetan marcos como la <strong>CIF (OMS)</strong> y la
-              <strong>terminología del dolor (IASP 2020)</strong>.
+        <section id="work" class="works">
+          <h2 class="section-label">Proyecto destacado</h2>
+
+          <article class="work-card">
+            <div class="work-top">
+              <h3 class="work-title">PoncePretelin</h3>
+              <span class="work-tag">Salud · Open source</span>
+            </div>
+            <p class="work-desc">
+              Gestor clínico de fisioterapia. Agenda, intake inteligente, SOAP, escalas con interpretación
+              EBP, pruebas diagnósticas con sensibilidad/especificidad citadas y motor de terminología clínica
+              versionada. FastAPI + Next.js + PostgreSQL.
             </p>
-            <p>
-              Mi enfoque: reducir carga cognitiva al terapeuta, mantener bases de datos clínicas accesibles
-              pero no invasivas, y documentar con criterio profesional — incluso en lo que no se ve en la UI.
+            <div class="work-actions">
+              <a
+                class="link-primary"
+                href="https://poncepretelin-web.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo en vivo →
+              </a>
+              <a
+                class="link-secondary"
+                href="https://github.com/UlisesPoncePretelin/Poncepretelin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+            <p class="work-demo">
+              Acceso demo: <code>demo@poncepretelin.app</code> · <code>DemoMidu2026</code>
             </p>
-          </div>
-          <ul class="about-list">
-            <li><span>01</span> Diseño de flujos SOAP e intake inteligente</li>
-            <li><span>02</span> Arquitectura FastAPI + Next.js + PostgreSQL</li>
-            <li><span>03</span> Open source (AGPL-3.0) · Docker · CI con Playwright</li>
-            <li><span>04</span> Perspectiva inclusiva: identidad, pronombres, lenguaje no estigmatizante</li>
+            <ul class="tech-list" aria-label="Stack">
+              <li>typescript</li>
+              <li>next.js</li>
+              <li>fastapi</li>
+              <li>postgresql</li>
+              <li>docker</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="highlights" aria-label="Enfoque">
+          <h2 class="section-label">Enfoque</h2>
+          <ul class="highlight-list">
+            <li>Flujos SOAP e intake con módulos regionales</li>
+            <li>Terminología IASP · CIF OMS · lenguaje centrado en la persona</li>
+            <li>Multi-tenant, RBAC y despliegue Docker o cloud</li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section id="project" class="section project-section">
-        <div class="section-head">
-          <p class="eyebrow">Proyecto destacado</p>
-          <h2>PoncePretelin — Gestor clínico de fisioterapia</h2>
-          <p class="section-lead">
-            Gestor clínico open source. Lo que más importa: <strong>banco de pruebas diagnósticas</strong> con
-            sensibilidad/especificidad citadas en fuente bibliográfica, <strong>presets y clusters clínicos</strong>,
-            <strong>calculadoras de escalas con EBP</strong> y motor de <strong>terminología versionada 2026</strong>.
-            v2 rediseñó la UX tras feedback de terapeutas; v1 queda como referencia.
-          </p>
-          <p class="note" style="margin-top: 0.75rem;">
-            <strong>Demo en la nube:</strong>
-            <a href="https://poncepretelin-web.onrender.com" target="_blank" rel="noopener noreferrer">poncepretelin-web.onrender.com</a>
-            — login <code>demo@poncepretelin.app</code> / <code>DemoMidu2026</code>
-            (plan free: puede tardar ~1 min en despertar).
-          </p>
-          <div class="hero-actions" style="margin-top: 1rem;">
-            <a class="btn primary" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">v2 (activa)</a>
-            <a class="btn ghost" href="https://github.com/UlisesPoncePretelin/Poncepretelin-v1" target="_blank" rel="noopener noreferrer">v1 (legado)</a>
-          </div>
-        </div>
-
-        <div class="project-layout">
-          <div class="project-visual card">
-            <div class="mock-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="mock-content">
-              <p class="mock-label">Flujo terapeuta</p>
-              <ol class="mock-flow">
-                <li>Agenda → Paciente → Episodio</li>
-                <li>Intake (contexto · dolor · riesgo · módulos · plan)</li>
-                <li>Evolución SOAP + escalas + plan HEp</li>
-                <li>Objetivos ↔ materiales por área</li>
-              </ol>
-              <div class="mock-tags">
-                <span>CIF OMS</span><span>Red flags</span><span>EBP</span><span>PWA</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-points">
-            <article class="point card">
-              <h3>Lo visible</h3>
-              <ul>
-                <li>Carátula del paciente con paneles embebidos (sin recargar rutas)</li>
-                <li>Wizard de historia clínica compacto, módulos regionales inline</li>
-                <li>Mapa corporal con síntomas, intensidad e irradiación</li>
-                <li>Calculadora de escalas (NDI, ODI, STarT Back, TUG, Berg…)</li>
-                <li>Biblioteca por áreas de intervención + objetivos por episodio</li>
-              </ul>
-            </article>
-            <article class="point card highlight">
-              <h3>Lo que no se ve a simple vista</h3>
-              <ul>
-                <li>Pruebas diagnósticas con <strong>Sn/Sp de Magee / Cook &amp; Hegedus</strong> — no valores inventados</li>
-                <li>Motor de terminología clínica versionado (<code>2026-05-23.7</code>, ~980 entradas)</li>
-                <li>Catálogo CIF OMS importado con calificadores en episodio</li>
-                <li>Sugerencias de lenguaje centrado en la persona y términos a evitar</li>
-                <li>Presets de patologías, clusters y reglas de recomendación clínica</li>
-                <li>Multi-tenant + RBAC + auditoría por organización</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="deep" class="section">
-        <div class="section-head">
-          <p class="eyebrow">Profundidad clínica</p>
-          <h2>Terminología y perspectiva profesional</h2>
-          <p class="section-lead">
-            El diferencial no es el color del botón: es cómo el sistema piensa la documentación clínica.
-          </p>
-        </div>
-
-        <div class="tabs" role="tablist">
-          <button class="tab active" role="tab" aria-selected="true" data-tab="terminology">Terminología</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="cif">CIF / OMS</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="inclusive">Inclusión</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="architecture">Arquitectura</button>
-        </div>
-
-        <div class="tab-panels">
-          <article class="tab-panel active card" id="terminology" role="tabpanel">
-            <h3>Motor de terminología centralizado</h3>
-            <p>
-              Backend (<code>clinical_terminology.py</code>) + frontend (<code>terminology.ts</code>) comparten un
-              catálogo de ~980 entradas con niveles: <em>preferido</em>, <em>contextual</em>,
-              <em>evitar</em>, <em>alias de búsqueda</em>.
-            </p>
-            <ul class="detail-list">
-              <li><strong>Dolor:</strong> alineado a definición revisada IASP 2020 — no “dolor crónico/benigno” sin criterio.</li>
-              <li><strong>MSK:</strong> preferencia por Terminologia Anatomica (FIPAT) vs eponimias cuando aplica.</li>
-              <li><strong>Comunicación prudente:</strong> “sugiere”, “compatible con”, evita diagnósticos categóricos en notas.</li>
-              <li><strong>Outcome measures:</strong> interpretación de scores integrada en calculadoras con contexto EBP.</li>
-            </ul>
-            <p class="note">
-              Los datos históricos en BD no se rompen: la capa de terminología transforma labels, reportes y tooltips sin migrar enums legacy.
-            </p>
-          </article>
-
-          <article class="tab-panel card" id="cif" role="tabpanel" hidden>
-            <h3>CIF estructurada, no solo texto libre</h3>
-            <p>
-              Importación del catálogo OMS (<code>icf_releases</code>, <code>icf_categories</code>) y vínculo por episodio
-              con calificadores (0–4, 8, 9) y nota clínica.
-            </p>
-            <ul class="detail-list">
-              <li>Selección en intake con códigos estructurados (<code>StructuredCIFCodes</code>).</li>
-              <li>Diagnóstico funcional alimentado por función/participación, no solo patología médica.</li>
-              <li>Coherencia con metas terapéuticas y materiales por área de intervención.</li>
-            </ul>
-          </article>
-
-          <article class="tab-panel card" id="inclusive" role="tabpanel" hidden>
-            <h3>Perspectiva centrada en la persona</h3>
-            <p>
-              Más allá del checkbox: identidad de género, pronombres, TRH, sexo administrativo para reportes,
-              contacto de emergencia estructurado y lenguaje que reduce estigma.
-            </p>
-            <ul class="detail-list">
-              <li>Categoría dedicada <code>lenguaje_centrado_persona</code> en el motor de términos.</li>
-              <li>Advertencias en UI cuando el texto clínico usa formulaciones deprecadas.</li>
-              <li>Objetivos terapéuticos formulados como metas de participación, no “defectos” del paciente.</li>
-            </ul>
-          </article>
-
-          <article class="tab-panel card" id="architecture" role="tabpanel" hidden>
-            <h3>Arquitectura para escalar sin perder simplicidad</h3>
-            <ul class="detail-list">
-              <li><strong>Backend:</strong> FastAPI, SQLAlchemy 2, Alembic, Pydantic v2, servicios por dominio.</li>
-              <li><strong>Frontend:</strong> Next.js 14 App Router, SWR, paneles lazy-loaded en carátula del paciente.</li>
-              <li><strong>Infra:</strong> Docker Compose, GitHub Actions, Playwright E2E, pytest.</li>
-              <li><strong>Multi-tenant:</strong> organización por clínica, JWT, roles RBAC, modo self-hosted o cloud.</li>
-            </ul>
-            <p class="note">
-              Navegación contextual: “Para la sesión” vs “Bases de datos clínicas” — el terapeuta no navega 40 menús en plena consulta.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="stack" class="section">
-        <div class="section-head">
-          <p class="eyebrow">Stack</p>
-          <h2>Tecnologías</h2>
-        </div>
-        <div class="stack-grid">
-          <span>TypeScript</span><span>Next.js 14</span><span>React</span><span>Tailwind CSS</span>
-          <span>Python 3.11</span><span>FastAPI</span><span>SQLAlchemy</span><span>Alembic</span>
-          <span>PostgreSQL 15</span><span>Docker</span><span>Playwright</span><span>pytest</span>
-          <span>SWR</span><span>Radix UI</span><span>PWA</span><span>GitHub Actions</span>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="card contact-card">
-          <h2>¿Revisas este proyecto?</h2>
+        <section class="contact">
+          <h2 class="section-label">Contacto</h2>
           <p>
-            Repo público, demo con Docker en <strong>localhost:3002</strong> (v2) o <strong>:3000</strong> (v1),
-            documentación de arquitectura y guía <a href="https://github.com/UlisesPoncePretelin/Poncepretelin/blob/main/docs/DEMO_MIDUDEV.md" target="_blank" rel="noopener noreferrer">DEMO_MIDUDEV.md</a>.
+            ¿Revisas el proyecto o quieres colaborar?
+            <a href="mailto:poncepretelin@gmail.com">poncepretelin@gmail.com</a>
           </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">
-              Repositorio v2 (activa)
-            </a>
-            <a class="btn ghost" href="https://github.com/UlisesPoncePretelin/Poncepretelin-v1" target="_blank" rel="noopener noreferrer">
-              Repositorio v1 (legado)
-            </a>
-            <a class="btn ghost" href="mailto:poncepretelin@gmail.com">poncepretelin@gmail.com</a>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <footer>
-      <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin · AGPL-3.0</p>
-    </footer>
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin · AGPL-3.0</p>
+      </footer>
+    </div>
 
     <script src="main.js"></script>
   </body>
