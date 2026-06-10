@@ -5,86 +5,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portafolio de Ulises Antonio Ponce Pretelin — fisioterapeuta y desarrollador de software clínico."
+      content="Ulises Ponce Pretelin — Fisioterapeuta y desarrollador full-stack. Proyecto destacado: PoncePretelin, gestor clínico open source con terminología CIF/OMS y perspectiva centrada en la persona."
     />
-    <title>Ulises Ponce Pretelin · Fisioterapia &amp; Software</title>
+    <title>Ulises Ponce Pretelin · Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,800;1,9..40,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <nav class="nav" id="top">
+      <a class="logo" href="#top">UPP<span class="accent">.</span></a>
+      <button class="nav-toggle" type="button" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#project">Proyecto</a>
+        <a href="#deep">Detalle técnico</a>
+        <a href="#stack">Stack</a>
+        <a class="nav-cta" href="#contact">Contacto</a>
+      </div>
+    </nav>
+
     <header class="hero">
-      <p class="eyebrow">Fisioterapeuta · Desarrollador</p>
-      <h1>Ulises Antonio Ponce Pretelin</h1>
-      <p class="lead">
-        Construyo herramientas digitales para la práctica clínica: expedientes, flujos SOAP,
-        bibliotecas terapéuticas y sistemas que reducen carga administrativa al terapeuta.
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="badge">Portfolio · Concurso MiduDev</p>
+      <h1>
+        Hola, soy <span class="gradient-text">Ulises Ponce Pretelin</span>
+      </h1>
+      <p class="hero-sub">
+        Fisioterapeuta y desarrollador full-stack. Construyo software clínico con
+        <strong>terminología actualizada</strong>, enfoque <strong>centrado en la persona</strong> y UX pensada
+        para el terapeuta en consulta — no solo pantallas bonitas.
       </p>
       <div class="hero-actions">
-        <a class="btn primary" href="#proyectos">Ver proyectos</a>
-        <a class="btn ghost" href="mailto:poncepretelin@gmail.com">Contacto</a>
-        <a class="btn ghost" href="https://github.com/poncepretelin" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn primary" href="#project">Ver proyecto principal</a>
+        <a class="btn ghost" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
+      <dl class="hero-stats">
+        <div><dt>~980</dt><dd>Términos clínicos versionados</dd></div>
+        <div><dt>594+</dt><dd>Archivos en el monorepo</dd></div>
+        <div><dt>12+</dt><dd>Módulos adaptativos de intake</dd></div>
+      </dl>
     </header>
 
     <main>
-      <section id="proyectos" class="section">
-        <h2>Proyectos destacados</h2>
-        <article class="card featured">
-          <div class="card-meta">
-            <span class="tag">Open source · AGPL-3.0</span>
-            <span class="tag">FastAPI · Next.js · PostgreSQL</span>
+      <section id="about" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Sobre mí</p>
+          <h2>Clínica + código en el mismo expediente</h2>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <p>
+              Soy fisioterapeuta que programó su propio EMR porque los gestores genéricos no hablan el
+              lenguaje de la rehabilitación ni respetan marcos como la <strong>CIF (OMS)</strong> y la
+              <strong>terminología del dolor (IASP 2020)</strong>.
+            </p>
+            <p>
+              Mi enfoque: reducir carga cognitiva al terapeuta, mantener bases de datos clínicas accesibles
+              pero no invasivas, y documentar con criterio profesional — incluso en lo que no se ve en la UI.
+            </p>
           </div>
-          <h3>PoncePretelin — Gestor clínico de fisioterapia</h3>
-          <p>
-            Sistema completo de gestión clínica: pacientes, episodios, intake inteligente con módulos
-            adaptativos (MSK, neuro, pediatría, vestibular…), evolución SOAP, planes domiciliarios,
-            biblioteca por áreas de intervención, finanzas, agenda y herramientas opcionales de IA.
-          </p>
-          <ul class="highlights">
-            <li>Intake clínico modular con mapa corporal y calculadoras de escalas</li>
-            <li>Bibliotecas: ejercicios, materiales por área, evaluaciones y evidencia</li>
-            <li>Docker Compose para despliegue local y demo</li>
+          <ul class="about-list">
+            <li><span>01</span> Diseño de flujos SOAP e intake inteligente</li>
+            <li><span>02</span> Arquitectura FastAPI + Next.js + PostgreSQL</li>
+            <li><span>03</span> Open source (AGPL-3.0) · Docker · CI con Playwright</li>
+            <li><span>04</span> Perspectiva inclusiva: identidad, pronombres, lenguaje no estigmatizante</li>
           </ul>
-          <a
-            class="btn primary"
-            href="https://github.com/poncepretelin/clinical-system"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Repositorio en GitHub →
-          </a>
-        </article>
+        </div>
       </section>
 
-      <section class="section grid-2">
-        <div>
-          <h2>Enfoque</h2>
-          <p>
-            Priorizo interfaces simples para el terapeuta en consulta: poco ruido visual, flujos
-            lógicos y bases de datos clínicas accesibles solo cuando hacen falta.
+      <section id="project" class="section project-section">
+        <div class="section-head">
+          <p class="eyebrow">Proyecto destacado</p>
+          <h2>PoncePretelin — Gestor clínico de fisioterapia</h2>
+          <p class="section-lead">
+            Monolito modular open source: expediente electrónico, intake adaptativo, bibliotecas por área,
+            agenda, finanzas (CFDI México), portal paciente y herramientas opcionales de IA.
           </p>
         </div>
-        <div>
-          <h2>Stack habitual</h2>
-          <ul class="stack">
-            <li>Python · FastAPI · SQLAlchemy · Alembic</li>
-            <li>TypeScript · Next.js · Tailwind CSS</li>
-            <li>PostgreSQL · Docker · Playwright · pytest</li>
-          </ul>
+
+        <div class="project-layout">
+          <div class="project-visual card">
+            <div class="mock-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mock-content">
+              <p class="mock-label">Flujo terapeuta</p>
+              <ol class="mock-flow">
+                <li>Agenda → Paciente → Episodio</li>
+                <li>Intake (contexto · dolor · riesgo · módulos · plan)</li>
+                <li>Evolución SOAP + escalas + plan HEp</li>
+                <li>Objetivos ↔ materiales por área</li>
+              </ol>
+              <div class="mock-tags">
+                <span>CIF OMS</span><span>Red flags</span><span>EBP</span><span>PWA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-points">
+            <article class="point card">
+              <h3>Lo visible</h3>
+              <ul>
+                <li>Carátula del paciente con paneles embebidos (sin recargar rutas)</li>
+                <li>Wizard de historia clínica compacto, módulos regionales inline</li>
+                <li>Mapa corporal con síntomas, intensidad e irradiación</li>
+                <li>Calculadora de escalas (NDI, ODI, STarT Back, TUG, Berg…)</li>
+                <li>Biblioteca por áreas de intervención + objetivos por episodio</li>
+              </ul>
+            </article>
+            <article class="point card highlight">
+              <h3>Lo que no se ve a simple vista</h3>
+              <ul>
+                <li>Motor de terminología clínica versionado (<code>2026-05-23.7</code>)</li>
+                <li>Catálogo CIF OMS importado con calificadores en episodio</li>
+                <li>Sugerencias de lenguaje centrado en la persona y términos a evitar</li>
+                <li>Multi-tenant + RBAC + auditoría por organización</li>
+                <li>Semáforo clínico, reglas de signos vitales y alertas farmacológicas</li>
+                <li>~10k ejercicios curados + sincronización wger/ExerciseDB</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="deep" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Profundidad clínica</p>
+          <h2>Terminología y perspectiva profesional</h2>
+          <p class="section-lead">
+            El diferencial no es el color del botón: es cómo el sistema piensa la documentación clínica.
+          </p>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="terminology">Terminología</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="cif">CIF / OMS</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="inclusive">Inclusión</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="architecture">Arquitectura</button>
+        </div>
+
+        <div class="tab-panels">
+          <article class="tab-panel active card" id="terminology" role="tabpanel">
+            <h3>Motor de terminología centralizado</h3>
+            <p>
+              Backend (<code>clinical_terminology.py</code>) + frontend (<code>terminology.ts</code>) comparten un
+              catálogo de ~980 entradas con niveles: <em>preferido</em>, <em>contextual</em>,
+              <em>evitar</em>, <em>alias de búsqueda</em>.
+            </p>
+            <ul class="detail-list">
+              <li><strong>Dolor:</strong> alineado a definición revisada IASP 2020 — no “dolor crónico/benigno” sin criterio.</li>
+              <li><strong>MSK:</strong> preferencia por Terminologia Anatomica (FIPAT) vs eponimias cuando aplica.</li>
+              <li><strong>Comunicación prudente:</strong> “sugiere”, “compatible con”, evita diagnósticos categóricos en notas.</li>
+              <li><strong>Outcome measures:</strong> interpretación de scores integrada en calculadoras con contexto EBP.</li>
+            </ul>
+            <p class="note">
+              Los datos históricos en BD no se rompen: la capa de terminología transforma labels, reportes y tooltips sin migrar enums legacy.
+            </p>
+          </article>
+
+          <article class="tab-panel card" id="cif" role="tabpanel" hidden>
+            <h3>CIF estructurada, no solo texto libre</h3>
+            <p>
+              Importación del catálogo OMS (<code>icf_releases</code>, <code>icf_categories</code>) y vínculo por episodio
+              con calificadores (0–4, 8, 9) y nota clínica.
+            </p>
+            <ul class="detail-list">
+              <li>Selección en intake con códigos estructurados (<code>StructuredCIFCodes</code>).</li>
+              <li>Diagnóstico funcional alimentado por función/participación, no solo patología médica.</li>
+              <li>Coherencia con metas terapéuticas y materiales por área de intervención.</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel card" id="inclusive" role="tabpanel" hidden>
+            <h3>Perspectiva centrada en la persona</h3>
+            <p>
+              Más allá del checkbox: identidad de género, pronombres, TRH, sexo administrativo para reportes,
+              contacto de emergencia estructurado y lenguaje que reduce estigma.
+            </p>
+            <ul class="detail-list">
+              <li>Categoría dedicada <code>lenguaje_centrado_persona</code> en el motor de términos.</li>
+              <li>Advertencias en UI cuando el texto clínico usa formulaciones deprecadas.</li>
+              <li>Objetivos terapéuticos formulados como metas de participación, no “defectos” del paciente.</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel card" id="architecture" role="tabpanel" hidden>
+            <h3>Arquitectura para escalar sin perder simplicidad</h3>
+            <ul class="detail-list">
+              <li><strong>Backend:</strong> FastAPI, SQLAlchemy 2, Alembic, Pydantic v2, servicios por dominio.</li>
+              <li><strong>Frontend:</strong> Next.js 14 App Router, SWR, paneles lazy-loaded en carátula del paciente.</li>
+              <li><strong>Infra:</strong> Docker Compose, GitHub Actions, Playwright E2E, pytest.</li>
+              <li><strong>Multi-tenant:</strong> organización por clínica, JWT, roles RBAC, modo self-hosted o cloud.</li>
+            </ul>
+            <p class="note">
+              Navegación contextual: “Para la sesión” vs “Bases de datos clínicas” — el terapeuta no navega 40 menús en plena consulta.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Stack</p>
+          <h2>Tecnologías</h2>
+        </div>
+        <div class="stack-grid">
+          <span>TypeScript</span><span>Next.js 14</span><span>React</span><span>Tailwind CSS</span>
+          <span>Python 3.11</span><span>FastAPI</span><span>SQLAlchemy</span><span>Alembic</span>
+          <span>PostgreSQL 15</span><span>Docker</span><span>Playwright</span><span>pytest</span>
+          <span>SWR</span><span>Radix UI</span><span>PWA</span><span>GitHub Actions</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="card contact-card">
+          <h2>¿Revisas este proyecto?</h2>
+          <p>
+            Repo público, demo con Docker, documentación de arquitectura y código listo para auditar.
+            Me interesa feedback sobre UX clínica y calidad de ingeniería.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://github.com/UlisesPoncePretelin/Poncepretelin" target="_blank" rel="noopener noreferrer">
+              Repositorio clinical-system
+            </a>
+            <a class="btn ghost" href="mailto:poncepretelin@gmail.com">poncepretelin@gmail.com</a>
+          </div>
+          <p class="github-note">
+            Si el enlace a GitHub aún no responde, el push está pendiente de <code>gh auth login</code> en terminal.
+          </p>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin</p>
+      <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin · AGPL-3.0</p>
     </footer>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+
+    <script src="main.js"></script>
   </body>
 </html>
