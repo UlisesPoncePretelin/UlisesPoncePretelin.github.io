@@ -1,20 +1,18 @@
 # Portafolio — Ulises Antonio Ponce Pretelin
 
-Sitio personal minimalista. Presenta **PoncePretelin**, gestor clínico open source para fisioterapia.
+Landing personal en GitHub Pages. Presenta **PoncePretelin** y el perfil profesional de Ulises.
 
-| Sitio | URL | Propósito |
-|-------|-----|-----------|
-| **Portafolio** | [ulisesponcepretelin.github.io](https://ulisesponcepretelin.github.io) | Presentación del proyecto y contacto |
-| **Gestor (landing)** | [poncepretelin.com](https://poncepretelin.com) | Landing del gestor clínico → demo/app |
-| **Demo en vivo** | [poncepretelin-web.onrender.com](https://poncepretelin-web.onrender.com) | Aplicación desplegada |
+| Sitio | URL |
+|-------|-----|
+| **Portafolio** | https://ulisesponcepretelin.github.io |
+| **Demo del gestor** | https://poncepretelin-web.onrender.com |
+| **Repositorio clínico** | https://github.com/UlisesPoncePretelin/Poncepretelin |
 
-## GitHub Pages (este repo)
+## Foto de perfil
 
-1. Push a `main` en `UlisesPoncePretelin/UlisesPoncePretelin.github.io`
-2. Settings → Pages → Source: branch `main`, folder `/ (root)`
-3. **No** uses `poncepretelin.com` como dominio custom aquí — ese dominio apunta al landing del gestor (carpeta `landing/` del repo clínico)
+Guarda tu retrato en `assets/portrait.jpg` (recomendado 4:5, mín. 1280×1600 px).
 
-## Proyecto clínico
+## Despliegue
 
-- [PoncePretelin v2](https://github.com/UlisesPoncePretelin/Poncepretelin)
-- Instrucciones de dominios: [docs/DOMAINS.md](https://github.com/UlisesPoncePretelin/Poncepretelin/blob/main/docs/DOMAINS.md)
+Push a `main` → GitHub Pages publica automáticamente desde la raíz.
+
