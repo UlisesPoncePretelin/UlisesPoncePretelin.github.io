@@ -74,8 +74,9 @@
       <a href="#sobre" class="chapter-link" data-chapter="sobre"><span>02</span> Sobre</a>
       <a href="#trayectoria" class="chapter-link" data-chapter="trayectoria"><span>03</span> Trayectoria</a>
       <a href="#proyecto" class="chapter-link" data-chapter="proyecto"><span>04</span> Proyecto</a>
-      <a href="#stack" class="chapter-link" data-chapter="stack"><span>05</span> Stack</a>
-      <a href="#contacto" class="chapter-link" data-chapter="contacto"><span>06</span> Contacto</a>
+      <a href="#certificaciones" class="chapter-link" data-chapter="certificaciones"><span>05</span> Certificaciones</a>
+      <a href="#stack" class="chapter-link" data-chapter="stack"><span>06</span> Stack</a>
+      <a href="#contacto" class="chapter-link" data-chapter="contacto"><span>07</span> Contacto</a>
     </nav>
 
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -88,6 +89,7 @@
             <a class="nav-link" href="#sobre"><span>Sobre mí</span></a>
             <a class="nav-link" href="#proyecto"><span>Proyecto</span></a>
             <a class="nav-link" href="cv.html"><span>CV</span></a>
+            <a class="nav-link" href="#certificaciones"><span>Certificaciones</span></a>
             <a class="nav-link" href="#stack"><span>Stack</span></a>
             <a class="nav-link" href="#contacto"><span>Contacto</span></a>
           </nav>
@@ -142,9 +144,9 @@
                 <span class="line"><span class="word" data-split>Ulises Antonio</span></span>
                 <span class="line line-accent"><span class="word" data-split>Ponce Pretelin</span></span>
               </h1>
-              <p class="hero-role reveal">
-                Lic. en Terapia física · desarrollador de software clínico ·
-                <strong>PoncePretelin</strong>
+              <p class="hero-typing reveal" aria-live="polite">
+                <span class="hero-typing-text" data-typing-text>Fisioterapeuta</span
+                ><span class="hero-typing-cursor" aria-hidden="true">|</span>
               </p>
               <p class="hero-text reveal">
                 Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e
@@ -272,6 +274,13 @@
               <h2 class="section-title">Clínica y código,<br /><em>mismo expediente</em></h2>
             </div>
             <div class="section-body reveal">
+              <ul class="skill-pills" aria-label="Áreas de práctica">
+                <li>Terapia física</li>
+                <li>Rehabilitación</li>
+                <li>Software clínico</li>
+                <li>EBP</li>
+                <li>Open source</li>
+              </ul>
               <p>
                 Licenciado en Terapia Física (ICES, Xalapa). Experiencia con poblaciones con
                 necesidades especiales en México, Estados Unidos y entornos interdisciplinarios —
@@ -347,78 +356,139 @@
           </ol>
         </section>
 
-        <section class="section frame-block project-pin-section" id="proyecto" data-project-pin>
-          <div class="project-pin-sticky">
-            <div class="frame-row project-pin-head reveal">
-              <div class="project-pin-intro">
-                <p class="section-tag">03 — Proyecto destacado</p>
-                <h2 class="section-title project-title">Ponce<em>Pretelin</em></h2>
-              </div>
-              <div class="project-pin-meta">
-                <p class="section-lead">
-                  Gestor clínico de fisioterapia open source — expediente, agenda, SOAP, finanzas, portal
-                  paciente y módulos por especialidad.
-                </p>
-                <p class="project-pin-counter" aria-live="polite">
-                  <span data-pin-current>01</span><span class="project-pin-total"> / 05</span>
-                </p>
-              </div>
+        <section class="section frame-block project-modules-section" id="proyecto">
+          <div class="frame-row project-modules-head reveal">
+            <div class="section-intro">
+              <p class="section-tag">03 — Proyecto destacado</p>
+              <h2 class="section-title project-title">Ponce<em>Pretelin</em></h2>
+              <p class="section-lead">
+                Gestor clínico open source — módulos con evidencia trazable, no formularios vacíos.
+              </p>
             </div>
+            <a
+              class="btn btn-outline magnetic"
+              href="https://github.com/UlisesPoncePretelin/Poncepretelin"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-magnetic
+            >
+              Repositorio
+            </a>
+          </div>
 
-            <div class="project-pin-viewport">
-              <div class="project-pin-track" data-pin-track>
-                <article class="project-card" data-tilt-card data-card-index="0">
-                  <span class="card-index">01</span>
-                  <div class="card-body">
-                    <h3>Pruebas diagnósticas</h3>
-                    <p>Sensibilidad y especificidad citadas — Magee, Cook &amp; Hegedus, guías clínicas.</p>
-                  </div>
-                </article>
-                <article class="project-card" data-tilt-card data-card-index="1">
-                  <span class="card-index">02</span>
-                  <div class="card-body">
-                    <h3>Terminología 2026</h3>
-                    <p>~980 términos: IASP, CIF OMS, lenguaje centrado en la persona.</p>
-                  </div>
-                </article>
-                <article class="project-card card-featured" data-tilt-card data-card-index="2">
-                  <span class="card-index">03</span>
-                  <div class="card-body">
-                    <h3>Expediente clínico</h3>
-                    <p>Sidebar global, flujo directo paciente → sesión, notas SOAP y evolución.</p>
-                    <a
-                      class="card-link"
-                      href="https://poncepretelin-web.onrender.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Abrir demo →
-                    </a>
-                  </div>
-                </article>
-                <article class="project-card" data-tilt-card data-card-index="3">
-                  <span class="card-index">04</span>
-                  <div class="card-body">
-                    <h3>Escalas EBP</h3>
-                    <p>NDI, ODI, STarT Back, TUG, Berg con interpretación integrada.</p>
-                  </div>
-                </article>
-                <article class="project-card" data-tilt-card data-card-index="4">
-                  <span class="card-index">05</span>
-                  <div class="card-body">
-                    <h3>Multi-especialidad</h3>
-                    <p>Neuro, vestibular, pediátrico, piso pélvico, deportivo y más.</p>
-                  </div>
-                </article>
+          <div class="project-modules-grid reveal">
+            <article class="module-card">
+              <div class="module-thumb">
+                <img
+                  src="assets/demo/02-diagnostic-tests.png"
+                  alt=""
+                  width="640"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-            </div>
+              <ul class="module-tags" aria-label="Etiquetas">
+                <li>EBP</li>
+                <li>Sn/Sp</li>
+              </ul>
+              <div class="module-body">
+                <h3>Pruebas diagnósticas</h3>
+                <p>Sensibilidad y especificidad citadas — Magee, Cook &amp; Hegedus, guías clínicas.</p>
+              </div>
+            </article>
 
-            <div class="frame-row project-pin-bar">
-              <span class="project-pin-hint">Scroll para recorrer módulos</span>
-              <div class="project-pin-progress" aria-hidden="true">
-                <span data-pin-progress></span>
+            <article class="module-card">
+              <div class="module-thumb">
+                <img
+                  src="assets/demo/03-evidence-atlas.png"
+                  alt=""
+                  width="640"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-            </div>
+              <ul class="module-tags" aria-label="Etiquetas">
+                <li>Terminología</li>
+                <li>IASP</li>
+              </ul>
+              <div class="module-body">
+                <h3>Terminología 2026</h3>
+                <p>~980 términos: IASP, CIF OMS, lenguaje centrado en la persona.</p>
+              </div>
+            </article>
+
+            <article class="module-card module-card-featured">
+              <div class="module-thumb">
+                <img
+                  src="assets/demo/07-episode.png"
+                  alt=""
+                  width="640"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <ul class="module-tags" aria-label="Etiquetas">
+                <li>SOAP</li>
+                <li>Expediente</li>
+              </ul>
+              <div class="module-body">
+                <h3>Expediente clínico</h3>
+                <p>Sidebar global, flujo paciente → sesión, notas SOAP y evolución.</p>
+                <a
+                  class="card-link"
+                  href="https://poncepretelin-web.onrender.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Abrir demo →
+                </a>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <div class="module-thumb">
+                <img
+                  src="assets/demo/01-dashboard.png"
+                  alt=""
+                  width="640"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <ul class="module-tags" aria-label="Etiquetas">
+                <li>Escalas</li>
+                <li>NDI · ODI</li>
+              </ul>
+              <div class="module-body">
+                <h3>Escalas EBP</h3>
+                <p>NDI, ODI, STarT Back, TUG, Berg con interpretación integrada.</p>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <div class="module-thumb">
+                <img
+                  src="assets/demo/06-patient-record.png"
+                  alt=""
+                  width="640"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <ul class="module-tags" aria-label="Etiquetas">
+                <li>Multi</li>
+                <li>Neuro</li>
+              </ul>
+              <div class="module-body">
+                <h3>Multi-especialidad</h3>
+                <p>Neuro, vestibular, pediátrico, piso pélvico, deportivo y más.</p>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -447,12 +517,16 @@
             </article>
           </div>
 
-          <div class="frame-row demo-preview reveal">
-            <div class="demo-preview-copy">
-              <h3 class="demo-preview-title">Demo en la nube</h3>
-              <p>Gestor clínico en demo pública. Arranque en frío ~1–2 min en Render free tier.</p>
+          <div class="frame-row">
+            <div class="demo-showcase reveal" data-demo-showcase>
+              <div class="demo-showcase-copy">
+              <p class="section-tag">Interfaz real</p>
+              <h3 class="demo-showcase-title">Capturas del <em>gestor</em></h3>
+              <p class="demo-showcase-lead">
+                Demo en la nube · arranque en frío ~1–2 min en Render free tier.
+              </p>
               <p class="hero-demo"><code>demo@poncepretelin.app</code> · <code>DemoCloud2026</code></p>
-              <div class="demo-preview-actions">
+              <div class="demo-showcase-actions">
                 <a
                   class="btn btn-fill magnetic"
                   href="https://poncepretelin-web.onrender.com"
@@ -473,86 +547,92 @@
                 </a>
               </div>
             </div>
-            <figure class="demo-preview-frame">
-              <div class="demo-preview-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-              <img
-                class="demo-preview-shot"
-                src="assets/demo/07-episode.png"
-                alt="Caso clínico en PoncePretelin: seguridad clínica, plan terapéutico y pruebas con lectura estructurada"
-                width="1440"
-                height="900"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-          </div>
 
-          <div class="frame-row">
-            <div class="section-intro reveal">
-              <p class="section-tag">Interfaz real</p>
-              <h2 class="section-title">Capturas del <em>gestor</em></h2>
-              <p class="section-lead">
-                Tomadas del entorno Docker local con datos demo — las mismas abstracciones clínicas que verás en la nube.
-              </p>
+            <div class="demo-showcase-stage">
+              <div class="demo-showcase-wheel" data-demo-wheel tabindex="0" aria-live="polite">
+                <figure class="demo-showcase-slide" data-demo-slide="0">
+                  <div class="demo-showcase-device">
+                    <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <img
+                      src="assets/demo/07-episode.png"
+                      alt="Caso clínico con seguridad clínica y pruebas estructuradas"
+                      width="960"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Caso clínico · plan y pruebas</figcaption>
+                </figure>
+                <figure class="demo-showcase-slide" data-demo-slide="1">
+                  <div class="demo-showcase-device">
+                    <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <img
+                      src="assets/demo/02-diagnostic-tests.png"
+                      alt="Biblioteca de pruebas diagnósticas con sensibilidad y especificidad"
+                      width="960"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Pruebas diagnósticas · Sn/Sp citadas</figcaption>
+                </figure>
+                <figure class="demo-showcase-slide" data-demo-slide="2">
+                  <div class="demo-showcase-device">
+                    <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <img
+                      src="assets/demo/06-patient-record.png"
+                      alt="Panel del día con ficha del paciente y expediente documental"
+                      width="960"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Panel del día · modo consultorio</figcaption>
+                </figure>
+                <figure class="demo-showcase-slide" data-demo-slide="3">
+                  <div class="demo-showcase-device">
+                    <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <img
+                      src="assets/demo/01-dashboard.png"
+                      alt="Dashboard con acciones rápidas y resumen matutino"
+                      width="960"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Inicio · acciones rápidas</figcaption>
+                </figure>
+                <figure class="demo-showcase-slide" data-demo-slide="4">
+                  <div class="demo-showcase-device">
+                    <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <img
+                      src="assets/demo/03-evidence-atlas.png"
+                      alt="Atlas de evidencia muscular con estudios indexados"
+                      width="960"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Atlas de evidencia · PMID</figcaption>
+                </figure>
+              </div>
+
+              <div class="demo-showcase-controls">
+                <button class="demo-showcase-btn" type="button" data-demo-prev aria-label="Captura anterior">
+                  ←
+                </button>
+                <div class="demo-showcase-dots" data-demo-dots role="tablist" aria-label="Capturas del gestor"></div>
+                <button class="demo-showcase-btn" type="button" data-demo-next aria-label="Captura siguiente">
+                  →
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="demo-gallery reveal">
-            <figure class="demo-gallery-item">
-              <img
-                src="assets/demo/02-diagnostic-tests.png"
-                alt="Biblioteca de pruebas diagnósticas con sensibilidad, especificidad y filtrado por segmento"
-                width="1440"
-                height="900"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Pruebas diagnósticas</strong>
-                <span>Sn/Sp citadas · filtrado por segmento · favoritos clínicos</span>
-              </figcaption>
-            </figure>
-            <figure class="demo-gallery-item">
-              <img
-                src="assets/demo/06-patient-record.png"
-                alt="Panel del día con ficha del paciente, expediente documental y modo consultorio simple"
-                width="1440"
-                height="900"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Panel del día</strong>
-                <span>Carátula del paciente · expediente · modo consultorio simple</span>
-              </figcaption>
-            </figure>
-            <figure class="demo-gallery-item">
-              <img
-                src="assets/demo/01-dashboard.png"
-                alt="Dashboard con acciones rápidas, resumen matutino y tareas clínicas del día"
-                width="1440"
-                height="900"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Inicio operativo</strong>
-                <span>Acciones rápidas · resumen matutino · búsqueda clínica</span>
-              </figcaption>
-            </figure>
-            <figure class="demo-gallery-item">
-              <img
-                src="assets/demo/03-evidence-atlas.png"
-                alt="Atlas de evidencia muscular con estudios indexados y PMID verificados"
-                width="1440"
-                height="900"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Atlas de evidencia</strong>
-                <span>Estudios indexados · mediciones verificadas · PMID</span>
-              </figcaption>
-            </figure>
+            </div>
           </div>
         </section>
 
@@ -636,10 +716,57 @@
           </div>
         </section>
 
+        <section class="section frame-block cert-section" id="certificaciones">
+          <div class="frame-row">
+            <div class="section-intro reveal">
+              <p class="section-tag">Formación continua</p>
+              <h2 class="section-title">Certificaciones</h2>
+              <p class="section-lead">
+                18+ cursos en clínica, salud mental y plataformas en línea — datos del CV, sin inventar.
+              </p>
+            </div>
+          </div>
+          <div class="cert-grid reveal">
+            <article class="cert-card">
+              <span class="cert-card-tag">Clínica</span>
+              <h3>Intervenciones comunitarias basadas en evidencias</h3>
+              <p>Inst. Nacional de Geriatría · abr — may 2022</p>
+            </article>
+            <article class="cert-card">
+              <span class="cert-card-tag">Clínica</span>
+              <h3>Manejo de heridas</h3>
+              <p>CONAMEGE · mar 2023</p>
+            </article>
+            <article class="cert-card">
+              <span class="cert-card-tag">Salud mental</span>
+              <h3>Mind Control: salud mental durante COVID-19</h3>
+              <p>Universidad de Toronto, Coursera · may 2021</p>
+            </article>
+            <article class="cert-card">
+              <span class="cert-card-tag">Coursera</span>
+              <h3>Atención primaria en salud: ENT</h3>
+              <p>Pontificia Univ. Católica de Chile · jul 2021</p>
+            </article>
+            <article class="cert-card">
+              <span class="cert-card-tag">Clínica</span>
+              <h3>Metodología de la investigación en geriatría</h3>
+              <p>Inst. Nacional de Geriatría · abr — may 2022</p>
+            </article>
+            <article class="cert-card">
+              <span class="cert-card-tag">Rendimiento</span>
+              <h3>Certificación PowerExplosive</h3>
+              <p>Entrenamiento y rendimiento deportivo</p>
+            </article>
+          </div>
+          <div class="frame-row cert-foot reveal">
+            <a class="btn btn-outline magnetic" href="cv.html#certificaciones" data-magnetic>Ver todas en el CV</a>
+          </div>
+        </section>
+
         <section class="section frame-block" id="stack">
           <div class="frame-row">
             <div class="section-intro reveal">
-              <p class="section-tag">04 — Stack</p>
+              <p class="section-tag">06 — Stack</p>
               <h2 class="section-title">Tecnologías</h2>
             </div>
           </div>
@@ -734,7 +861,7 @@
         <section class="section frame-block" id="contacto">
           <div class="frame-row contact-panel reveal">
             <div>
-              <p class="section-tag">05 — Contacto</p>
+              <p class="section-tag">07 — Contacto</p>
               <h2 class="section-title">¿Colaboramos?</h2>
               <p class="contact-text">
                 Si revisas el proyecto, quieres contribuir o desplegar PoncePretelin en tu consultorio.

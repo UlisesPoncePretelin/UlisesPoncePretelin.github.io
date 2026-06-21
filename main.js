@@ -3,8 +3,10 @@
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isCoarse = window.matchMedia("(pointer: coarse)").matches;
-  const isNarrow = window.matchMedia("(max-width: 720px)").matches;
+  const narrowQuery = window.matchMedia("(max-width: 720px)");
+  let isNarrow = narrowQuery.matches;
   const canAnimate = !prefersReduced;
+  const usePinLerp = canAnimate;
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
   const lerp = (current, target, amount) => current + (target - current) * amount;
@@ -75,10 +77,16 @@
   const nav = document.getElementById("site-nav");
   const navLinks = nav?.querySelectorAll('.nav-link[href^="#"]');
   const chapterLinks = document.querySelectorAll("[data-chapter]");
-  const sectionIds = ["top", "sobre", "trayectoria", "proyecto", "stack", "contacto"];
+  const sectionIds = ["top", "sobre", "trayectoria", "proyecto", "certificaciones", "stack", "contacto"];
+
+  const applyPinTransform = () => {
+    if (!pinTrack || isNarrow) return;
+    pinTrack.style.transform = `translate3d(${motion.pinX}px, 0, 0)`;
+    if (pinProgress) pinProgress.style.width = `${motion.pinProgress}%`;
+  };
 
   const computePin = () => {
-    if (!projectPin || !pinTrack || isNarrow || !canAnimate) return;
+    if (!projectPin || !pinTrack || isNarrow) return;
 
     const rect = projectPin.getBoundingClientRect();
     const viewport = pinTrack.parentElement;
@@ -91,6 +99,12 @@
     const maxShift = Math.max(0, pinTrack.scrollWidth - viewport.clientWidth);
     motion.pinTarget = -progress * maxShift;
     motion.pinProgressTarget = progress * 100;
+
+    if (!usePinLerp) {
+      motion.pinX = motion.pinTarget;
+      motion.pinProgress = motion.pinProgressTarget;
+      applyPinTransform();
+    }
 
     if (pinCards.length) {
       const activeIdx = Math.min(pinCards.length - 1, Math.round(progress * (pinCards.length - 1)));
@@ -150,16 +164,29 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll, { passive: true });
+  narrowQuery.addEventListener("change", (event) => {
+    isNarrow = event.matches;
+    if (isNarrow && pinTrack) {
+      pinTrack.style.transform = "";
+      if (pinProgress) pinProgress.style.width = "0%";
+    }
+    onScroll();
+  });
+  window.addEventListener("load", () => {
+    requestAnimationFrame(() => {
+      onScroll();
+      setTimeout(onScroll, 120);
+    });
+  });
 
   if (pinCards.length) pinCards[0]?.classList.add("is-active");
   if (endcapContent && (isNarrow || !canAnimate)) endcapContent.classList.add("is-active");
 
   const renderMotion = () => {
-    if (pinTrack && !isNarrow && canAnimate) {
+    if (pinTrack && !isNarrow && usePinLerp) {
       motion.pinX = lerp(motion.pinX, motion.pinTarget, 0.11);
       motion.pinProgress = lerp(motion.pinProgress, motion.pinProgressTarget, 0.11);
-      pinTrack.style.transform = `translate3d(${motion.pinX}px, 0, 0)`;
-      if (pinProgress) pinProgress.style.width = `${motion.pinProgress}%`;
+      applyPinTransform();
     }
 
     if (endcapContent && !isNarrow && canAnimate) {
@@ -175,6 +202,134 @@
   };
 
   if (canAnimate) requestAnimationFrame(renderMotion);
+
+  /* Demo showcase carousel */
+  const initDemoShowcase = () => {
+    const showcase = document.querySelector("[data-demo-showcase]");
+    const wheel = showcase?.querySelector("[data-demo-wheel]");
+    const slides = wheel ? [...wheel.querySelectorAll("[data-demo-slide]")] : [];
+    const dotsRoot = showcase?.querySelector("[data-demo-dots]");
+    const prevBtn = showcase?.querySelector("[data-demo-prev]");
+    const nextBtn = showcase?.querySelector("[data-demo-next]");
+
+    if (!showcase || !wheel || !slides.length || !dotsRoot) return;
+
+    let index = 0;
+    let timer;
+
+    slides.forEach((slide, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "demo-showcase-dot";
+      dot.setAttribute("role", "tab");
+      dot.setAttribute("aria-label", slide.querySelector("figcaption")?.textContent || `Captura ${i + 1}`);
+      dot.addEventListener("click", () => goTo(i, true));
+      dotsRoot.appendChild(dot);
+    });
+
+    const dots = [...dotsRoot.querySelectorAll(".demo-showcase-dot")];
+
+    const renderSlides = () => {
+      const total = slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.remove("is-active", "is-prev", "is-next", "is-far");
+        let diff = i - index;
+        if (diff > total / 2) diff -= total;
+        if (diff < -total / 2) diff += total;
+
+        if (diff === 0) slide.classList.add("is-active");
+        else if (diff === 1) slide.classList.add("is-next");
+        else if (diff === -1) slide.classList.add("is-prev");
+        else slide.classList.add("is-far");
+      });
+      dots.forEach((dot, i) => {
+        const active = i === index;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", active ? "true" : "false");
+      });
+    };
+
+    const goTo = (nextIndex, manual = false) => {
+      index = (nextIndex + slides.length) % slides.length;
+      renderSlides();
+      if (manual) restartAuto();
+    };
+
+    const restartAuto = () => {
+      clearInterval(timer);
+      if (!canAnimate || isNarrow) return;
+      timer = setInterval(() => goTo(index + 1), 5200);
+    };
+
+    prevBtn?.addEventListener("click", () => goTo(index - 1, true));
+    nextBtn?.addEventListener("click", () => goTo(index + 1, true));
+
+    showcase.addEventListener("mouseenter", () => clearInterval(timer));
+    showcase.addEventListener("mouseleave", restartAuto);
+
+    wheel.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          goTo(index - 1, true);
+        }
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          goTo(index + 1, true);
+        }
+      },
+      { passive: false }
+    );
+
+    renderSlides();
+    restartAuto();
+  };
+
+  initDemoShowcase();
+
+  /* Hero typing roles */
+  const typingEl = document.querySelector("[data-typing-text]");
+  if (typingEl && canAnimate) {
+    const roles = [
+      "Fisioterapeuta",
+      "Dev clínico",
+      "Creador de PoncePretelin",
+      "Open source · AGPL",
+    ];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let deleting = false;
+
+    const tick = () => {
+      const current = roles[roleIdx];
+      if (!deleting) {
+        charIdx += 1;
+        typingEl.textContent = current.slice(0, charIdx);
+        if (charIdx === current.length) {
+          deleting = true;
+          setTimeout(tick, 2200);
+          return;
+        }
+        setTimeout(tick, 55);
+        return;
+      }
+
+      charIdx -= 1;
+      typingEl.textContent = current.slice(0, charIdx);
+      if (charIdx <= 0) {
+        deleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        setTimeout(tick, 400);
+        return;
+      }
+      setTimeout(tick, 32);
+    };
+
+    setTimeout(tick, 900);
+  } else if (typingEl) {
+    typingEl.textContent = "Fisioterapeuta · Dev clínico · PoncePretelin";
+  }
 
   /* Mobile menu */
   menuBtn?.addEventListener("click", () => {
