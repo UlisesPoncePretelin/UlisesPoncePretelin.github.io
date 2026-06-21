@@ -5,422 +5,337 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ulises Antonio Ponce Pretelin — fisioterapeuta y desarrollador de software clínico. Creador de PoncePretelin, gestor open source para fisioterapia basado en evidencia."
+      content="Ulises Antonio Ponce Pretelin — fisioterapeuta y desarrollador de software clínico. Creador de PoncePretelin."
     />
     <meta property="og:title" content="Ulises Antonio Ponce Pretelin" />
     <meta
       property="og:description"
-      content="Fisioterapeuta y desarrollador. PoncePretelin: gestor clínico open source con CIF, terminología EBP y flujos de consulta reales."
+      content="Fisioterapeuta · desarrollador clínico · PoncePretelin open source"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ulisesponcepretelin.github.io/" />
     <meta property="og:image" content="https://ulisesponcepretelin.github.io/assets/portrait.jpg" />
     <link rel="canonical" href="https://ulisesponcepretelin.github.io/" />
-    <title>Ulises Antonio Ponce Pretelin — Fisioterapeuta &amp; Desarrollador</title>
+    <title>Ulises Ponce Pretelin — Fisioterapeuta &amp; Dev Clínico</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <p class="preloader-label">Cargando portafolio</p>
+        <p class="preloader-name">Ulises Ponce Pretelin</p>
+        <div class="preloader-bar"><span id="preloader-fill"></span></div>
+        <p class="preloader-pct" id="preloader-pct">0%</p>
+      </div>
+    </div>
+
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <div class="page">
+    <div class="site-shell">
       <header class="site-header" data-header>
-        <div class="header-inner">
-          <a class="wordmark" href="#top" aria-label="Inicio">
-            <span class="wordmark-full">Ulises Ponce</span>
-            <span class="wordmark-short">UPP</span>
-          </a>
-          <nav class="site-nav" id="site-nav" aria-label="Principal">
-            <a href="#sobre">Sobre mí</a>
-            <a href="#proyecto">Proyecto</a>
-            <a href="#capacidades">Capacidades</a>
-            <a href="#contacto">Contacto</a>
+        <div class="frame-row header-row">
+          <a class="logo" href="#top">UPP<span class="logo-dot">.</span></a>
+          <nav class="nav" id="site-nav" aria-label="Principal">
+            <a class="nav-link" href="#sobre"><span>Sobre mí</span></a>
+            <a class="nav-link" href="#proyecto"><span>Proyecto</span></a>
+            <a class="nav-link" href="#stack"><span>Stack</span></a>
+            <a class="nav-link" href="#contacto"><span>Contacto</span></a>
           </nav>
           <a
-            class="header-cta"
+            class="nav-cta magnetic"
             href="https://poncepretelin-web.onrender.com"
             target="_blank"
             rel="noopener noreferrer"
+            data-magnetic
           >
-            Ver demo
+            Demo en vivo
           </a>
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="site-nav"
-          >
-            <span></span>
-            <span></span>
+          <button class="menu-btn" type="button" aria-label="Menú" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span>
           </button>
         </div>
       </header>
 
       <main id="contenido">
-        <section class="hero" id="top">
-          <div class="hero-grid">
-            <div class="hero-media reveal">
-              <div class="portrait-frame">
-                <div class="portrait-accent" aria-hidden="true"></div>
-                <picture class="portrait-wrap">
+        <section class="hero frame-block" id="top">
+          <div class="frame-row hero-row">
+            <div class="hero-left">
+              <div class="hero-badge reveal">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="14 9 9 4 4 9"></polyline>
+                  <path d="M20 20h-7a4 4 0 0 1-4-4V4"></path>
+                </svg>
+                <span>Soy yo</span>
+              </div>
+
+              <div class="portrait-stage reveal" data-tilt>
+                <div class="portrait-glow" aria-hidden="true"></div>
+                <div class="portrait-ring" aria-hidden="true"></div>
+                <div class="portrait-inner">
                   <img
                     class="portrait"
                     src="assets/portrait.jpg"
-                    alt="Ulises Antonio Ponce Pretelin, fisioterapeuta y desarrollador de software clínico"
-                    width="640"
-                    height="800"
+                    alt="Ulises Antonio Ponce Pretelin en el Puente de Brooklyn"
+                    width="720"
+                    height="900"
                     loading="eager"
                     decoding="async"
                   />
-                </picture>
-                <div class="portrait-badge">
-                  <span class="badge-label">Brooklyn · 2024</span>
-                  <span class="badge-role">Fisioterapia · Software</span>
                 </div>
+                <div class="portrait-shine" aria-hidden="true"></div>
               </div>
             </div>
 
-            <div class="hero-copy reveal" style="--reveal-delay: 120ms">
-              <p class="eyebrow">Portafolio profesional</p>
-              <h1 class="hero-title">
-                Ulises Antonio<br />
-                <em>Ponce Pretelin</em>
+            <div class="hero-right">
+              <p class="hero-kicker reveal">Portafolio · 2026</p>
+              <h1 class="hero-title reveal">
+                <span class="line"><span class="word" data-split>Ulises Antonio</span></span>
+                <span class="line line-accent"><span class="word" data-split>Ponce Pretelin</span></span>
               </h1>
-              <p class="hero-subtitle">
-                Fisioterapeuta que diseña software clínico con la misma rigurosidad que exige la
-                consulta.
+              <p class="hero-role reveal">
+                Fisioterapeuta · desarrollador de software clínico · creador de
+                <strong>PoncePretelin</strong>
               </p>
-              <p class="hero-lead">
-                Creé <strong>PoncePretelin</strong>: un gestor open source donde expediente,
-                terminología basada en evidencia y flujos de rehabilitación conviven en un solo
-                sistema — sin formularios vacíos ni datos inventados.
+              <p class="hero-text reveal">
+                Construyo herramientas donde la evidencia clínica, la terminología prudente y el
+                código comparten el mismo expediente — sin datos inventados ni formularios vacíos.
               </p>
-              <div class="hero-actions">
+              <div class="hero-actions reveal">
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-fill magnetic"
                   href="https://poncepretelin-web.onrender.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-magnetic
                 >
-                  Explorar demo en vivo
+                  Explorar demo
                 </a>
                 <a
-                  class="btn btn-secondary"
+                  class="btn btn-outline magnetic"
                   href="https://github.com/UlisesPoncePretelin/Poncepretelin"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-magnetic
                 >
-                  Código en GitHub
+                  GitHub
                 </a>
               </div>
-              <p class="hero-credentials">
-                Acceso demo:
-                <code>demo@poncepretelin.app</code>
-                <span class="sep" aria-hidden="true">·</span>
-                <code>DemoCloud2026</code>
+              <p class="hero-demo reveal">
+                <code>demo@poncepretelin.app</code> · <code>DemoCloud2026</code>
               </p>
             </div>
-          </div>
-
-          <div class="hero-metrics reveal" style="--reveal-delay: 220ms" aria-label="Métricas del proyecto">
-            <article class="metric">
-              <span class="metric-value">980+</span>
-              <span class="metric-label">Términos clínicos versionados (IASP · CIF · 2026)</span>
-            </article>
-            <article class="metric">
-              <span class="metric-value">Sn/Sp</span>
-              <span class="metric-label">Pruebas diagnósticas con fuentes citadas (Magee, Cook)</span>
-            </article>
-            <article class="metric">
-              <span class="metric-value">AGPL-3.0</span>
-              <span class="metric-label">Open source · auto-hospedaje · sin paywall</span>
-            </article>
-            <article class="metric">
-              <span class="metric-value">v2</span>
-              <span class="metric-label">FastAPI · Next.js 14 · PostgreSQL · Docker</span>
-            </article>
           </div>
         </section>
 
-        <section class="section about" id="sobre">
-          <div class="section-head reveal">
-            <p class="section-eyebrow">Sobre mí</p>
-            <h2 class="section-title">Clínica y código, mismo expediente</h2>
+        <div class="loc-bar frame-block">
+          <div class="frame-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>From: México · Brooklyn Bridge · Fisioterapia &amp; Software</span>
           </div>
-          <div class="about-grid reveal" style="--reveal-delay: 80ms">
-            <div class="about-copy">
-              <p>
-                Trabajo en la intersección entre rehabilitación y tecnología. Mi enfoque no es
-                digitalizar papeles: es construir herramientas que respeten la evidencia, el
-                lenguaje clínico prudente y el ritmo real de una consulta de fisioterapia.
-              </p>
-              <p>
-                <strong>PoncePretelin</strong> nació de esa necesidad — un sistema que propone
-                pruebas con sensibilidad y especificidad documentadas, calcula escalas con
-                interpretación EBP y mantiene la terminología alineada con estándares
-                internacionales, sin romper el historial del paciente.
-              </p>
-            </div>
-            <ul class="about-pillars" aria-label="Enfoque profesional">
-              <li>
-                <span class="pillar-index">01</span>
-                <div>
-                  <h3>Evidencia trazable</h3>
-                  <p>Cada dato clínico referenciado a su fuente, no generado al azar.</p>
-                </div>
-              </li>
-              <li>
-                <span class="pillar-index">02</span>
-                <div>
-                  <h3>Consulta primero</h3>
-                  <p>Flujos diseñados con terapeutas: menos pasos, más claridad en sesión.</p>
-                </div>
-              </li>
-              <li>
-                <span class="pillar-index">03</span>
-                <div>
-                  <h3>Acceso abierto</h3>
-                  <p>Gratuito para clínicas que quieren auto-hospedar sin dependencia de SaaS.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
+        </div>
 
-        <section class="section project" id="proyecto">
-          <div class="project-shell reveal">
-            <div class="project-intro">
-              <p class="section-eyebrow">Proyecto destacado</p>
-              <h2 class="section-title project-name">PoncePretelin</h2>
-              <p class="project-tagline">
-                Gestor clínico de fisioterapia — expediente electrónico, agenda, SOAP, finanzas,
-                portal paciente y módulos por especialidad.
-              </p>
-              <ul class="tech-row" aria-label="Stack tecnológico">
-                <li>TypeScript</li>
-                <li>Next.js 14</li>
-                <li>FastAPI</li>
-                <li>PostgreSQL</li>
-                <li>Docker</li>
-                <li>Playwright</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="btn btn-primary"
-                  href="https://poncepretelin-web.onrender.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Demo en la nube
-                </a>
-                <a
-                  class="btn btn-ghost"
-                  href="https://github.com/UlisesPoncePretelin/Poncepretelin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Repositorio
-                </a>
+        <section class="marquee-section frame-block" aria-label="Roles">
+          <div class="marquee-viewport">
+            <div class="marquee-track" data-marquee>
+              <div class="marquee-group">
+                <span class="marquee-item">Fisioterapeuta</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">Desarrollador Clínico</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">Open Source</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">PoncePretelin</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">Evidencia EBP</span>
+                <span class="marquee-icon">◆</span>
               </div>
-            </div>
-
-            <div class="project-preview" aria-hidden="true">
-              <div class="preview-window">
-                <div class="preview-chrome">
-                  <span></span><span></span><span></span>
-                  <span class="preview-url">poncepretelin · expediente clínico</span>
-                </div>
-                <div class="preview-body">
-                  <aside class="preview-sidebar">
-                    <span class="active">Pacientes</span>
-                    <span>Agenda</span>
-                    <span>Evaluaciones</span>
-                    <span>Ejercicios</span>
-                    <span>Finanzas</span>
-                  </aside>
-                  <div class="preview-main">
-                    <div class="preview-card">
-                      <span class="preview-label">Episodio activo</span>
-                      <strong>Lumbalgia mecánica · Semana 3</strong>
-                      <p>STarT Back: bajo riesgo · NDI 18/50 · TUG 9.2 s</p>
-                    </div>
-                    <div class="preview-card accent">
-                      <span class="preview-label">Sugerencia clínica</span>
-                      <strong>Cluster lumbar — pruebas con Sn/Sp citadas</strong>
-                      <p>Terminología 2026 · lenguaje centrado en la persona</p>
-                    </div>
-                    <div class="preview-card">
-                      <span class="preview-label">CIF estructurada</span>
-                      <strong>b28013 · d450 · e110</strong>
-                      <p>Calificadores OMS integrados al episodio</p>
-                    </div>
-                  </div>
-                </div>
+              <div class="marquee-group" aria-hidden="true">
+                <span class="marquee-item">Fisioterapeuta</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">Desarrollador Clínico</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">Open Source</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">PoncePretelin</span>
+                <span class="marquee-icon">◆</span>
+                <span class="marquee-item">Evidencia EBP</span>
+                <span class="marquee-icon">◆</span>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section capabilities" id="capacidades">
-          <div class="section-head reveal">
-            <p class="section-eyebrow">Diferencial clínico</p>
-            <h2 class="section-title">No es un gestor genérico</h2>
-            <p class="section-desc">
-              Automatizaciones con información reciente, trazable y pensada para la consulta de
-              fisioterapia.
-            </p>
+        <section class="metrics frame-block">
+          <div class="frame-row metrics-row">
+            <article class="metric-card reveal" data-count="980" data-suffix="+">
+              <span class="metric-num"><span class="counter">0</span></span>
+              <span class="metric-label">Términos clínicos versionados</span>
+            </article>
+            <article class="metric-card reveal">
+              <span class="metric-num">Sn/Sp</span>
+              <span class="metric-label">Pruebas con fuentes citadas</span>
+            </article>
+            <article class="metric-card reveal">
+              <span class="metric-num">AGPL</span>
+              <span class="metric-label">Open source · sin paywall</span>
+            </article>
+            <article class="metric-card reveal">
+              <span class="metric-num">v2</span>
+              <span class="metric-label">FastAPI · Next.js · PostgreSQL</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section frame-block" id="sobre">
+          <div class="frame-row section-grid">
+            <div class="section-intro reveal">
+              <p class="section-tag">01 — Sobre mí</p>
+              <h2 class="section-title">Clínica y código,<br /><em>mismo expediente</em></h2>
+            </div>
+            <div class="section-body reveal">
+              <p>
+                Trabajo en la intersección entre rehabilitación y tecnología. No digitalizo papeles:
+                construyo sistemas que respetan la evidencia, el lenguaje clínico prudente y el ritmo
+                real de una consulta.
+              </p>
+              <p>
+                <strong>PoncePretelin</strong> propone pruebas con sensibilidad y especificidad
+                documentadas, calcula escalas con interpretación EBP y mantiene terminología alineada
+                con IASP y CIF — sin romper el historial del paciente.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section frame-block project-section" id="proyecto">
+          <div class="frame-row">
+            <div class="section-intro reveal">
+              <p class="section-tag">02 — Proyecto destacado</p>
+              <h2 class="section-title project-title">PoncePretelin</h2>
+              <p class="section-lead">
+                Gestor clínico de fisioterapia — expediente, agenda, SOAP, finanzas, portal paciente y
+                módulos por especialidad.
+              </p>
+            </div>
           </div>
 
-          <div class="bento reveal" style="--reveal-delay: 100ms">
-            <article class="bento-card bento-wide">
-              <div class="bento-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M4 19h16M6 16l3-8 3 5 3-7 3 10" />
-                </svg>
-              </div>
-              <h3>Pruebas diagnósticas con evidencia</h3>
-              <p>
-                Catálogo por segmento y procedimiento con sensibilidad y especificidad documentadas.
-                Fuentes: Magee, Cook &amp; Hegedus y guías clínicas citadas en cada ítem.
-              </p>
+          <div class="project-scroll reveal" data-project-scroll>
+            <article class="project-card" data-tilt-card>
+              <span class="card-index">01</span>
+              <h3>Pruebas diagnósticas</h3>
+              <p>Sensibilidad y especificidad citadas — Magee, Cook &amp; Hegedus, guías clínicas.</p>
             </article>
-            <article class="bento-card">
-              <div class="bento-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 3v18M3 12h18" />
-                </svg>
-              </div>
+            <article class="project-card" data-tilt-card>
+              <span class="card-index">02</span>
               <h3>Terminología 2026</h3>
-              <p>
-                Motor centralizado (~980 términos): IASP 2020, CIF OMS, comunicación prudente sin
-                alterar datos históricos.
-              </p>
+              <p>~980 términos: IASP, CIF OMS, lenguaje centrado en la persona.</p>
             </article>
-            <article class="bento-card">
-              <div class="bento-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="4" y="4" width="16" height="16" rx="2" />
-                  <path d="M8 12h8M8 8h5M8 16h6" />
-                </svg>
-              </div>
-              <h3>Escalas EBP</h3>
-              <p>NDI, ODI, STarT Back, TUG, Berg, ICIQ-SF con interpretación integrada.</p>
-            </article>
-            <article class="bento-card">
-              <div class="bento-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="8" />
-                  <path d="M12 8v4l3 2" />
-                </svg>
-              </div>
-              <h3>Agenda inteligente</h3>
-              <p>Vista diaria/semanal, bloqueos, horarios por profesional y reserva pública.</p>
-            </article>
-            <article class="bento-card bento-wide">
-              <div class="bento-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M4 7h16M4 12h10M4 17h14" />
-                </svg>
-              </div>
-              <h3>Módulos por especialidad</h3>
-              <p>
-                Neuro, vestibular, pediátrico, geriátrico, piso pélvico, deportivo, respiratorio y
-                amputaciones — misma base clínica, UI v2 rediseñada para adopción real.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section modules">
-          <div class="section-head reveal">
-            <p class="section-eyebrow">Alcance del sistema</p>
-            <h2 class="section-title">Una clínica completa en un solo lugar</h2>
-          </div>
-          <div class="module-grid reveal" style="--reveal-delay: 80ms">
-            <div class="module-item"><span>Expediente SOAP</span></div>
-            <div class="module-item"><span>Banco de ejercicios</span></div>
-            <div class="module-item"><span>Planes domiciliarios</span></div>
-            <div class="module-item"><span>Finanzas y CFDI</span></div>
-            <div class="module-item"><span>Portal paciente</span></div>
-            <div class="module-item"><span>IA clínica opcional</span></div>
-            <div class="module-item"><span>Academy y flashcards</span></div>
-            <div class="module-item"><span>Inventario clínico</span></div>
-          </div>
-        </section>
-
-        <section class="section explore">
-          <div class="explore-panel reveal">
-            <p class="section-eyebrow">Cómo evaluarlo</p>
-            <h2 class="section-title">Tres pasos para conocer el proyecto</h2>
-            <ol class="explore-steps">
-              <li>
-                <span class="step-num">01</span>
-                <div>
-                  <h3>Revisa el repositorio</h3>
-                  <p>Arquitectura, documentación y licencia AGPL en GitHub.</p>
-                </div>
-              </li>
-              <li>
-                <span class="step-num">02</span>
-                <div>
-                  <h3>Prueba la demo en la nube</h3>
-                  <p>
-                    Evalúa pruebas diagnósticas, escalas y terminología con las credenciales de
-                    arriba.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span class="step-num">03</span>
-                <div>
-                  <h3>Despliega tu clínica</h3>
-                  <p>Docker local en 5–10 min o auto-hospedaje en tu infraestructura.</p>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="section contact" id="contacto">
-          <div class="contact-card reveal">
-            <div>
-              <p class="section-eyebrow">Contacto</p>
-              <h2 class="section-title">¿Colaboramos?</h2>
-              <p class="contact-lead">
-                Si revisas el proyecto, quieres contribuir código clínico o desplegar PoncePretelin en
-                tu consultorio, escríbeme.
-              </p>
-            </div>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:poncepretelin@gmail.com">poncepretelin@gmail.com</a>
+            <article class="project-card card-featured" data-tilt-card>
+              <span class="card-index">03</span>
+              <h3>Expediente clínico v2</h3>
+              <p>UI rediseñada con terapeutas — sidebar global, flujo directo paciente → sesión.</p>
               <a
-                class="btn btn-secondary"
-                href="https://github.com/UlisesPoncePretelin"
+                class="card-link"
+                href="https://poncepretelin-web.onrender.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Perfil en GitHub
+                Abrir demo →
+              </a>
+            </article>
+            <article class="project-card" data-tilt-card>
+              <span class="card-index">04</span>
+              <h3>Escalas EBP</h3>
+              <p>NDI, ODI, STarT Back, TUG, Berg con interpretación integrada.</p>
+            </article>
+            <article class="project-card" data-tilt-card>
+              <span class="card-index">05</span>
+              <h3>Multi-especialidad</h3>
+              <p>Neuro, vestibular, pediátrico, piso pélvico, deportivo y más.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section frame-block" id="stack">
+          <div class="frame-row">
+            <div class="section-intro reveal">
+              <p class="section-tag">03 — Stack</p>
+              <h2 class="section-title">Tecnologías</h2>
+            </div>
+          </div>
+          <div class="stack-grid reveal">
+            <div class="stack-chip" data-tilt-chip>TypeScript</div>
+            <div class="stack-chip" data-tilt-chip>Next.js 14</div>
+            <div class="stack-chip" data-tilt-chip>FastAPI</div>
+            <div class="stack-chip" data-tilt-chip>PostgreSQL</div>
+            <div class="stack-chip" data-tilt-chip>Docker</div>
+            <div class="stack-chip" data-tilt-chip>Tailwind</div>
+            <div class="stack-chip" data-tilt-chip>Playwright</div>
+            <div class="stack-chip" data-tilt-chip>Alembic</div>
+            <div class="stack-chip" data-tilt-chip>Radix UI</div>
+            <div class="stack-chip" data-tilt-chip>SQLAlchemy</div>
+          </div>
+        </section>
+
+        <section class="section frame-block cta-section">
+          <div class="frame-row cta-panel reveal">
+            <div>
+              <p class="section-tag">Cómo evaluarlo</p>
+              <h2 class="section-title light">Tres pasos</h2>
+              <ol class="steps-list">
+                <li><span>01</span> Revisa el repo y la arquitectura en GitHub</li>
+                <li><span>02</span> Prueba la demo con las credenciales de arriba</li>
+                <li><span>03</span> Despliega con Docker en tu clínica</li>
+              </ol>
+            </div>
+            <div class="cta-actions">
+              <a
+                class="btn btn-light magnetic"
+                href="https://github.com/UlisesPoncePretelin/Poncepretelin"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-magnetic
+              >
+                Ver repositorio
               </a>
             </div>
           </div>
         </section>
+
+        <section class="section frame-block" id="contacto">
+          <div class="frame-row contact-panel reveal">
+            <div>
+              <p class="section-tag">04 — Contacto</p>
+              <h2 class="section-title">¿Colaboramos?</h2>
+              <p class="contact-text">
+                Si revisas el proyecto, quieres contribuir o desplegar PoncePretelin en tu consultorio.
+              </p>
+            </div>
+            <a class="btn btn-fill magnetic contact-btn" href="mailto:poncepretelin@gmail.com" data-magnetic>
+              poncepretelin@gmail.com
+            </a>
+          </div>
+        </section>
       </main>
 
-      <footer class="site-footer">
-        <p>
-          © <span id="year"></span> Ulises Antonio Ponce Pretelin
-          <span class="sep" aria-hidden="true">·</span>
-          PoncePretelin AGPL-3.0
-        </p>
-        <p class="footer-note">
-          Herramienta de apoyo clínico — no sustituye el juicio profesional.
-        </p>
+      <footer class="site-footer frame-block">
+        <div class="frame-row footer-row">
+          <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin · PoncePretelin AGPL-3.0</p>
+          <p class="footer-note">Herramienta de apoyo — no sustituye el juicio clínico.</p>
+        </div>
       </footer>
     </div>
 

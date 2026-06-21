@@ -1,7 +1,5 @@
-# Assets
+# Portrait
 
-Coloca tu foto de perfil aquí como:
+Place your photo here as `portrait.jpg` (4:5, min 1280×1600 px).
 
-`portrait.jpg`
-
-Recomendado: recorte vertical 4:5, mínimo 1280×1600 px.
+The site uses this path in the hero. Until the file exists, a styled placeholder is shown.
