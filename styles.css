@@ -43,9 +43,11 @@ body {
   overflow-x: clip;
 }
 
-body.has-cursor {
-  cursor: none;
+body.has-cursor .cursor-glow {
+  opacity: 1;
 }
+
+/* Spotlight visual only — never hide the system cursor */
 
 img {
   display: block;
@@ -1845,6 +1847,11 @@ body.is-loaded .chapter-nav {
 /* ─── CV Page ─── */
 body.cv-page {
   cursor: auto;
+}
+
+body.cv-page .reveal {
+  opacity: 1;
+  transform: none;
 }
 
 body.cv-page .cursor-glow,
