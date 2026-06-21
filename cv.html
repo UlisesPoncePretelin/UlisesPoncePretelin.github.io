@@ -23,14 +23,19 @@
     <div class="site-shell">
       <header class="site-header is-scrolled" data-header>
         <div class="frame-row header-row">
-          <a class="logo" href="index.html">UPP<span class="logo-dot">.</span></a>
+          <a class="logo" href="index.html">Ulises <span class="logo-serif">Ponce</span><span class="logo-dot">.</span></a>
           <nav class="nav" id="site-nav" aria-label="Principal">
             <a class="nav-link" href="index.html#sobre"><span>Sobre mí</span></a>
             <a class="nav-link" href="index.html#proyecto"><span>Proyecto</span></a>
             <a class="nav-link is-active" href="cv.html"><span>CV</span></a>
             <a class="nav-link" href="index.html#contacto"><span>Contacto</span></a>
           </nav>
-          <button class="btn btn-outline cv-print-btn" type="button" id="print-cv">Imprimir</button>
+          <div class="cv-hero-actions">
+            <a class="btn btn-outline cv-download-btn" href="assets/CV_UlisesPoncePretelin.pdf" download
+              >Descargar PDF</a
+            >
+            <button class="btn btn-outline cv-print-btn" type="button" id="print-cv">Imprimir</button>
+          </div>
           <button
             class="menu-btn"
             type="button"
@@ -341,8 +346,25 @@
         <section class="frame-block cv-section">
           <div class="frame-row">
             <h2 class="cv-section-title">Certificaciones y cursos</h2>
+            <div class="cv-cert-tabs" role="tablist" aria-label="Filtrar certificaciones">
+              <button class="cv-cert-tab is-active" type="button" role="tab" data-cert-filter="all" aria-selected="true">
+                Todas
+              </button>
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="clinica" aria-selected="false">
+                Clínica
+              </button>
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="mental" aria-selected="false">
+                Salud mental
+              </button>
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="coursera" aria-selected="false">
+                Coursera
+              </button>
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="otros" aria-selected="false">
+                Otros
+              </button>
+            </div>
             <div class="cv-cert-groups">
-              <article class="cv-cert-group reveal">
+              <article class="cv-cert-group reveal" data-cert-category="clinica">
                 <h3 class="cv-cert-group-title">Formación clínica</h3>
                 <p class="cv-cert-group-desc">Geriatría, CONAMEGE y cursos de salud</p>
                 <ul class="cv-cert-list">
@@ -381,7 +403,7 @@
                 </ul>
               </article>
 
-              <article class="cv-cert-group reveal">
+              <article class="cv-cert-group reveal" data-cert-category="mental">
                 <h3 class="cv-cert-group-title">Salud mental y bienestar</h3>
                 <ul class="cv-cert-list">
                   <li>
@@ -403,7 +425,7 @@
                 </ul>
               </article>
 
-              <article class="cv-cert-group reveal">
+              <article class="cv-cert-group reveal" data-cert-category="coursera">
                 <h3 class="cv-cert-group-title">Coursera · salud y ciencia</h3>
                 <ul class="cv-cert-list">
                   <li>
@@ -421,7 +443,7 @@
                 </ul>
               </article>
 
-              <article class="cv-cert-group reveal">
+              <article class="cv-cert-group reveal" data-cert-category="otros">
                 <h3 class="cv-cert-group-title">Otros</h3>
                 <ul class="cv-cert-list">
                   <li>

@@ -74,7 +74,8 @@
   const menuBtn = document.querySelector(".menu-btn");
   const nav = document.getElementById("site-nav");
   const navLinks = nav?.querySelectorAll('.nav-link[href^="#"]');
-  const sectionIds = ["top", "sobre", "proyecto", "stack", "contacto"];
+  const chapterLinks = document.querySelectorAll("[data-chapter]");
+  const sectionIds = ["top", "sobre", "trayectoria", "proyecto", "stack", "contacto"];
 
   const computePin = () => {
     if (!projectPin || !pinTrack || isNarrow || !canAnimate) return;
@@ -130,6 +131,9 @@
     });
     navLinks.forEach((link) => {
       link.classList.toggle("is-active", link.getAttribute("href") === `#${current}`);
+    });
+    chapterLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.dataset.chapter === current);
     });
   };
 
@@ -320,5 +324,26 @@
       { threshold: 0.5 }
     );
     counters.forEach((c) => counterObserver.observe(c));
+  }
+
+  /* CV cert filters */
+  if (document.body.classList.contains("cv-page")) {
+    const certTabs = document.querySelectorAll("[data-cert-filter]");
+    const certGroups = document.querySelectorAll("[data-cert-category]");
+
+    certTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const filter = tab.dataset.certFilter;
+        certTabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        certGroups.forEach((group) => {
+          const show = filter === "all" || group.dataset.certCategory === filter;
+          group.hidden = !show;
+        });
+      });
+    });
   }
 })();
