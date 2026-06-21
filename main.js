@@ -3,7 +3,10 @@
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+  const isNarrow = window.matchMedia("(max-width: 720px)").matches;
   const canAnimate = !prefersReduced;
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -17,6 +20,7 @@
     document.body.classList.add("is-loaded");
     preloader?.classList.add("is-done");
     setTimeout(() => preloader?.remove(), 700);
+    revealInView();
   };
 
   if (canAnimate && preloader && preloaderFill && preloaderPct) {
@@ -43,17 +47,22 @@
     portrait.closest(".portrait-stage")?.classList.add("portrait-missing");
   });
 
-  /* Header scroll */
+  /* Header + global scroll progress */
   const header = document.querySelector("[data-header]");
+  const scrollProgress = document.getElementById("scroll-progress");
+
   const onScroll = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 16);
     const max = document.documentElement.scrollHeight - window.innerHeight;
     const progress = max > 0 ? (window.scrollY / max) * 100 : 0;
-    const bar = document.getElementById("scroll-progress");
-    if (bar) bar.style.width = `${progress}%`;
+    if (scrollProgress) scrollProgress.style.width = `${progress}%`;
+    updateProjectPin();
+    updateEndcap();
   };
+
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
 
   /* Mobile menu */
   const menuBtn = document.querySelector(".menu-btn");
@@ -96,7 +105,22 @@
     animateGlow();
   }
 
-  /* 3D tilt — portrait */
+  /* 3D tilt helpers */
+  const bindTilt = (elements, max) => {
+    elements.forEach((el) => {
+      if (!canAnimate || isCoarse) return;
+      el.addEventListener("mousemove", (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform = `perspective(800px) rotateY(${x * max}deg) rotateX(${-y * max}deg) translateY(-4px)`;
+      });
+      el.addEventListener("mouseleave", () => {
+        el.style.transform = "";
+      });
+    });
+  };
+
   const tiltEl = document.querySelector("[data-tilt]");
   if (tiltEl && canAnimate && !isCoarse) {
     const max = 14;
@@ -111,19 +135,8 @@
     });
   }
 
-  /* 3D tilt — cards */
-  document.querySelectorAll("[data-tilt-card]").forEach((card) => {
-    if (!canAnimate || isCoarse) return;
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
-    });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
-    });
-  });
+  bindTilt(document.querySelectorAll("[data-tilt-card]"), 8);
+  bindTilt(document.querySelectorAll("[data-tilt-chip]"), 6);
 
   /* Magnetic buttons */
   document.querySelectorAll("[data-magnetic]").forEach((el) => {
@@ -141,21 +154,34 @@
 
   /* Reveal on scroll */
   const reveals = document.querySelectorAll(".reveal");
+  let revealObserver;
+
+  const revealInView = () => {
+    reveals.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+        el.classList.add("is-visible");
+        revealObserver?.unobserve(el);
+      }
+    });
+  };
+
   if (reveals.length && canAnimate) {
-    const observer = new IntersectionObserver(
+    revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
     );
     reveals.forEach((el, i) => {
       el.style.setProperty("--delay", `${Math.min(i * 40, 200)}ms`);
-      observer.observe(el);
+      revealObserver.observe(el);
     });
+    revealInView();
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
@@ -188,17 +214,56 @@
     counters.forEach((c) => counterObserver.observe(c));
   }
 
-  /* Horizontal project scroll — wheel to scroll */
-  const projectScroll = document.querySelector("[data-project-scroll]");
-  if (projectScroll && canAnimate) {
-    projectScroll.addEventListener(
-      "wheel",
-      (e) => {
-        if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-        e.preventDefault();
-        projectScroll.scrollLeft += e.deltaY * 0.8;
-      },
-      { passive: false }
-    );
+  /* Pinned horizontal project scroll */
+  const projectPin = document.querySelector("[data-project-pin]");
+  const pinTrack = document.querySelector("[data-pin-track]");
+  const pinProgress = document.querySelector("[data-pin-progress]");
+
+  const updateProjectPin = () => {
+    if (!projectPin || !pinTrack || isNarrow || !canAnimate) return;
+
+    const rect = projectPin.getBoundingClientRect();
+    const viewport = pinTrack.parentElement;
+    if (!viewport) return;
+
+    const scrollable = projectPin.offsetHeight - window.innerHeight;
+    if (scrollable <= 0) return;
+
+    const progress = clamp(-rect.top / scrollable, 0, 1);
+    const maxShift = Math.max(0, pinTrack.scrollWidth - viewport.clientWidth);
+    pinTrack.style.transform = `translate3d(${-progress * maxShift}px, 0, 0)`;
+    if (pinProgress) pinProgress.style.width = `${progress * 100}%`;
+  };
+
+  /* Endcap scroll reveal */
+  const endcap = document.querySelector("[data-endcap]");
+  const endcapContent = document.querySelector("[data-endcap-content]");
+
+  const updateEndcap = () => {
+    if (!endcap || !endcapContent || isNarrow || !canAnimate) return;
+
+    const rect = endcap.getBoundingClientRect();
+    const scrollable = endcap.offsetHeight - window.innerHeight;
+    if (scrollable <= 0) {
+      endcapContent.classList.add("is-active");
+      return;
+    }
+
+    const progress = clamp(-rect.top / scrollable, 0, 1);
+    const scale = 0.82 + progress * 0.18;
+    const opacity = 0.35 + progress * 0.65;
+    const blur = (1 - progress) * 6;
+
+    endcapContent.style.transform = `scale(${scale})`;
+    endcapContent.style.opacity = String(opacity);
+    endcapContent.style.filter = `blur(${blur}px)`;
+
+    if (progress > 0.55) {
+      endcapContent.classList.add("is-active");
+    }
+  };
+
+  if (endcapContent && (isNarrow || !canAnimate)) {
+    endcapContent.classList.add("is-active");
   }
 })();

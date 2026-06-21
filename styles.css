@@ -35,11 +35,10 @@ body {
   color: var(--ink);
   background: var(--bg);
   overflow-x: clip;
-  cursor: none;
 }
 
-body.is-loaded {
-  cursor: auto;
+body.has-cursor {
+  cursor: none;
 }
 
 img {
@@ -720,9 +719,181 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
   color: var(--ink);
 }
 
-/* Project scroll */
-.project-section .section-intro {
-  margin-bottom: 2rem;
+/* Project pin scroll */
+.project-pin-section {
+  position: relative;
+  height: 260vh;
+  padding-block: 0;
+}
+
+.project-pin-sticky {
+  position: sticky;
+  top: var(--header);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: calc(100vh - var(--header));
+  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+  overflow: hidden;
+}
+
+.project-pin-head {
+  flex-shrink: 0;
+}
+
+.project-pin-viewport {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem));
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.project-pin-track {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  align-items: stretch;
+  will-change: transform;
+  transition: transform 0.08s linear;
+}
+
+.project-pin-track .project-card {
+  flex: 0 0 min(78vw, 18rem);
+  height: auto;
+  min-height: 12rem;
+}
+
+.project-pin-track .card-featured {
+  flex-basis: min(78vw, 22rem);
+}
+
+.project-pin-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.project-pin-hint {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project-pin-progress {
+  flex: 1;
+  max-width: 12rem;
+  height: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.project-pin-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.08s linear;
+}
+
+/* Endcap scroll reveal */
+.endcap {
+  position: relative;
+  height: 180vh;
+  padding-block: 0;
+  background: var(--ink);
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.endcap-sticky {
+  position: sticky;
+  top: var(--header);
+  display: grid;
+  place-items: center;
+  height: calc(100vh - var(--header));
+  overflow: hidden;
+}
+
+.endcap-marquee {
+  position: absolute;
+  inset: auto 0 12%;
+  overflow: hidden;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.endcap-track {
+  display: flex;
+  width: max-content;
+  animation: endcap-marquee 28s linear infinite;
+}
+
+.endcap-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: 1rem;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  font-weight: 200;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.endcap-dot {
+  color: var(--accent-soft);
+  font-size: 0.45em;
+}
+
+@keyframes endcap-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.endcap-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-inline: 1.5rem;
+  will-change: transform, opacity, filter;
+}
+
+.endcap-kicker {
+  margin: 0 0 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.endcap-name {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 9vw, 6rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.endcap-name em {
+  font-style: italic;
+  color: var(--accent-soft);
+}
+
+.endcap-sub {
+  margin: 1rem 0 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .project-title {
@@ -944,6 +1115,29 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
     transform: none;
     opacity: 1;
   }
+
+  .project-pin-section {
+    height: auto;
+  }
+
+  .project-pin-track {
+    transform: none !important;
+  }
+
+  .endcap {
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .endcap-content {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  .endcap-track {
+    animation: none;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1025,6 +1219,60 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
 
   .metric-card:last-child {
     border-bottom: none;
+  }
+
+  .project-pin-section {
+    height: auto;
+  }
+
+  .project-pin-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .project-pin-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .project-pin-viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-pin-track {
+    transform: none !important;
+    transition: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .project-pin-track .project-card {
+    scroll-snap-align: start;
+  }
+
+  .project-pin-hint {
+    display: none;
+  }
+
+  .endcap {
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .endcap-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 70vh;
+    padding-block: 4rem;
+  }
+
+  .endcap-content {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
   }
 }
 
