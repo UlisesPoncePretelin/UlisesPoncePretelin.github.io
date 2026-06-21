@@ -58,6 +58,7 @@
     if (scrollProgress) scrollProgress.style.width = `${progress}%`;
     updateProjectPin();
     updateEndcap();
+    updateNav();
   };
 
   onScroll();
@@ -218,6 +219,8 @@
   const projectPin = document.querySelector("[data-project-pin]");
   const pinTrack = document.querySelector("[data-pin-track]");
   const pinProgress = document.querySelector("[data-pin-progress]");
+  const pinCards = document.querySelectorAll("[data-card-index]");
+  const pinCurrent = document.querySelector("[data-pin-current]");
 
   const updateProjectPin = () => {
     if (!projectPin || !pinTrack || isNarrow || !canAnimate) return;
@@ -233,6 +236,34 @@
     const maxShift = Math.max(0, pinTrack.scrollWidth - viewport.clientWidth);
     pinTrack.style.transform = `translate3d(${-progress * maxShift}px, 0, 0)`;
     if (pinProgress) pinProgress.style.width = `${progress * 100}%`;
+
+    if (pinCards.length) {
+      const activeIdx = Math.min(pinCards.length - 1, Math.round(progress * (pinCards.length - 1)));
+      pinCards.forEach((card, i) => card.classList.toggle("is-active", i === activeIdx));
+      if (pinCurrent) pinCurrent.textContent = String(activeIdx + 1).padStart(2, "0");
+    }
+  };
+
+  if (pinCards.length) {
+    pinCards[0]?.classList.add("is-active");
+  }
+
+  /* Nav section highlight */
+  const navLinks = nav?.querySelectorAll('.nav-link[href^="#"]');
+  const sectionIds = ["top", "sobre", "proyecto", "stack", "contacto"];
+
+  const updateNav = () => {
+    if (!navLinks?.length) return;
+    let current = "top";
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.38) {
+        current = id;
+      }
+    });
+    navLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${current}`);
+    });
   };
 
   /* Endcap scroll reveal */

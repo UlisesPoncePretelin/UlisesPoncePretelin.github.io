@@ -44,7 +44,7 @@
     <div class="site-shell">
       <header class="site-header" data-header>
         <div class="frame-row header-row">
-          <a class="logo" href="#top">UPP<span class="logo-dot">.</span></a>
+          <a class="logo" href="#top">Ulises <span class="logo-serif">Ponce</span><span class="logo-dot">.</span></a>
           <nav class="nav" id="site-nav" aria-label="Principal">
             <a class="nav-link" href="#sobre"><span>Sobre mí</span></a>
             <a class="nav-link" href="#proyecto"><span>Proyecto</span></a>
@@ -226,54 +226,71 @@
         <section class="section frame-block project-pin-section" id="proyecto" data-project-pin>
           <div class="project-pin-sticky">
             <div class="frame-row project-pin-head reveal">
-              <p class="section-tag">02 — Proyecto destacado</p>
-              <h2 class="section-title project-title">PoncePretelin</h2>
-              <p class="section-lead">
-                Gestor clínico de fisioterapia open source — expediente, agenda, SOAP, finanzas, portal
-                paciente y módulos por especialidad.
-              </p>
+              <div class="project-pin-intro">
+                <p class="section-tag">02 — Proyecto destacado</p>
+                <h2 class="section-title project-title">Ponce<em>Pretelin</em></h2>
+              </div>
+              <div class="project-pin-meta">
+                <p class="section-lead">
+                  Gestor clínico de fisioterapia open source — expediente, agenda, SOAP, finanzas, portal
+                  paciente y módulos por especialidad.
+                </p>
+                <p class="project-pin-counter" aria-live="polite">
+                  <span data-pin-current>01</span><span class="project-pin-total"> / 05</span>
+                </p>
+              </div>
             </div>
 
             <div class="project-pin-viewport">
               <div class="project-pin-track" data-pin-track>
-                <article class="project-card" data-tilt-card>
+                <article class="project-card" data-tilt-card data-card-index="0">
                   <span class="card-index">01</span>
-                  <h3>Pruebas diagnósticas</h3>
-                  <p>Sensibilidad y especificidad citadas — Magee, Cook &amp; Hegedus, guías clínicas.</p>
+                  <div class="card-body">
+                    <h3>Pruebas diagnósticas</h3>
+                    <p>Sensibilidad y especificidad citadas — Magee, Cook &amp; Hegedus, guías clínicas.</p>
+                  </div>
                 </article>
-                <article class="project-card" data-tilt-card>
+                <article class="project-card" data-tilt-card data-card-index="1">
                   <span class="card-index">02</span>
-                  <h3>Terminología 2026</h3>
-                  <p>~980 términos: IASP, CIF OMS, lenguaje centrado en la persona.</p>
+                  <div class="card-body">
+                    <h3>Terminología 2026</h3>
+                    <p>~980 términos: IASP, CIF OMS, lenguaje centrado en la persona.</p>
+                  </div>
                 </article>
-                <article class="project-card card-featured" data-tilt-card>
+                <article class="project-card card-featured" data-tilt-card data-card-index="2">
                   <span class="card-index">03</span>
-                  <h3>Expediente clínico v2</h3>
-                  <p>UI rediseñada con terapeutas — sidebar global, flujo directo paciente → sesión.</p>
-                  <a
-                    class="card-link"
-                    href="https://poncepretelin-web.onrender.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Abrir demo →
-                  </a>
+                  <div class="card-body">
+                    <h3>Expediente clínico v2</h3>
+                    <p>UI rediseñada con terapeutas — sidebar global, flujo directo paciente → sesión.</p>
+                    <a
+                      class="card-link"
+                      href="https://poncepretelin-web.onrender.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Abrir demo →
+                    </a>
+                  </div>
                 </article>
-                <article class="project-card" data-tilt-card>
+                <article class="project-card" data-tilt-card data-card-index="3">
                   <span class="card-index">04</span>
-                  <h3>Escalas EBP</h3>
-                  <p>NDI, ODI, STarT Back, TUG, Berg con interpretación integrada.</p>
+                  <div class="card-body">
+                    <h3>Escalas EBP</h3>
+                    <p>NDI, ODI, STarT Back, TUG, Berg con interpretación integrada.</p>
+                  </div>
                 </article>
-                <article class="project-card" data-tilt-card>
+                <article class="project-card" data-tilt-card data-card-index="4">
                   <span class="card-index">05</span>
-                  <h3>Multi-especialidad</h3>
-                  <p>Neuro, vestibular, pediátrico, piso pélvico, deportivo y más.</p>
+                  <div class="card-body">
+                    <h3>Multi-especialidad</h3>
+                    <p>Neuro, vestibular, pediátrico, piso pélvico, deportivo y más.</p>
+                  </div>
                 </article>
               </div>
             </div>
 
             <div class="frame-row project-pin-bar">
-              <span class="project-pin-hint">Sigue bajando para recorrer el proyecto →</span>
+              <span class="project-pin-hint">Scroll para recorrer módulos</span>
               <div class="project-pin-progress" aria-hidden="true">
                 <span data-pin-progress></span>
               </div>
@@ -288,17 +305,15 @@
               <h2 class="section-title">Tecnologías</h2>
             </div>
           </div>
-          <div class="stack-grid reveal">
-            <div class="stack-chip" data-tilt-chip>TypeScript</div>
-            <div class="stack-chip" data-tilt-chip>Next.js 14</div>
-            <div class="stack-chip" data-tilt-chip>FastAPI</div>
-            <div class="stack-chip" data-tilt-chip>PostgreSQL</div>
-            <div class="stack-chip" data-tilt-chip>Docker</div>
-            <div class="stack-chip" data-tilt-chip>Tailwind</div>
-            <div class="stack-chip" data-tilt-chip>Playwright</div>
-            <div class="stack-chip" data-tilt-chip>Alembic</div>
-            <div class="stack-chip" data-tilt-chip>Radix UI</div>
-            <div class="stack-chip" data-tilt-chip>SQLAlchemy</div>
+          <div class="stack-bento reveal">
+            <div class="stack-cell stack-cell-wide" data-tilt-chip><span>TypeScript</span><small>Frontend</small></div>
+            <div class="stack-cell" data-tilt-chip><span>Next.js 14</span></div>
+            <div class="stack-cell" data-tilt-chip><span>FastAPI</span></div>
+            <div class="stack-cell stack-cell-tall" data-tilt-chip><span>PostgreSQL</span><small>SQLAlchemy · Alembic</small></div>
+            <div class="stack-cell" data-tilt-chip><span>Docker</span></div>
+            <div class="stack-cell" data-tilt-chip><span>Tailwind</span></div>
+            <div class="stack-cell" data-tilt-chip><span>Playwright</span></div>
+            <div class="stack-cell stack-cell-wide" data-tilt-chip><span>Radix UI</span><small>Componentes accesibles</small></div>
           </div>
         </section>
 
