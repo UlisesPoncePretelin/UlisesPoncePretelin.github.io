@@ -203,48 +203,7 @@
 
   if (canAnimate) requestAnimationFrame(renderMotion);
 
-  /* Hero typing roles */
-  const typingEl = document.querySelector("[data-typing-text]");
-  if (typingEl && canAnimate) {
-    const roles = [
-      "Fisioterapeuta",
-      "Dev clínico",
-      "Creador de PoncePretelin",
-      "Open source · AGPL",
-    ];
-    let roleIdx = 0;
-    let charIdx = 0;
-    let deleting = false;
-
-    const tick = () => {
-      const current = roles[roleIdx];
-      if (!deleting) {
-        charIdx += 1;
-        typingEl.textContent = current.slice(0, charIdx);
-        if (charIdx === current.length) {
-          deleting = true;
-          setTimeout(tick, 2200);
-          return;
-        }
-        setTimeout(tick, 55);
-        return;
-      }
-
-      charIdx -= 1;
-      typingEl.textContent = current.slice(0, charIdx);
-      if (charIdx <= 0) {
-        deleting = false;
-        roleIdx = (roleIdx + 1) % roles.length;
-        setTimeout(tick, 400);
-        return;
-      }
-      setTimeout(tick, 32);
-    };
-
-    setTimeout(tick, 900);
-  } else if (typingEl) {
-    typingEl.textContent = "Fisioterapeuta · Dev clínico · PoncePretelin";
-  }
+  /* Hero typing roles — slot-text en slot-init.mjs */
 
   /* Mobile menu */
   menuBtn?.addEventListener("click", () => {
