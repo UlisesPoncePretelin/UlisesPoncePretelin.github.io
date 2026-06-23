@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="CV de Ulises Antonio Ponce Pretelin — Lic. en Terapia Física."
+      content="CV de Ulises Antonio Ponce Pretelin — Arquitecto de IA clínica y fisioterapeuta."
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://ulisesponcepretelin.github.io/cv.html" />
@@ -19,23 +19,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="cv-page is-loaded">
-    <a class="skip-link" href="#cv-contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#cv-contenido" data-i18n="nav.skip">Saltar al contenido</a>
 
     <div class="site-shell">
       <header class="site-header is-scrolled" data-header>
         <div class="frame-row header-row">
           <a class="logo" href="index.html">Ulises <span class="logo-serif">Ponce</span><span class="logo-dot">.</span></a>
-          <nav class="nav" id="site-nav" aria-label="Principal">
-            <a class="nav-link" href="index.html#sobre"><span>Sobre mí</span></a>
-            <a class="nav-link" href="index.html#proyecto"><span>Proyecto</span></a>
-            <a class="nav-link is-active" href="cv.html"><span>CV</span></a>
-            <a class="nav-link" href="index.html#contacto"><span>Contacto</span></a>
+          <nav class="nav" id="site-nav" aria-label="Principal" data-i18n-attr="aria-label:nav.mainLabel">
+            <a class="nav-link" href="index.html#sobre"><span data-i18n="nav.aboutMe">Sobre mí</span></a>
+            <a class="nav-link" href="index.html#proyecto"><span data-i18n="nav.project">Proyecto</span></a>
+            <a class="nav-link is-active" href="cv.html"><span data-i18n="nav.cv">CV</span></a>
+            <a class="nav-link" href="index.html#contacto"><span data-i18n="nav.contact">Contacto</span></a>
           </nav>
+          <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.switchLabel">
+            <button type="button" class="lang-toggle-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+            <button type="button" class="lang-toggle-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
           <div class="cv-hero-actions">
-            <a class="btn btn-outline cv-download-btn" href="assets/CV_UlisesPoncePretelin.pdf" download
+            <a class="btn btn-outline cv-download-btn" href="assets/CV_UlisesPoncePretelin.pdf" download data-cv-pdf data-i18n="cv.downloadPdf"
               >Descargar PDF</a
             >
-            <button class="btn btn-outline cv-print-btn" type="button" id="print-cv">Imprimir</button>
+            <button class="btn btn-outline cv-print-btn" type="button" id="print-cv" data-i18n="cv.print">Imprimir</button>
           </div>
           <button
             class="menu-btn"
@@ -43,6 +47,7 @@
             aria-label="Menú"
             aria-expanded="false"
             aria-controls="site-nav"
+            data-i18n-attr="aria-label:nav.menu"
           >
             <span></span><span></span>
           </button>
@@ -53,9 +58,9 @@
         <div class="frame-block cv-hero">
           <div class="frame-row cv-hero-row reveal is-visible">
             <div>
-              <p class="section-tag">Curriculum vitae</p>
+              <p class="section-tag" data-i18n="cv.tag">Curriculum vitae</p>
               <h1 class="cv-name">Ulises Antonio <em>Ponce Pretelin</em></h1>
-              <p class="cv-headline">Lic. en Terapia física</p>
+              <p class="cv-headline" data-i18n="cv.headline">Arquitecto de IA clínica & Fisioterapeuta</p>
               <p class="cv-contact">
                 Xalapa, Veracruz, México
                 <span class="sep">·</span>
@@ -73,21 +78,16 @@
                 <a href="https://github.com/UlisesPoncePretelin" target="_blank" rel="noopener noreferrer">GitHub</a>
               </p>
             </div>
-            <a class="btn btn-fill" href="index.html">← Portafolio</a>
+            <a class="btn btn-fill" href="index.html" data-i18n="cv.backPortfolio">← Portafolio</a>
           </div>
         </div>
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Resumen</h2>
+            <h2 class="cv-section-title" data-i18n="cv.summaryTitle">Resumen</h2>
             <div class="cv-prose">
-              <p>
-                Profesional en Terapia Física con experiencia en atención a poblaciones con
-                necesidades especiales, tanto en contextos clínicos como comunitarios e
-                internacionales. Con enfoque interdisciplinario, habilidades en el desarrollo de
-                competencias clínicas y terapéuticas, y experiencia en la aplicación de estrategias
-                de intervención conductual positiva además del uso de herramientas tecnológicas para
-                potenciar el bienestar y la autonomía de los usuarios.
+              <p data-i18n="cv.summary">
+                Profesional en Terapia Física con experiencia en atención a poblaciones con necesidades especiales en contextos clínicos, comunitarios e internacionales. Arquitecto de sistemas clínicos con IA: diseño flujos, datos referenciados, integraciones de seguridad y módulos de apoyo que respetan el juicio profesional.
               </p>
             </div>
           </div>
@@ -95,22 +95,22 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Experiencia reciente</h2>
+            <h2 class="cv-section-title" data-i18n="cv.recentTitle">Experiencia reciente</h2>
             <ol class="cv-timeline">
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Fisioterapeuta</h3>
+                    <h3 data-i18n="cv.rolePt">Fisioterapeuta</h3>
                     <p class="cv-org">Clínica de terapia de lenguaje</p>
                   </div>
-                  <time class="cv-date" datetime="2026">2026 — Actual</time>
+                  <time class="cv-date" datetime="2026">2026 — <span data-i18n="cv.present">Actual</span></time>
                 </div>
                 <ul>
-                  <li>
+                  <li data-i18n="cv.rolePtLi1">
                     Atención clínica en contexto interdisciplinario de terapia de lenguaje y
                     rehabilitación.
                   </li>
-                  <li>
+                  <li data-i18n="cv.rolePtLi2">
                     Documentación de evolución, coordinación con equipo terapéutico y seguimiento de
                     objetivos funcionales del paciente.
                   </li>
@@ -119,7 +119,7 @@
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Creador &amp; desarrollador</h3>
+                    <h3 data-i18n="cv.roleArchitect">Arquitecto & creador</h3>
                     <p class="cv-org">
                       <a
                         href="https://github.com/UlisesPoncePretelin/Poncepretelin"
@@ -127,22 +127,23 @@
                         rel="noopener noreferrer"
                         >PoncePretelin</a
                       >
-                      · gestor clínico con apoyo de IA
+                      <span data-i18n="cv.roleOrgSuffix"> · gestor clínico con IA</span>
                     </p>
                   </div>
-                  <time class="cv-date" datetime="2024">2024 — Actual</time>
+                  <time class="cv-date" datetime="2024">2024 — <span data-i18n="cv.present">Actual</span></time>
                 </div>
                 <ul>
-                  <li>
-                    Diseño y desarrollo de gestor clínico de fisioterapia: expediente, agenda, SOAP,
+                  <li data-i18n="cv.roleDevLi1">
+                    Arquitectura y desarrollo de gestor clínico: expediente, agenda, SOAP,
                     finanzas y portal paciente.
                   </li>
                   <li>
-                    Stack: FastAPI, PostgreSQL, Next.js, TypeScript, Docker.
+                    <span data-i18n="cv.roleDevLi2">Stack: FastAPI, PostgreSQL, Next.js, TypeScript, Docker.</span>
                     <a
                       href="https://poncepretelin-web.onrender.com"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="cv.liveDemo"
                       >Demo en vivo</a
                     >
                   </li>
@@ -154,7 +155,7 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Educación</h2>
+            <h2 class="cv-section-title" data-i18n="cv.educationTitle">Educación</h2>
             <ol class="cv-timeline cv-timeline-compact">
               <li class="cv-entry">
                 <div class="cv-entry-head">
@@ -188,7 +189,7 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Experiencia profesional</h2>
+            <h2 class="cv-section-title" data-i18n="cv.experienceTitle">Experiencia profesional</h2>
             <ol class="cv-timeline">
               <li class="cv-entry">
                 <div class="cv-entry-head">
@@ -276,7 +277,7 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Servicio social</h2>
+            <h2 class="cv-section-title" data-i18n="cv.socialServiceTitle">Servicio social</h2>
             <article class="cv-entry reveal">
               <div class="cv-entry-head">
                 <div>
@@ -302,7 +303,7 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Prácticas profesionales</h2>
+            <h2 class="cv-section-title" data-i18n="cv.internshipsTitle">Prácticas profesionales</h2>
             <ol class="cv-timeline">
               <li class="cv-entry">
                 <div class="cv-entry-head">
@@ -361,7 +362,7 @@
 
         <section class="frame-block cv-section" id="certificaciones">
           <div class="frame-row">
-            <h2 class="cv-section-title">Certificaciones y cursos</h2>
+            <h2 class="cv-section-title" data-i18n="cv.certsTitle">Certificaciones y cursos</h2>
             <div class="cv-cert-tabs" role="tablist" aria-label="Filtrar certificaciones">
               <button class="cv-cert-tab is-active" type="button" role="tab" data-cert-filter="all" aria-selected="true">
                 Todas
@@ -482,7 +483,7 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Habilidades técnicas</h2>
+            <h2 class="cv-section-title" data-i18n="cv.skillsTitle">Habilidades técnicas</h2>
             <ul class="cv-lang-list">
               <li>
                 Valoración funcional y análisis del movimiento para el diagnóstico
@@ -518,7 +519,7 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title">Idiomas</h2>
+            <h2 class="cv-section-title" data-i18n="cv.languagesTitle">Idiomas</h2>
             <ul class="cv-lang-list">
               <li><strong>Español</strong> — nativo</li>
               <li><strong>Inglés</strong> — B2 (avanzado-intermedio, sin certificado)</li>
@@ -530,11 +531,12 @@
       <footer class="site-footer frame-block">
         <div class="frame-row footer-row">
           <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin</p>
-          <p class="footer-note">Basado en CV_UlisesPoncePretelin.pdf · junio 2026</p>
+          <p class="footer-note" data-i18n="cv.footerNote">Basado en CV_UlisesPoncePretelin.pdf · junio 2026</p>
         </div>
       </footer>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="main.js"></script>
     <script>
       document.getElementById("print-cv")?.addEventListener("click", () => window.print());

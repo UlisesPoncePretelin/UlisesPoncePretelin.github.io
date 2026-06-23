@@ -297,6 +297,35 @@ body.has-cursor .cursor-glow {
   transform: translateY(-1px);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.lang-toggle-btn {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+
+.lang-toggle-btn.is-active {
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: var(--ink);
+}
+
 .menu-btn {
   display: none;
   flex-direction: column;
@@ -473,6 +502,16 @@ main {
 .hero-title .line-accent {
   color: var(--slate);
   font-style: italic;
+}
+
+.hero-tagline {
+  margin: -0.35rem 0 1.1rem;
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--accent);
 }
 
 .hero-title .word {
@@ -941,6 +980,159 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
 
 .module-card-featured .card-link {
   color: var(--accent-soft);
+}
+
+/* Clinical engines */
+.engines-intro {
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.engines-heading {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.engines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  max-width: calc(var(--frame) + 4rem);
+  margin-inline: auto;
+  padding-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.engine-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: transform 0.35s var(--ease-out), border-color 0.35s, box-shadow 0.35s;
+}
+
+.engine-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.engine-card-featured {
+  background: linear-gradient(165deg, var(--slate), color-mix(in srgb, var(--ink) 92%, var(--slate)));
+  color: #fff;
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--slate));
+}
+
+.engine-num {
+  position: absolute;
+  margin: 1rem 0 0 1rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  z-index: 1;
+}
+
+.engine-card-featured .engine-num {
+  color: var(--accent-soft);
+}
+
+.engine-thumb {
+  min-height: 8rem;
+}
+
+.engine-tags {
+  margin: 0;
+  padding: 0.65rem 1rem 0;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.engine-card-featured .engine-tags {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.engine-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+  padding: 0.85rem 1.15rem 1.25rem;
+}
+
+.engine-body h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.engine-body p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.engine-card-featured .engine-body p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.engine-card-featured .card-link {
+  color: var(--accent-soft);
+}
+
+.stack-clinical-head {
+  padding-top: 0.5rem;
+}
+
+.stack-subtitle {
+  margin: 0 0 0.35rem;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 400;
+}
+
+.clinical-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  max-width: calc(var(--frame) + 4rem);
+  margin-inline: auto;
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.clinical-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: color-mix(in srgb, var(--accent) 3%, var(--surface));
+}
+
+.clinical-chip-sig {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.clinical-chip span:last-child {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
 .hero-role-block {
@@ -2531,8 +2723,10 @@ body.is-loaded .chapter-nav {
   }
 
   .project-modules-grid,
+  .engines-grid,
   .cert-grid,
   .tech-grid,
+  .clinical-grid,
   .stack-groups {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2566,6 +2760,10 @@ body.is-loaded .chapter-nav {
 
   .nav-cta {
     display: none;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
   }
 
   .menu-btn {
@@ -2613,8 +2811,10 @@ body.is-loaded .chapter-nav {
   }
 
   .project-modules-grid,
+  .engines-grid,
   .cert-grid,
   .tech-grid,
+  .clinical-grid,
   .stack-groups {
     grid-template-columns: 1fr;
   }

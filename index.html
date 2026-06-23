@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ulises Antonio Ponce Pretelin — fisioterapeuta y desarrollador de software clínico con IA. Creador de PoncePretelin."
+      content="Ulises Antonio Ponce Pretelin — arquitecto de IA clínica y fisioterapeuta. Creador de PoncePretelin."
     />
-    <meta property="og:title" content="Ulises Antonio Ponce Pretelin" />
+    <meta property="og:title" content="Ulises Ponce Pretelin — Arquitecto de IA clínica" />
     <meta
       property="og:description"
-      content="Fisioterapeuta · desarrollador clínico · PoncePretelin con apoyo de IA"
+      content="Fisioterapeuta · arquitecto de sistemas clínicos con IA · PoncePretelin v1"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ulisesponcepretelin.github.io/" />
@@ -19,17 +19,17 @@
     <meta name="twitter:title" content="Ulises Antonio Ponce Pretelin" />
     <meta
       name="twitter:description"
-      content="Fisioterapeuta · desarrollador clínico · PoncePretelin con apoyo de IA"
+      content="Fisioterapeuta · arquitecto de sistemas clínicos con IA · PoncePretelin v1"
     />
     <meta name="twitter:image" content="https://ulisesponcepretelin.github.io/assets/demo/07-episode.png" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://ulisesponcepretelin.github.io/" />
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="schema-person">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Ulises Antonio Ponce Pretelin",
-        "jobTitle": "Fisioterapeuta y desarrollador de software clínico",
+        "jobTitle": "Arquitecto de IA clínica y fisioterapeuta",
         "url": "https://ulisesponcepretelin.github.io/",
         "email": "poncepretelin@gmail.com",
         "address": {
@@ -46,7 +46,7 @@
         ]
       }
     </script>
-    <title>Ulises Ponce Pretelin — Fisioterapeuta &amp; Dev Clínico</title>
+    <title>Ulises Ponce Pretelin — Arquitecto de IA clínica &amp; Fisioterapeuta</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,7 +59,7 @@
   <body>
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader-inner">
-        <p class="preloader-label">Cargando portafolio</p>
+        <p class="preloader-label" data-i18n="preloader.label">Cargando portafolio</p>
         <p class="preloader-name">Ulises Ponce Pretelin</p>
         <div class="preloader-bar"><span id="preloader-fill"></span></div>
         <p class="preloader-pct" id="preloader-pct">0%</p>
@@ -70,40 +70,45 @@
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <div class="noise" aria-hidden="true"></div>
 
-    <nav class="chapter-nav" data-chapter-nav aria-label="Capítulos del portafolio">
-      <a href="#top" class="chapter-link" data-chapter="top"><span>01</span> Inicio</a>
-      <a href="#sobre" class="chapter-link" data-chapter="sobre"><span>02</span> Sobre</a>
-      <a href="#trayectoria" class="chapter-link" data-chapter="trayectoria"><span>03</span> Trayectoria</a>
-      <a href="#proyecto" class="chapter-link" data-chapter="proyecto"><span>04</span> Proyecto</a>
-      <a href="#certificaciones" class="chapter-link" data-chapter="certificaciones"><span>05</span> Certificaciones</a>
-      <a href="#stack" class="chapter-link" data-chapter="stack"><span>06</span> Tecnologías</a>
-      <a href="#contacto" class="chapter-link" data-chapter="contacto"><span>07</span> Contacto</a>
+    <nav class="chapter-nav" data-chapter-nav aria-label="Capítulos del portafolio" data-i18n-attr="aria-label:nav.chaptersLabel">
+      <a href="#top" class="chapter-link" data-chapter="top"><span>01</span> <span data-i18n="nav.home">Inicio</span></a>
+      <a href="#sobre" class="chapter-link" data-chapter="sobre"><span>02</span> <span data-i18n="nav.about">Sobre</span></a>
+      <a href="#trayectoria" class="chapter-link" data-chapter="trayectoria"><span>03</span> <span data-i18n="nav.path">Trayectoria</span></a>
+      <a href="#proyecto" class="chapter-link" data-chapter="proyecto"><span>04</span> <span data-i18n="nav.project">Proyecto</span></a>
+      <a href="#certificaciones" class="chapter-link" data-chapter="certificaciones"><span>05</span> <span data-i18n="nav.certs">Certificaciones</span></a>
+      <a href="#stack" class="chapter-link" data-chapter="stack"><span>06</span> <span data-i18n="nav.stack">Tecnologías</span></a>
+      <a href="#contacto" class="chapter-link" data-chapter="contacto"><span>07</span> <span data-i18n="nav.contact">Contacto</span></a>
     </nav>
 
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#contenido" data-i18n="nav.skip">Saltar al contenido</a>
 
     <div class="site-shell">
       <header class="site-header" data-header>
         <div class="frame-row header-row">
           <a class="logo" href="#top">Ulises <span class="logo-serif">Ponce</span><span class="logo-dot">.</span></a>
-          <nav class="nav" id="site-nav" aria-label="Principal">
-            <a class="nav-link" href="#sobre"><span>Sobre mí</span></a>
-            <a class="nav-link" href="#proyecto"><span>Proyecto</span></a>
-            <a class="nav-link" href="cv.html"><span>CV</span></a>
-            <a class="nav-link" href="#certificaciones"><span>Certificaciones</span></a>
-            <a class="nav-link" href="#stack"><span>Tecnologías</span></a>
-            <a class="nav-link" href="#contacto"><span>Contacto</span></a>
+          <nav class="nav" id="site-nav" aria-label="Principal" data-i18n-attr="aria-label:nav.mainLabel">
+            <a class="nav-link" href="#sobre"><span data-i18n="nav.aboutMe">Sobre mí</span></a>
+            <a class="nav-link" href="#proyecto"><span data-i18n="nav.project">Proyecto</span></a>
+            <a class="nav-link" href="cv.html"><span data-i18n="nav.cv">CV</span></a>
+            <a class="nav-link" href="#certificaciones"><span data-i18n="nav.certs">Certificaciones</span></a>
+            <a class="nav-link" href="#stack"><span data-i18n="nav.technologies">Tecnologías</span></a>
+            <a class="nav-link" href="#contacto"><span data-i18n="nav.contact">Contacto</span></a>
           </nav>
+          <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.switchLabel">
+            <button type="button" class="lang-toggle-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+            <button type="button" class="lang-toggle-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
           <a
             class="nav-cta magnetic"
             href="https://poncepretelin-web.onrender.com"
             target="_blank"
             rel="noopener noreferrer"
             data-magnetic
+            data-i18n="nav.demoLive"
           >
             Demo en vivo
           </a>
-          <button class="menu-btn" type="button" aria-label="Menú" aria-expanded="false" aria-controls="site-nav">
+          <button class="menu-btn" type="button" aria-label="Menú" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:nav.menu">
             <span></span><span></span>
           </button>
         </div>
@@ -126,6 +131,7 @@
                     class="portrait"
                     src="assets/portrait.jpg"
                     alt="Ulises Antonio Ponce Pretelin, fisioterapeuta"
+                    data-i18n-attr="alt:hero.portraitAlt"
                     width="720"
                     height="900"
                     loading="eager"
@@ -137,21 +143,21 @@
             </div>
 
             <div class="hero-right">
-              <p class="hero-kicker reveal">Portafolio · 2026</p>
+              <p class="hero-kicker reveal" data-i18n="hero.kicker">Portafolio · 2026</p>
               <h1 class="hero-title reveal">
                 <span class="line"><span class="word" data-split>Ulises Antonio</span></span>
                 <span class="line line-accent"><span class="word" data-split>Ponce Pretelin</span></span>
               </h1>
+              <p class="hero-tagline reveal" data-i18n="hero.tagline">Arquitecto de IA clínica &amp; Fisioterapeuta</p>
               <div class="hero-role-block reveal" aria-live="polite">
-                <p class="hero-role-label">Rol actual</p>
+                <p class="hero-role-label" data-i18n="hero.roleLabel">Rol actual</p>
                 <p class="hero-typing">
-                  <span class="hero-typing-text" data-slot-hero>Fisioterapeuta</span>
+                  <span class="hero-typing-text" data-slot-hero>Arquitecto IA clínica</span>
                 </p>
               </div>
-              <p class="hero-text reveal">
+              <p class="hero-text reveal" data-i18n-html="hero.text">
                 Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e
-                internacionales. Construyo <strong>PoncePretelin</strong>, gestor clínico con módulos de
-                apoyo con IA, evidencia referenciada y documentación que respeta el juicio profesional.
+                internacionales. Diseño la arquitectura de <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.
               </p>
               <div class="hero-actions reveal">
                 <a
@@ -160,6 +166,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   data-magnetic
+                  data-i18n="hero.exploreDemo"
                 >
                   Explorar demo
                 </a>
@@ -169,12 +176,13 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   data-magnetic
+                  data-i18n="hero.github"
                 >
                   GitHub
                 </a>
               </div>
               <p class="hero-focus reveal">
-                Enfoque · <span class="hero-focus-slot" data-slot-focus>PoncePretelin</span>
+                <span data-i18n="hero.focusPrefix">Enfoque ·</span> <span class="hero-focus-slot" data-slot-focus>PoncePretelin</span>
               </p>
             </div>
           </div>
@@ -186,35 +194,35 @@
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span>From: Xalapa, Veracruz · México · Terapia Física &amp; Software</span>
+            <span data-i18n="loc.text">Xalapa, Veracruz · México · Terapia Física &amp; IA clínica</span>
           </div>
         </div>
 
-        <section class="marquee-section frame-block" aria-label="Roles">
+        <section class="marquee-section frame-block" aria-label="Roles" data-i18n-attr="aria-label:marquee.label">
           <div class="marquee-viewport">
             <div class="marquee-track" data-marquee>
               <div class="marquee-group">
-                <span class="marquee-item">Terapia Física</span>
+                <span class="marquee-item" data-i18n="marquee.physicalTherapy">Terapia Física</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">Rehabilitación</span>
+                <span class="marquee-item" data-i18n="marquee.rehab">Rehabilitación</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">DEV</span>
+                <span class="marquee-item" data-i18n="marquee.architect">Arquitecto IA</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">PoncePretelin</span>
+                <span class="marquee-item" data-i18n="marquee.poncepretelin">PoncePretelin</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">IA clínica</span>
+                <span class="marquee-item" data-i18n="marquee.clinicalAi">IA clínica</span>
                 <span class="marquee-icon">◆</span>
               </div>
               <div class="marquee-group" aria-hidden="true">
-                <span class="marquee-item">Terapia Física</span>
+                <span class="marquee-item" data-i18n="marquee.physicalTherapy">Terapia Física</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">Rehabilitación</span>
+                <span class="marquee-item" data-i18n="marquee.rehab">Rehabilitación</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">DEV</span>
+                <span class="marquee-item" data-i18n="marquee.architect">Arquitecto IA</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">PoncePretelin</span>
+                <span class="marquee-item" data-i18n="marquee.poncepretelin">PoncePretelin</span>
                 <span class="marquee-icon">◆</span>
-                <span class="marquee-item">IA clínica</span>
+                <span class="marquee-item" data-i18n="marquee.clinicalAi">IA clínica</span>
                 <span class="marquee-icon">◆</span>
               </div>
             </div>
@@ -225,27 +233,25 @@
         <section class="section frame-block" id="sobre">
           <div class="frame-row section-grid">
             <div class="section-intro reveal">
-              <p class="section-tag">01 — Sobre mí</p>
-              <h2 class="section-title">Clínica y código,<br /><em>mismo expediente</em></h2>
+              <p class="section-tag" data-i18n="about.tag">01 — Sobre mí</p>
+              <h2 class="section-title"><span data-i18n="about.title">Clínica y arquitectura,</span><br /><em data-i18n="about.titleEm">mismo expediente</em></h2>
             </div>
             <div class="section-body reveal">
               <ul class="skill-pills" aria-label="Áreas de práctica">
-                <li>Terapia física</li>
-                <li>Rehabilitación</li>
-                <li>Software clínico</li>
-                <li>EBP</li>
-                <li>IA clínica</li>
+                <li data-i18n="about.pill1">Terapia física</li>
+                <li data-i18n="about.pill2">Rehabilitación</li>
+                <li data-i18n="about.pill3">Sistemas clínicos</li>
+                <li data-i18n="about.pill4">EBP</li>
+                <li data-i18n="about.pill5">IA clínica</li>
               </ul>
-              <p>
+              <p data-i18n="about.p1">
                 Licenciado en Terapia Física (ICES, Xalapa). Experiencia con poblaciones con
                 necesidades especiales en México, Estados Unidos y entornos interdisciplinarios,
                 incluyendo terapia de lenguaje y campamentos de inclusión con Citizens Options
                 Unlimited.
               </p>
-              <p>
-                Desarrollo <strong>PoncePretelin</strong> con la misma lógica clínica: pruebas con
-                sensibilidad y especificidad referenciadas, escalas EBP, terminología IASP y CIF OMS,
-                módulos de apoyo con IA y documentación que respeta el juicio profesional.
+              <p data-i18n-html="about.p2">
+                Aplico razonamiento clínico y práctica basada en evidencia para diseñar la arquitectura de <strong>PoncePretelin</strong>: pruebas con valores referenciados, escalas EBP, terminología IASP y CIF OMS, integraciones de seguridad y módulos de IA como apoyo — no sustituto del criterio profesional.
               </p>
             </div>
           </div>
@@ -254,58 +260,58 @@
         <section class="section frame-block" id="trayectoria">
           <div class="frame-row">
             <div class="section-intro reveal">
-              <p class="section-tag">02 — Trayectoria</p>
-              <h2 class="section-title">Formación y <em>experiencia</em></h2>
+              <p class="section-tag" data-i18n="path.tag">02 — Trayectoria</p>
+              <h2 class="section-title"><span data-i18n="path.title">Formación y</span> <em data-i18n="path.titleEm">experiencia</em></h2>
             </div>
           </div>
           <ol class="timeline reveal">
             <li class="timeline-item">
               <time datetime="2026">2026</time>
               <div>
-                <h3>Fisioterapeuta</h3>
-                <p>Clínica de terapia de lenguaje · entorno interdisciplinario · Xalapa</p>
+                <h3 data-i18n="path.t1Title">Fisioterapeuta</h3>
+                <p data-i18n="path.t1Desc">Clínica de terapia de lenguaje · entorno interdisciplinario · Xalapa</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2024">2024 — hoy</time>
               <div>
-                <h3>PoncePretelin</h3>
-                <p>Creador y desarrollador del gestor clínico para fisioterapia con apoyo de IA</p>
+                <h3 data-i18n="path.t2Title">PoncePretelin</h3>
+                <p data-i18n="path.t2Desc">Arquitecto y creador del gestor clínico con IA para fisioterapia</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2025">2025</time>
               <div>
-                <h3>Cabin Leader</h3>
-                <p>Citizens Options Unlimited · campamento de inclusión · EE.UU.</p>
+                <h3 data-i18n="path.t3Title">Cabin Leader</h3>
+                <p data-i18n="path.t3Desc">Citizens Options Unlimited · campamento de inclusión · EE.UU.</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2023/2024">2023 — 2024</time>
               <div>
-                <h3>Terapeuta físico · ISSSTE</h3>
-                <p>Clínica Hospital ISSSTE Xalapa · servicio social · área clínica hospitalaria</p>
+                <h3 data-i18n="path.t4Title">Terapeuta físico · ISSSTE</h3>
+                <p data-i18n="path.t4Desc">Clínica Hospital ISSSTE Xalapa · servicio social · área clínica hospitalaria</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2023/2024">2023 — 2024</time>
               <div>
-                <h3>Prácticas profesionales</h3>
-                <p>INECOL (salud ocupacional) · Velódromo Internacional de Xalapa</p>
+                <h3 data-i18n="path.t5Title">Prácticas profesionales</h3>
+                <p data-i18n="path.t5Desc">INECOL (salud ocupacional) · Velódromo Internacional de Xalapa</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2022/2023">2022 — 2023</time>
               <div>
-                <h3>Citizens Options Unlimited</h3>
-                <p>Camp Counselor y Behavior Helper · población con discapacidad · EE.UU.</p>
+                <h3 data-i18n="path.t6Title">Citizens Options Unlimited</h3>
+                <p data-i18n="path.t6Desc">Camp Counselor y Behavior Helper · población con discapacidad · EE.UU.</p>
               </div>
             </li>
             <li class="timeline-item">
               <time datetime="2019/2023">2019 — 2023</time>
               <div>
-                <h3>Lic. Terapia Física · ICES</h3>
-                <p>Campus Xalapa · estudios finalizados · titulación en curso</p>
+                <h3 data-i18n="path.t7Title">Lic. Terapia Física · ICES</h3>
+                <p data-i18n="path.t7Desc">Campus Xalapa · estudios finalizados · titulación en curso</p>
               </div>
             </li>
           </ol>
@@ -314,10 +320,10 @@
         <section class="section frame-block project-modules-section" id="proyecto">
           <div class="frame-row project-modules-head reveal">
             <div class="section-intro">
-              <p class="section-tag">03 — Proyecto destacado</p>
+              <p class="section-tag" data-i18n="project.tag">03 — Proyecto destacado</p>
               <h2 class="section-title project-title">Ponce<em>Pretelin</em></h2>
               <p class="section-lead project-lead">
-                <span data-slot-project>Gestor clínico</span> con IA y evidencia referenciada — no formularios vacíos.
+                <span data-slot-project>Gestor clínico</span> <span data-i18n="project.leadPrefix">con IA y evidencia referenciada — no formularios vacíos.</span>
               </p>
             </div>
             <a
@@ -326,101 +332,52 @@
               target="_blank"
               rel="noopener noreferrer"
               data-magnetic
+              data-i18n="project.repo"
             >
               Repositorio
             </a>
           </div>
 
-          <div class="project-modules-grid reveal">
-            <article class="module-card">
-              <div class="module-thumb module-thumb-empty" aria-hidden="true">
-                <span>Captura próximamente</span>
+          <div class="frame-row engines-intro reveal">
+            <p class="section-tag" data-i18n="project.enginesTag">Motores clínicos</p>
+            <h3 class="engines-heading"><span data-i18n="project.enginesTitle">Tres capas de</span> <em data-i18n="project.enginesTitleEm">inteligencia</em></h3>
+          </div>
+
+          <div class="engines-grid reveal">
+            <article class="engine-card engine-card-featured">
+              <span class="engine-num" data-i18n="project.engine1Num">01</span>
+              <div class="engine-thumb module-thumb-empty" aria-hidden="true">
+                <span data-i18n="project.screenshotSoon">Captura próximamente</span>
               </div>
-              <ul class="module-tags" aria-label="Etiquetas">
-                <li>EBP</li>
-                <li>Sn/Sp</li>
-              </ul>
-              <div class="module-body">
-                <h3>Pruebas diagnósticas</h3>
-                <p>Sensibilidad y especificidad referenciadas en la literatura — no valores inventados.</p>
+              <p class="engine-tags" data-i18n="project.engine1Tags">SOAP · Episodios · Multi</p>
+              <div class="engine-body">
+                <h3 data-i18n="project.engine1Title">Motor clínico y especialidades</h3>
+                <p data-i18n="project.engine1Desc">Multi-especialidad, episodios, notas SOAP y flujos por consultorio. v1 activa con expediente, agenda y portal paciente.</p>
+                <a class="card-link" href="https://poncepretelin-web.onrender.com" target="_blank" rel="noopener noreferrer" data-i18n="project.openDemo">Abrir demo →</a>
               </div>
             </article>
 
-            <article class="module-card">
-              <div class="module-thumb module-thumb-empty" aria-hidden="true">
-                <span>Captura próximamente</span>
+            <article class="engine-card">
+              <span class="engine-num" data-i18n="project.engine2Num">02</span>
+              <div class="engine-thumb module-thumb-empty" aria-hidden="true">
+                <span data-i18n="project.screenshotSoon">Captura próximamente</span>
               </div>
-              <ul class="module-tags" aria-label="Etiquetas">
-                <li>Terminología</li>
-                <li>IASP</li>
-              </ul>
-              <div class="module-body">
-                <h3>Terminología 2026</h3>
-                <p>~980 términos referenciados (IASP, CIF OMS). MVP usable por sí solo en notas y reportes.</p>
+              <p class="engine-tags" data-i18n="project.engine2Tags">openFDA · RxNav · Seguridad</p>
+              <div class="engine-body">
+                <h3 data-i18n="project.engine2Title">Motor de seguridad y validación</h3>
+                <p data-i18n="project.engine2Desc">Integración openFDA y RxNav para alertas de dispositivos y contexto farmacológico. Apoyo a la decisión clínica — no sustituye protocolos institucionales.</p>
               </div>
             </article>
 
-            <article class="module-card module-card-featured">
-              <div class="module-thumb module-thumb-empty" aria-hidden="true">
-                <span>Captura próximamente</span>
+            <article class="engine-card">
+              <span class="engine-num" data-i18n="project.engine3Num">03</span>
+              <div class="engine-thumb module-thumb-empty" aria-hidden="true">
+                <span data-i18n="project.screenshotSoon">Captura próximamente</span>
               </div>
-              <ul class="module-tags" aria-label="Etiquetas">
-                <li>SOAP</li>
-                <li>Expediente</li>
-              </ul>
-              <div class="module-body">
-                <h3>Expediente clínico</h3>
-                <p>Sidebar global, flujo paciente → sesión, notas SOAP y evolución.</p>
-                <a
-                  class="card-link"
-                  href="https://poncepretelin-web.onrender.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Abrir demo →
-                </a>
-              </div>
-            </article>
-
-            <article class="module-card">
-              <div class="module-thumb module-thumb-empty" aria-hidden="true">
-                <span>Captura próximamente</span>
-              </div>
-              <ul class="module-tags" aria-label="Etiquetas">
-                <li>Escalas</li>
-                <li>NDI · ODI</li>
-              </ul>
-              <div class="module-body">
-                <h3>Escalas EBP</h3>
-                <p>NDI, ODI, STarT Back, TUG, Berg con interpretación integrada.</p>
-              </div>
-            </article>
-
-            <article class="module-card">
-              <div class="module-thumb module-thumb-empty" aria-hidden="true">
-                <span>Captura próximamente</span>
-              </div>
-              <ul class="module-tags" aria-label="Etiquetas">
-                <li>IA</li>
-                <li>Imagenología</li>
-              </ul>
-              <div class="module-body">
-                <h3>Apoyo con IA</h3>
-                <p>Módulos de IA para imagenología y asistencia clínica integrados al expediente.</p>
-              </div>
-            </article>
-
-            <article class="module-card">
-              <div class="module-thumb module-thumb-empty" aria-hidden="true">
-                <span>Captura próximamente</span>
-              </div>
-              <ul class="module-tags" aria-label="Etiquetas">
-                <li>Multi</li>
-                <li>Neuro</li>
-              </ul>
-              <div class="module-body">
-                <h3>Multi-especialidad</h3>
-                <p>Neuro, vestibular, pediátrico, piso pélvico, deportivo y más.</p>
+              <p class="engine-tags" data-i18n="project.engine3Tags">IASP · CIF · Terminología</p>
+              <div class="engine-body">
+                <h3 data-i18n="project.engine3Title">Motor de terminología clínica</h3>
+                <p data-i18n="project.engine3Desc">~980 términos referenciados (IASP, CIF OMS). Alineación de lenguaje en notas y reportes. MVP usable por sí solo.</p>
               </div>
             </article>
           </div>
@@ -429,34 +386,34 @@
         <section class="section frame-block usecases-section">
           <div class="frame-row">
             <div class="section-intro reveal">
-              <p class="section-tag">Flujos clínicos</p>
-              <h2 class="section-title">Tres flujos de <em>trabajo</em></h2>
+              <p class="section-tag" data-i18n="flows.tag">Flujos clínicos</p>
+              <h2 class="section-title"><span data-i18n="flows.title">Tres flujos de</span> <em data-i18n="flows.titleEm">trabajo</em></h2>
             </div>
           </div>
           <div class="usecases-grid reveal">
             <article class="usecase-card">
               <span class="usecase-num">01</span>
-              <h3>Primera consulta</h3>
-              <p>Crear paciente, episodio activo y nota SOAP inicial con plantillas por especialidad.</p>
+              <h3 data-i18n="flows.f1Title">Primera consulta</h3>
+              <p data-i18n="flows.f1Desc">Crear paciente, episodio activo y nota SOAP inicial con plantillas por especialidad.</p>
             </article>
             <article class="usecase-card">
               <span class="usecase-num">02</span>
-              <h3>Seguimiento EBP</h3>
-              <p>Aplicar NDI u ODI, ver interpretación basada en evidencia y evolución en el expediente.</p>
+              <h3 data-i18n="flows.f2Title">Seguimiento EBP</h3>
+              <p data-i18n="flows.f2Desc">Aplicar NDI u ODI, ver interpretación basada en evidencia y evolución en el expediente.</p>
             </article>
             <article class="usecase-card">
               <span class="usecase-num">03</span>
-              <h3>Terminología prudente</h3>
-              <p>Corrector con ~980 términos IASP · CIF OMS · lenguaje centrado en la persona.</p>
+              <h3 data-i18n="flows.f3Title">Terminología prudente</h3>
+              <p data-i18n="flows.f3Desc">Corrector con ~980 términos IASP · CIF OMS · lenguaje centrado en la persona.</p>
             </article>
           </div>
 
           <div class="frame-row">
             <div class="demo-showcase reveal" data-demo-showcase>
               <div class="demo-showcase-copy">
-              <p class="section-tag">Interfaz real</p>
-              <h3 class="demo-showcase-title">Capturas del <em>gestor</em></h3>
-              <p class="demo-showcase-lead">
+              <p class="section-tag" data-i18n="demo.tag">Interfaz real</p>
+              <h3 class="demo-showcase-title"><span data-i18n="demo.title">Capturas del</span> <em data-i18n="demo.titleEm">gestor</em></h3>
+              <p class="demo-showcase-lead" data-i18n="demo.lead">
                 Demo en la nube · arranque en frío ~1–2 min en Render free tier.
               </p>
               <p class="hero-demo"><code>demo@poncepretelin.app</code> · <code>DemoCloud2026</code></p>
@@ -467,6 +424,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   data-magnetic
+                  data-i18n="demo.openLive"
                 >
                   Abrir demo en vivo
                 </a>
@@ -476,6 +434,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   data-magnetic
+                  data-i18n="demo.source"
                 >
                   Ver código fuente
                 </a>
@@ -486,16 +445,16 @@
               <div class="demo-showcase-device demo-showcase-device-empty">
                 <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
                 <div class="demo-showcase-placeholder">
-                  <p>Capturas del gestor próximamente</p>
-                  <span>Preparando material propio del demo en vivo</span>
+                  <p data-i18n="demo.placeholderTitle">Capturas del gestor próximamente</p>
+                  <span data-i18n="demo.placeholderSub">Preparando material propio del demo en vivo</span>
                 </div>
               </div>
-              <ul class="demo-showcase-topics" aria-label="Vistas del gestor">
-                <li>Caso clínico · plan y pruebas</li>
-                <li>Pruebas diagnósticas · Sn/Sp</li>
-                <li>Panel del día · expediente</li>
-                <li>Inicio · acciones rápidas</li>
-                <li>Atlas de evidencia · PMID</li>
+              <ul class="demo-showcase-topics" aria-label="Vistas del gestor" data-i18n-attr="aria-label:demo.topicsLabel">
+                <li data-i18n="demo.topic1">Caso clínico · plan y pruebas</li>
+                <li data-i18n="demo.topic2">Pruebas diagnósticas · Sn/Sp</li>
+                <li data-i18n="demo.topic3">Panel del día · expediente</li>
+                <li data-i18n="demo.topic4">Inicio · acciones rápidas</li>
+                <li data-i18n="demo.topic5">Atlas de evidencia · PMID</li>
               </ul>
             </div>
             </div>
@@ -505,36 +464,35 @@
         <section class="section frame-block why-section">
           <div class="frame-row">
             <div class="section-intro reveal">
-              <p class="section-tag">Diferencial</p>
-              <h2 class="section-title">No es un EMR <em>genérico</em></h2>
-              <p class="section-lead">
-                Formularios vacíos vs automatizaciones clínicas con fuentes trazables y lenguaje prudente.
+              <p class="section-tag" data-i18n="why.tag">Diferencial</p>
+              <h2 class="section-title"><span data-i18n="why.title">No es un EMR</span> <em data-i18n="why.titleEm">genérico</em></h2>
+              <p class="section-lead" data-i18n="why.lead">
+                Formularios vacíos vs automatizaciones clínicas con fuentes referenciadas y lenguaje prudente.
               </p>
             </div>
           </div>
           <div class="why-grid reveal">
             <article class="why-card">
               <span class="why-num">01</span>
-              <h3>Evidencia trazable</h3>
-              <p>
+              <h3 data-i18n="why.c1Title">Evidencia trazable</h3>
+              <p data-i18n="why.c1Desc">
                 Sensibilidad y especificidad de pruebas con valores referenciados en la literatura — no
-                inventados ni generados al azar en el formulario.
+                inventados ni generados al azar.
               </p>
             </article>
             <article class="why-card">
               <span class="why-num">02</span>
-              <h3>Terminología 2026</h3>
-              <p>
+              <h3 data-i18n="why.c2Title">Terminología 2026</h3>
+              <p data-i18n="why.c2Desc">
                 ~980 términos versionados y referenciados: IASP 2020, CIF OMS, lenguaje centrado en la persona.
-                Útil como MVP en notas, reportes y resúmenes.
+                MVP en notas y reportes.
               </p>
             </article>
             <article class="why-card">
               <span class="why-num">03</span>
-              <h3>Apoyo con IA</h3>
-              <p>
-                Módulos de IA para imagenología y asistencia clínica, integrados al expediente con el mismo
-                criterio de trazabilidad — herramienta de apoyo, no sustituto del juicio profesional.
+              <h3 data-i18n="why.c3Title">Apoyo con IA</h3>
+              <p data-i18n="why.c3Desc">
+                Módulos de IA para imagenología y asistencia clínica integrados al expediente — herramienta de apoyo, no sustituto del juicio profesional.
               </p>
             </article>
           </div>
@@ -543,9 +501,9 @@
         <section class="section frame-block roadmap-section">
           <div class="frame-row roadmap-panel reveal">
             <div>
-              <p class="section-tag">Roadmap honesto</p>
-              <h2 class="section-title">v1 · qué hay <em>hoy</em></h2>
-              <p class="section-lead">
+              <p class="section-tag" data-i18n="roadmap.tag">Roadmap honesto</p>
+              <h2 class="section-title"><span data-i18n="roadmap.title">v1 · qué hay</span> <em data-i18n="roadmap.titleEm">hoy</em></h2>
+              <p class="section-lead" data-i18n="roadmap.lead">
                 Primera versión pública en desarrollo activo. Lo que ya funciona y lo que sigue en curso.
               </p>
             </div>
@@ -553,29 +511,29 @@
               <li class="roadmap-item is-done">
                 <span class="roadmap-marker" aria-hidden="true">✓</span>
                 <div>
-                  <strong>Expediente y flujo clínico</strong>
-                  <p>Pacientes, episodios, SOAP, agenda, finanzas y portal paciente.</p>
+                  <strong data-i18n="roadmap.r1Title">Expediente y flujo clínico</strong>
+                  <p data-i18n="roadmap.r1Desc">Pacientes, episodios, SOAP, agenda, finanzas y portal paciente.</p>
                 </div>
               </li>
               <li class="roadmap-item is-done">
                 <span class="roadmap-marker" aria-hidden="true">✓</span>
                 <div>
-                  <strong>Bibliotecas clínicas</strong>
-                  <p>Pruebas diagnósticas, escalas EBP, atlas de evidencia y presets por patología.</p>
+                  <strong data-i18n="roadmap.r2Title">Bibliotecas clínicas</strong>
+                  <p data-i18n="roadmap.r2Desc">Pruebas diagnósticas, escalas EBP, atlas de evidencia y presets por patología.</p>
                 </div>
               </li>
               <li class="roadmap-item is-active">
                 <span class="roadmap-marker" aria-hidden="true">→</span>
                 <div>
-                  <strong>Módulos de IA</strong>
-                  <p>Apoyo en imagenología y asistencia clínica integrados al expediente.</p>
+                  <strong data-i18n="roadmap.r3Title">Módulos de IA</strong>
+                  <p data-i18n="roadmap.r3Desc">Apoyo en imagenología y asistencia clínica integrados al expediente.</p>
                 </div>
               </li>
               <li class="roadmap-item is-next">
                 <span class="roadmap-marker" aria-hidden="true">○</span>
                 <div>
-                  <strong>Documentación y despliegue</strong>
-                  <p>Guías de instalación más claras, más presets clínicos y capturas actualizadas del demo.</p>
+                  <strong data-i18n="roadmap.r4Title">Documentación y despliegue</strong>
+                  <p data-i18n="roadmap.r4Desc">Guías de instalación más claras, más presets clínicos y capturas actualizadas del demo.</p>
                 </div>
               </li>
             </ul>
@@ -585,9 +543,9 @@
         <section class="section frame-block cert-section" id="certificaciones">
           <div class="frame-row">
             <div class="section-intro reveal">
-              <p class="section-tag">Formación continua</p>
-              <h2 class="section-title">Certificaciones</h2>
-              <p class="section-lead">
+              <p class="section-tag" data-i18n="certs.tag">Formación continua</p>
+              <h2 class="section-title" data-i18n="certs.title">Certificaciones</h2>
+              <p class="section-lead" data-i18n="certs.lead">
                 18+ cursos en clínica, salud mental y plataformas en línea — datos del CV, sin inventar.
               </p>
             </div>
@@ -625,17 +583,17 @@
             </article>
           </div>
           <div class="frame-row cert-foot reveal">
-            <a class="btn btn-outline magnetic" href="cv.html#certificaciones" data-magnetic>Ver todas en el CV</a>
+            <a class="btn btn-outline magnetic" href="cv.html#certificaciones" data-magnetic data-i18n="certs.viewAll">Ver todas en el CV</a>
           </div>
         </section>
 
         <section class="section frame-block" id="stack">
           <div class="frame-row">
             <div class="section-intro reveal">
-              <p class="section-tag">PoncePretelin</p>
-              <h2 class="section-title">Tecnologías <em>usadas</em></h2>
-              <p class="section-lead">
-                Stack real con el que construyo y despliego el gestor clínico.
+              <p class="section-tag" data-i18n="stack.tag">PoncePretelin</p>
+              <h2 class="section-title"><span data-i18n="stack.techTitle">Tecnologías</span> <em data-i18n="stack.techTitleEm">usadas</em></h2>
+              <p class="section-lead" data-i18n="stack.techLead">
+                Stack técnico con el que construyo y despliego el gestor clínico.
               </p>
             </div>
           </div>
@@ -695,9 +653,26 @@
               <span class="tech-chip-label">GitHub</span>
             </article>
           </div>
+
+          <div class="frame-row stack-clinical-head reveal">
+            <div class="section-intro">
+              <h3 class="stack-subtitle"><span data-i18n="stack.clinicalTitle">Estándares</span> <em data-i18n="stack.clinicalTitleEm">clínicos</em></h3>
+              <p class="section-lead" data-i18n="stack.clinicalLead">
+                Referencias y frameworks que aplico en la arquitectura del sistema.
+              </p>
+            </div>
+          </div>
+          <div class="clinical-grid reveal">
+            <article class="clinical-chip"><span class="clinical-chip-sig">IASP</span><span data-i18n="stack.iaspDesc">Terminología del dolor referenciada</span></article>
+            <article class="clinical-chip"><span class="clinical-chip-sig">CIF</span><span data-i18n="stack.cifDesc">Clasificación Internacional del Funcionamiento (OMS)</span></article>
+            <article class="clinical-chip"><span class="clinical-chip-sig">openFDA</span><span data-i18n="stack.openfdaDesc">Integración de alertas de dispositivos y recalls</span></article>
+            <article class="clinical-chip"><span class="clinical-chip-sig">EBP</span><span data-i18n="stack.ebpDesc">NDI · ODI · Berg · TUG · STarT Back</span></article>
+            <article class="clinical-chip"><span class="clinical-chip-sig">RxNav</span><span data-i18n="stack.rxnavDesc">Contexto farmacológico en intake clínico</span></article>
+            <article class="clinical-chip"><span class="clinical-chip-sig">Sn/Sp</span><span data-i18n="stack.snspDesc">Valores referenciados en pruebas diagnósticas</span></article>
+          </div>
         </section>
 
-        <section class="endcap frame-block" data-endcap aria-label="Cierre del portafolio">
+        <section class="endcap frame-block" data-endcap aria-label="Cierre del portafolio" data-i18n-attr="aria-label:endcap.label">
           <div class="endcap-sticky">
             <div class="endcap-marquee" aria-hidden="true">
               <div class="endcap-track">
@@ -724,9 +699,9 @@
               </div>
             </div>
             <div class="endcap-content" data-endcap-content>
-              <p class="endcap-kicker">Lic. en Terapia física · Xalapa, Veracruz</p>
+              <p class="endcap-kicker" data-i18n="endcap.kicker">Lic. en Terapia física · Xalapa, Veracruz</p>
               <h2 class="endcap-name">Ulises <em>Ponce Pretelin</em></h2>
-              <p class="endcap-sub">Fisioterapeuta y desarrollador de software clínico</p>
+              <p class="endcap-sub" data-i18n="endcap.sub">Arquitecto de IA clínica & Fisioterapeuta</p>
             </div>
           </div>
         </section>
@@ -734,17 +709,17 @@
         <section class="section frame-block" id="contacto">
           <div class="frame-row contact-panel reveal">
             <div>
-              <p class="section-tag">07 — Contacto</p>
-              <h2 class="section-title">¿Colaboramos?</h2>
-              <p class="contact-text">
-                Si revisas el proyecto, quieres contribuir o desplegar PoncePretelin en tu consultorio.
+              <p class="section-tag" data-i18n="contact.tag">07 — Contacto</p>
+              <h2 class="section-title" data-i18n="contact.title">¿Colaboramos?</h2>
+              <p class="contact-text" data-i18n="contact.text">
+                Si revisas el proyecto, quieres colaborar o desplegar PoncePretelin en tu consultorio.
               </p>
             </div>
             <div class="contact-actions">
               <a class="btn btn-fill magnetic contact-btn" href="mailto:poncepretelin@gmail.com" data-magnetic>
                 poncepretelin@gmail.com
               </a>
-              <ul class="social-links social-links--icons" aria-label="Redes sociales">
+              <ul class="social-links social-links--icons" aria-label="Redes sociales" data-i18n-attr="aria-label:contact.socialLabel">
                 <li>
                   <a href="https://www.linkedin.com/in/ulises-antonio-ponce-pretelin-3a1a8a13a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" width="20" height="20" loading="lazy" decoding="async" />
@@ -775,9 +750,9 @@
         <div class="frame-row footer-row">
           <div>
             <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin · PoncePretelin</p>
-            <p class="footer-note">Herramienta de apoyo — no sustituye el juicio clínico.</p>
+            <p class="footer-note" data-i18n="footer.note">Herramienta de apoyo — no sustituye el juicio clínico.</p>
           </div>
-          <ul class="social-links social-links--icons social-links--footer" aria-label="Redes sociales">
+          <ul class="social-links social-links--icons social-links--footer" aria-label="Redes sociales" data-i18n-attr="aria-label:footer.socialLabel">
             <li>
               <a href="https://www.linkedin.com/in/ulises-antonio-ponce-pretelin-3a1a8a13a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" width="20" height="20" loading="lazy" decoding="async" />
@@ -803,6 +778,7 @@
       </footer>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="main.js"></script>
     <script type="module" src="slot-init.mjs"></script>
   </body>
