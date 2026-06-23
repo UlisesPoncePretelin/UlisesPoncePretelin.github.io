@@ -53,6 +53,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="vendor/slot-text/style.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -113,11 +114,8 @@
           <div class="frame-row hero-row">
             <div class="hero-left">
               <div class="hero-badge reveal">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="14 9 9 4 4 9"></polyline>
-                  <path d="M20 20h-7a4 4 0 0 1-4-4V4"></path>
-                </svg>
-                <span>Soy yo</span>
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                <span class="hero-badge-slot" data-slot-badge>Xalapa</span>
               </div>
 
               <div class="portrait-stage reveal" data-tilt>
@@ -144,9 +142,12 @@
                 <span class="line"><span class="word" data-split>Ulises Antonio</span></span>
                 <span class="line line-accent"><span class="word" data-split>Ponce Pretelin</span></span>
               </h1>
-              <p class="hero-typing reveal" aria-live="polite">
-                <span class="hero-typing-text" data-slot-hero>Fisioterapeuta</span>
-              </p>
+              <div class="hero-role-block reveal" aria-live="polite">
+                <p class="hero-role-label">Rol actual</p>
+                <p class="hero-typing">
+                  <span class="hero-typing-text" data-slot-hero>Fisioterapeuta</span>
+                </p>
+              </div>
               <p class="hero-text reveal">
                 Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e
                 internacionales. Construyo <strong>PoncePretelin</strong>, gestor clínico con módulos de
@@ -172,8 +173,8 @@
                   GitHub
                 </a>
               </div>
-              <p class="hero-demo reveal">
-                <code>demo@poncepretelin.app</code> · <code>DemoCloud2026</code>
+              <p class="hero-focus reveal">
+                Enfoque · <span class="hero-focus-slot" data-slot-focus>PoncePretelin</span>
               </p>
             </div>
           </div>
@@ -220,18 +221,6 @@
           </div>
         </section>
 
-
-        <section class="today-panel frame-block reveal">
-          <div class="frame-row today-row">
-            <p class="today-label">Hoy</p>
-            <ul class="today-list today-list--single">
-              <li>
-                <strong>Desarrollo</strong>
-                <span>PoncePretelin · gestor clínico con IA, evidencia y terminología</span>
-              </li>
-            </ul>
-          </div>
-        </section>
 
         <section class="section frame-block" id="sobre">
           <div class="frame-row section-grid">
@@ -327,8 +316,8 @@
             <div class="section-intro">
               <p class="section-tag">03 — Proyecto destacado</p>
               <h2 class="section-title project-title">Ponce<em>Pretelin</em></h2>
-              <p class="section-lead">
-                Gestor clínico con IA y evidencia referenciada — no formularios vacíos.
+              <p class="section-lead project-lead">
+                <span data-slot-project>Gestor clínico</span> con IA y evidencia referenciada — no formularios vacíos.
               </p>
             </div>
             <a
@@ -814,7 +803,6 @@
       </footer>
     </div>
 
-    <link rel="stylesheet" href="https://esm.sh/slot-text@0.3.1/style.css" />
     <script src="main.js"></script>
     <script type="module" src="slot-init.mjs"></script>
   </body>
