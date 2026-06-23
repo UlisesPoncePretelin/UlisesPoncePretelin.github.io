@@ -938,7 +938,7 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
 
 .hero-typing-text {
   display: inline-block;
-  min-width: 11ch;
+  min-width: 6ch;
 }
 
 .hero-typing-text .slot-text {
@@ -1376,41 +1376,55 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
+  gap: 0.75rem;
   padding-inline: clamp(1rem, 4vw, 2rem);
   max-width: calc(var(--frame) + 4rem);
   margin-inline: auto;
   padding-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
-.tech-item {
+.tech-chip {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 1rem 1.1rem;
+  gap: 0.8rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--line);
-  border-radius: 0.65rem;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  transition: border-color 0.3s, transform 0.35s var(--ease-out), box-shadow 0.35s;
+  border-radius: 0.75rem;
+  background: var(--surface);
+  transition:
+    border-color 0.3s,
+    transform 0.35s var(--ease-out),
+    box-shadow 0.35s;
 }
 
-.tech-item img {
+.tech-chip-icon {
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--brand, var(--ink)) 10%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand, var(--line)) 18%, var(--line));
+}
+
+.tech-chip-icon img {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
   object-fit: contain;
 }
 
-.tech-item span {
-  font-size: 0.92rem;
+.tech-chip-label {
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
 }
 
-.tech-item:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
-  box-shadow: 0 12px 28px color-mix(in srgb, var(--ink) 6%, transparent);
+.tech-chip:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--brand, var(--accent)) 35%, var(--line));
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--ink) 5%, transparent);
 }
 
 /* Stack groups — legacy */
@@ -1659,12 +1673,21 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
 }
 
 .social-links a img {
+  display: block;
   flex-shrink: 0;
-  opacity: 0.85;
 }
 
-.social-links a:hover img {
-  opacity: 1;
+.social-links--icons a {
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.social-links--icons a:hover {
+  transform: translateY(-2px);
 }
 
 .social-links--footer {
@@ -1702,6 +1725,11 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
   padding: 0;
   list-style: none;
   flex: 1;
+}
+
+.today-list--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 42rem;
 }
 
 .today-list li {

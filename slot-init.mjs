@@ -6,12 +6,7 @@ const initHeroSlot = () => {
   const el = document.querySelector("[data-slot-hero]");
   if (!el || reduced) return;
 
-  const roles = [
-    "Fisioterapeuta",
-    "Dev clínico",
-    "PoncePretelin",
-    "IA clínica",
-  ];
+  const roles = ["Fisioterapeuta", "DEV", "PoncePretelin", "IA clínica"];
   let index = 0;
   const roller = slotText(el, roles[0]);
 
@@ -21,38 +16,13 @@ const initHeroSlot = () => {
   }, 3200);
 };
 
-const initMetricSlot = () => {
-  const el = document.querySelector("[data-slot-metric]");
-  if (!el || reduced) {
-    if (el) el.textContent = el.dataset.slotTarget || el.textContent;
-    return;
-  }
-
-  const roller = slotText(el, "0");
-  const target = el.dataset.slotTarget || "980+";
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        roller.set(target);
-        observer.disconnect();
-      });
-    },
-    { threshold: 0.45 }
-  );
-
-  observer.observe(el);
-};
-
 const initHeroFallback = () => {
   const el = document.querySelector("[data-slot-hero]");
   if (!el || !reduced) return;
-  el.textContent = "Fisioterapeuta · Dev clínico · PoncePretelin";
+  el.textContent = "Fisioterapeuta · DEV · PoncePretelin";
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeroSlot();
   initHeroFallback();
-  initMetricSlot();
 });
