@@ -62,7 +62,7 @@
               <h1 class="cv-name">Ulises Antonio <em>Ponce Pretelin</em></h1>
               <p class="cv-headline" data-i18n="cv.headline">Arquitecto de IA clínica & Fisioterapeuta</p>
               <p class="cv-contact">
-                Xalapa, Veracruz, México
+                <span data-i18n="cv.location">Xalapa, Veracruz, México</span>
                 <span class="sep">·</span>
                 <a href="mailto:poncepretelin@gmail.com">poncepretelin@gmail.com</a>
                 <span class="sep">·</span>
@@ -87,7 +87,7 @@
             <h2 class="cv-section-title" data-i18n="cv.summaryTitle">Resumen</h2>
             <div class="cv-prose">
               <p data-i18n="cv.summary">
-                Profesional en Terapia Física con experiencia en atención a poblaciones con necesidades especiales en contextos clínicos, comunitarios e internacionales. Arquitecto de sistemas clínicos con IA: diseño flujos, datos referenciados, integraciones de seguridad y módulos de apoyo que respetan el juicio profesional.
+                Profesional en Terapia Física con experiencia en atención a poblaciones con necesidades especiales en contextos clínicos, comunitarios e internacionales. Arquitecto de sistemas clínicos con IA: diseño flujos de expediente, datos referenciados, integraciones de seguridad (openFDA, RxNav), terminología IASP/CIF y módulos de apoyo que respetan el juicio profesional.
               </p>
             </div>
           </div>
@@ -101,18 +101,16 @@
                 <div class="cv-entry-head">
                   <div>
                     <h3 data-i18n="cv.rolePt">Fisioterapeuta</h3>
-                    <p class="cv-org">Clínica de terapia de lenguaje</p>
+                    <p class="cv-org" data-i18n="cv.rolePtOrg">Clínica de terapia de lenguaje</p>
                   </div>
                   <time class="cv-date" datetime="2026">2026 — <span data-i18n="cv.present">Actual</span></time>
                 </div>
                 <ul>
                   <li data-i18n="cv.rolePtLi1">
-                    Atención clínica en contexto interdisciplinario de terapia de lenguaje y
-                    rehabilitación.
+                    Atención clínica en contexto interdisciplinario de terapia de lenguaje y rehabilitación.
                   </li>
                   <li data-i18n="cv.rolePtLi2">
-                    Documentación de evolución, coordinación con equipo terapéutico y seguimiento de
-                    objetivos funcionales del paciente.
+                    Documentación de evolución, coordinación con equipo terapéutico y seguimiento de objetivos funcionales del paciente.
                   </li>
                 </ul>
               </li>
@@ -134,11 +132,13 @@
                 </div>
                 <ul>
                   <li data-i18n="cv.roleDevLi1">
-                    Arquitectura y desarrollo de gestor clínico: expediente, agenda, SOAP,
-                    finanzas y portal paciente.
+                    Arquitectura y desarrollo del gestor: expediente multi-especialidad, episodios, SOAP, agenda, finanzas y portal paciente.
+                  </li>
+                  <li data-i18n="cv.roleDevLi2">
+                    Integraciones openFDA y RxNav, terminología referenciada IASP/CIF, escalas EBP y módulos de apoyo con IA.
                   </li>
                   <li>
-                    <span data-i18n="cv.roleDevLi2">Stack: FastAPI, PostgreSQL, Next.js, TypeScript, Docker.</span>
+                    <span data-i18n="cv.roleDevLi3">Stack: FastAPI, PostgreSQL, Next.js, TypeScript, Docker.</span>
                     <a
                       href="https://poncepretelin-web.onrender.com"
                       target="_blank"
@@ -160,28 +160,22 @@
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Licenciatura en Terapia física</h3>
-                    <p class="cv-org">
-                      Instituto de Ciencias y Estudios Superiores (ICES)
-                    </p>
+                    <h3 data-i18n="cv.eduPtTitle">Licenciatura en Terapia física</h3>
+                    <p class="cv-org" data-i18n="cv.eduPtOrg">Instituto de Ciencias y Estudios Superiores (ICES)</p>
                   </div>
-                  <time class="cv-date" datetime="2019/2023">2019 — 2023</time>
+                  <time class="cv-date" datetime="2019/2023" data-i18n="cv.eduPtDate">2019 — 2023</time>
                 </div>
-                <p class="cv-note">
-                  Estudios finalizados (constancia oct 2023) · titulación en curso
-                </p>
+                <p class="cv-note" data-i18n="cv.eduPtNote">Estudios finalizados (constancia oct 2023) · titulación en curso</p>
               </li>
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Licenciatura en Tecnologías para la Información en Ciencias</h3>
-                    <p class="cv-org">
-                      ENES Morelia, Universidad Nacional Autónoma de México (UNAM)
-                    </p>
+                    <h3 data-i18n="cv.eduItTitle">Licenciatura en Tecnologías para la Información en Ciencias</h3>
+                    <p class="cv-org" data-i18n="cv.eduItOrg">ENES Morelia, Universidad Nacional Autónoma de México (UNAM)</p>
                   </div>
-                  <time class="cv-date" datetime="2018/2021">2018 — 2021</time>
+                  <time class="cv-date" datetime="2018/2021" data-i18n="cv.eduItDate">2018 — 2021</time>
                 </div>
-                <p class="cv-note">Constancia UNAM · folio 619 · junio 2022</p>
+                <p class="cv-note" data-i18n="cv.eduItNote">Constancia UNAM · folio 619 · junio 2022</p>
               </li>
             </ol>
           </div>
@@ -194,81 +188,46 @@
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Cabin Leader</h3>
-                    <p class="cv-org">Citizens Options Unlimited · Estados Unidos</p>
+                    <h3 data-i18n="cv.expCabinTitle">Cabin Leader</h3>
+                    <p class="cv-org" data-i18n="cv.expCabinOrg">Citizens Options Unlimited · Estados Unidos</p>
                   </div>
-                  <time class="cv-date" datetime="2025">2025</time>
+                  <time class="cv-date" datetime="2025" data-i18n="cv.expCabinDate">2025</time>
                 </div>
                 <ul>
-                  <li>
-                    Coordinación y supervisión directa de una cabaña de usuarios de silla de ruedas.
-                  </li>
-                  <li>
-                    Liderazgo y orientación de counselors en la atención diaria, manejo conductual y
-                    apoyo a actividades de la vida diaria.
-                  </li>
-                  <li>
-                    Implementación y supervisión de adaptaciones físicas y organizativas para
-                    garantizar accesibilidad y seguridad.
-                  </li>
-                  <li>
-                    Promoción de la autonomía, participación y bienestar integral de los campistas.
-                  </li>
+                  <li data-i18n="cv.expCabinLi1">Coordinación y supervisión directa de una cabaña de usuarios de silla de ruedas.</li>
+                  <li data-i18n="cv.expCabinLi2">Liderazgo y orientación de counselors en la atención diaria, manejo conductual y apoyo a actividades de la vida diaria.</li>
+                  <li data-i18n="cv.expCabinLi3">Implementación y supervisión de adaptaciones físicas y organizativas para garantizar accesibilidad y seguridad.</li>
+                  <li data-i18n="cv.expCabinLi4">Promoción de la autonomía, participación y bienestar integral de los campistas.</li>
                 </ul>
               </li>
-
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Behavior Helper Supporter</h3>
-                    <p class="cv-org">Citizens Options Unlimited · Estados Unidos</p>
+                    <h3 data-i18n="cv.expBehaviorTitle">Behavior Helper Supporter</h3>
+                    <p class="cv-org" data-i18n="cv.expBehaviorOrg">Citizens Options Unlimited · Estados Unidos</p>
                   </div>
-                  <time class="cv-date" datetime="2023">2023</time>
+                  <time class="cv-date" datetime="2023" data-i18n="cv.expBehaviorDate">2023</time>
                 </div>
                 <ul>
-                  <li>
-                    Colaboración con profesionales en el diseño e implementación de planes de
-                    intervención conductual positiva.
-                  </li>
-                  <li>
-                    Apoyo en la regulación conductual, promoción de comportamientos adaptativos e
-                    inclusión social.
-                  </li>
-                  <li>
-                    Acompañamiento individualizado a personas con discapacidad en contextos
-                    comunitarios.
-                  </li>
-                  <li>
-                    Función como puente cultural y lingüístico, facilitando la comunicación entre
-                    counselors y el equipo de trabajo.
-                  </li>
+                  <li data-i18n="cv.expBehaviorLi1">Colaboración con profesionales en el diseño e implementación de planes de intervención conductual positiva.</li>
+                  <li data-i18n="cv.expBehaviorLi2">Apoyo en la regulación conductual, promoción de comportamientos adaptativos e inclusión social.</li>
+                  <li data-i18n="cv.expBehaviorLi3">Acompañamiento individualizado a personas con discapacidad en contextos comunitarios.</li>
+                  <li data-i18n="cv.expBehaviorLi4">Función como puente cultural y lingüístico, facilitando la comunicación entre counselors y el equipo de trabajo.</li>
                 </ul>
               </li>
-
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Camp Counselor</h3>
-                    <p class="cv-org">Citizens Options Unlimited · Estados Unidos</p>
+                    <h3 data-i18n="cv.expCampTitle">Camp Counselor</h3>
+                    <p class="cv-org" data-i18n="cv.expCampOrg">Citizens Options Unlimited · Estados Unidos</p>
                   </div>
-                  <time class="cv-date" datetime="2022">2022</time>
+                  <time class="cv-date" datetime="2022" data-i18n="cv.expCampDate">2022</time>
                 </div>
                 <ul>
-                  <li>
-                    Facilitación de actividades recreativas y educativas adaptadas para personas con
-                    discapacidad.
-                  </li>
-                  <li>
-                    Promoción del desarrollo personal, la autonomía y la independencia funcional de
-                    los participantes.
-                  </li>
-                  <li>
-                    Supervisión continua para garantizar un entorno seguro, estructurado y
-                    enriquecedor.
-                  </li>
-                  <li>
-                    Apoyo en rutinas diarias y acompañamiento en contextos comunitarios inclusivos.
-                  </li>
+                  <li data-i18n="cv.expCampLi1">Facilitación de actividades recreativas y educativas adaptadas para personas con discapacidad.</li>
+                  <li data-i18n="cv.expCampLi2">Promoción del desarrollo personal, la autonomía y la independencia funcional de los participantes.</li>
+                  <li data-i18n="cv.expCampLi3">Supervisión continua para garantizar un entorno seguro, estructurado y enriquecedor.</li>
+                  <li data-i18n="cv.expCampLi4">Apoyo en rutinas diarias y acompañamiento en contextos comunitarios inclusivos.</li>
                 </ul>
               </li>
             </ol>
@@ -281,21 +240,15 @@
             <article class="cv-entry reveal">
               <div class="cv-entry-head">
                 <div>
-                  <h3>Terapeuta físico — servicio social</h3>
-                  <p class="cv-org">Clínica Hospital ISSSTE · Xalapa, Veracruz</p>
+                  <h3 data-i18n="cv.ssTitle">Terapeuta físico — servicio social</h3>
+                  <p class="cv-org" data-i18n="cv.ssOrg">Clínica Hospital ISSSTE · Xalapa, Veracruz</p>
                 </div>
-                <time class="cv-date" datetime="2023/2024">ago 2023 — jul 2024</time>
+                <time class="cv-date" datetime="2023/2024" data-i18n="cv.ssDate">ago 2023 — jul 2024</time>
               </div>
               <ul>
-                <li>
-                  Atención fisioterapéutica en contexto hospitalario público, integrado al equipo clínico del
-                  ISSSTE.
-                </li>
-                <li>
-                  Aplicación de valoración, tratamiento y seguimiento durante la formación profesional (Lic.
-                  Terapia Física, ICES Campus Xalapa).
-                </li>
-                <li>Cumplimiento del servicio social universitario requerido para titulación.</li>
+                <li data-i18n="cv.ssLi1">Atención fisioterapéutica en contexto hospitalario público, integrado al equipo clínico del ISSSTE.</li>
+                <li data-i18n="cv.ssLi2">Aplicación de valoración, tratamiento y seguimiento durante la formación profesional (Lic. Terapia Física, ICES Campus Xalapa).</li>
+                <li data-i18n="cv.ssLi3">Cumplimiento del servicio social universitario requerido para titulación.</li>
               </ul>
             </article>
           </div>
@@ -308,52 +261,31 @@
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Instituto de Ecología (INECOL)</h3>
-                    <p class="cv-org">Xalapa, Veracruz</p>
+                    <h3 data-i18n="cv.intInecolTitle">Instituto de Ecología (INECOL)</h3>
+                    <p class="cv-org" data-i18n="cv.intInecolOrg">Xalapa, Veracruz</p>
                   </div>
-                  <time class="cv-date" datetime="2023/2024">2023 — 2024</time>
+                  <time class="cv-date" datetime="2023/2024" data-i18n="cv.intInecolDate">2023 — 2024</time>
                 </div>
                 <ul>
-                  <li>
-                    Participación en el proyecto Salud Ocupacional: Estrategias para la Prevención,
-                    Diagnóstico y Tratamiento de Lesiones.
-                  </li>
-                  <li>
-                    Apoyo en la evaluación funcional y análisis de riesgos musculoesqueléticos en
-                    población laboral.
-                  </li>
-                  <li>
-                    Colaboración en actividades de prevención de lesiones, ergonomía básica y
-                    promoción del bienestar físico en un entorno institucional.
-                  </li>
-                  <li>
-                    Trabajo en coordinación con personal académico y técnico dentro de un contexto
-                    de investigación aplicada a la salud.
-                  </li>
+                  <li data-i18n="cv.intInecolLi1">Participación en el proyecto Salud Ocupacional: Estrategias para la Prevención, Diagnóstico y Tratamiento de Lesiones.</li>
+                  <li data-i18n="cv.intInecolLi2">Apoyo en la evaluación funcional y análisis de riesgos musculoesqueléticos en población laboral.</li>
+                  <li data-i18n="cv.intInecolLi3">Colaboración en actividades de prevención de lesiones, ergonomía básica y promoción del bienestar físico en un entorno institucional.</li>
+                  <li data-i18n="cv.intInecolLi4">Trabajo en coordinación con personal académico y técnico dentro de un contexto de investigación aplicada a la salud.</li>
                 </ul>
               </li>
-
               <li class="cv-entry">
                 <div class="cv-entry-head">
                   <div>
-                    <h3>Velódromo Internacional de Xalapa</h3>
-                    <p class="cv-org">Xalapa, Veracruz</p>
+                    <h3 data-i18n="cv.intVeloTitle">Velódromo Internacional de Xalapa</h3>
+                    <p class="cv-org" data-i18n="cv.intVeloOrg">Xalapa, Veracruz</p>
                   </div>
-                  <time class="cv-date" datetime="2023/2024">2023 — 2024</time>
+                  <time class="cv-date" datetime="2023/2024" data-i18n="cv.intVeloDate">2023 — 2024</time>
                 </div>
                 <ul>
-                  <li>Apoyo en la evaluación física y funcional de atletas.</li>
-                  <li>
-                    Participación en programas de prevención de lesiones, recuperación física y
-                    acondicionamiento.
-                  </li>
-                  <li>
-                    Asistencia durante sesiones terapéuticas y de entrenamiento, aplicando
-                    principios de biomecánica y control del movimiento.
-                  </li>
-                  <li>
-                    Trabajo interdisciplinario con entrenadores y personal de apoyo deportivo.
-                  </li>
+                  <li data-i18n="cv.intVeloLi1">Apoyo en la evaluación física y funcional de atletas.</li>
+                  <li data-i18n="cv.intVeloLi2">Participación en programas de prevención de lesiones, recuperación física y acondicionamiento.</li>
+                  <li data-i18n="cv.intVeloLi3">Asistencia durante sesiones terapéuticas y de entrenamiento, aplicando principios de biomecánica y control del movimiento.</li>
+                  <li data-i18n="cv.intVeloLi4">Trabajo interdisciplinario con entrenadores y personal de apoyo deportivo.</li>
                 </ul>
               </li>
             </ol>
@@ -363,27 +295,27 @@
         <section class="frame-block cv-section" id="certificaciones">
           <div class="frame-row">
             <h2 class="cv-section-title" data-i18n="cv.certsTitle">Certificaciones y cursos</h2>
-            <div class="cv-cert-tabs" role="tablist" aria-label="Filtrar certificaciones">
-              <button class="cv-cert-tab is-active" type="button" role="tab" data-cert-filter="all" aria-selected="true">
+            <div class="cv-cert-tabs" role="tablist" data-i18n-attr="aria-label:cv.certFilterLabel">
+              <button class="cv-cert-tab is-active" type="button" role="tab" data-cert-filter="all" aria-selected="true" data-i18n="cv.certFilterAll">
                 Todas
               </button>
-              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="clinica" aria-selected="false">
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="clinica" aria-selected="false" data-i18n="cv.certFilterClinica">
                 Clínica
               </button>
-              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="mental" aria-selected="false">
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="mental" aria-selected="false" data-i18n="cv.certFilterMental">
                 Salud mental
               </button>
-              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="coursera" aria-selected="false">
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="coursera" aria-selected="false" data-i18n="cv.certFilterCoursera">
                 Coursera
               </button>
-              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="otros" aria-selected="false">
+              <button class="cv-cert-tab" type="button" role="tab" data-cert-filter="otros" aria-selected="false" data-i18n="cv.certFilterOtros">
                 Otros
               </button>
             </div>
             <div class="cv-cert-groups">
               <article class="cv-cert-group reveal" data-cert-category="clinica">
-                <h3 class="cv-cert-group-title">Formación clínica</h3>
-                <p class="cv-cert-group-desc">Geriatría, CONAMEGE y cursos de salud</p>
+                <h3 class="cv-cert-group-title" data-i18n="cv.certClinicaTitle">Formación clínica</h3>
+                <p class="cv-cert-group-desc" data-i18n="cv.certClinicaDesc">Geriatría, CONAMEGE y cursos de salud</p>
                 <ul class="cv-cert-list">
                   <li>
                     <strong>Intervenciones Comunitarias Basadas en Evidencias</strong>
@@ -421,7 +353,7 @@
               </article>
 
               <article class="cv-cert-group reveal" data-cert-category="mental">
-                <h3 class="cv-cert-group-title">Salud mental y bienestar</h3>
+                <h3 class="cv-cert-group-title" data-i18n="cv.certMentalTitle">Salud mental y bienestar</h3>
                 <ul class="cv-cert-list">
                   <li>
                     <strong>Abordaje de la Ansiedad</strong>
@@ -443,7 +375,7 @@
               </article>
 
               <article class="cv-cert-group reveal" data-cert-category="coursera">
-                <h3 class="cv-cert-group-title">Coursera · salud y ciencia</h3>
+                <h3 class="cv-cert-group-title" data-i18n="cv.certCourseraTitle">Coursera · salud y ciencia</h3>
                 <ul class="cv-cert-list">
                   <li>
                     <strong>Atención Primaria en Salud: ENT</strong>
@@ -461,7 +393,7 @@
               </article>
 
               <article class="cv-cert-group reveal" data-cert-category="otros">
-                <h3 class="cv-cert-group-title">Otros</h3>
+                <h3 class="cv-cert-group-title" data-i18n="cv.certOtrosTitle">Otros</h3>
                 <ul class="cv-cert-list">
                   <li>
                     <strong>Educación Financiera</strong>
@@ -483,36 +415,25 @@
 
         <section class="frame-block cv-section">
           <div class="frame-row">
-            <h2 class="cv-section-title" data-i18n="cv.skillsTitle">Habilidades técnicas</h2>
+            <h2 class="cv-section-title" data-i18n="cv.clinicalSkillsTitle">Habilidades clínicas</h2>
             <ul class="cv-lang-list">
-              <li>
-                Valoración funcional y análisis del movimiento para el diagnóstico
-                fisioterapéutico.
-              </li>
-              <li>
-                Aplicación de intervenciones fisioterapéuticas orientadas a la rehabilitación y
-                prevención de lesiones.
-              </li>
-              <li>
-                Atención a personas con discapacidad, incluyendo apoyo en movilidad, transferencias
-                y actividades de la vida diaria.
-              </li>
-              <li>
-                Implementación de estrategias de intervención conductual positiva para favorecer la
-                adherencia terapéutica y la interacción social.
-              </li>
-              <li>
-                Uso de herramientas digitales para el registro, seguimiento y organización de
-                información clínica (Microsoft Excel, Google Sheets).
-              </li>
-              <li>
-                Elaboración de reportes y documentación clínica mediante procesadores de texto
-                (Microsoft Word, Google Docs).
-              </li>
-              <li>
-                Análisis básico de datos clínicos y funcionales para el monitoreo del progreso
-                terapéutico.
-              </li>
+              <li data-i18n="cv.skillLi1">Valoración funcional y análisis del movimiento para el diagnóstico fisioterapéutico.</li>
+              <li data-i18n="cv.skillLi2">Aplicación de intervenciones orientadas a rehabilitación y prevención de lesiones.</li>
+              <li data-i18n="cv.skillLi3">Atención a personas con discapacidad: movilidad, transferencias y actividades de la vida diaria.</li>
+              <li data-i18n="cv.skillLi4">Estrategias de intervención conductual positiva para adherencia terapéutica e interacción social.</li>
+              <li data-i18n="cv.skillLi5">Documentación clínica y seguimiento de evolución en entornos interdisciplinarios.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="frame-block cv-section">
+          <div class="frame-row">
+            <h2 class="cv-section-title" data-i18n="cv.systemsSkillsTitle">Sistemas clínicos e IA</h2>
+            <ul class="cv-lang-list">
+              <li data-i18n="cv.sysLi1">Diseño de flujos clínicos: expediente, episodios, SOAP y multi-especialidad.</li>
+              <li data-i18n="cv.sysLi2">Terminología referenciada IASP / CIF OMS y escalas EBP (NDI, ODI, Berg, TUG).</li>
+              <li data-i18n="cv.sysLi3">Integraciones de seguridad clínica: openFDA y RxNav.</li>
+              <li data-i18n="cv.sysLi4">Stack de despliegue: TypeScript, Next.js, Python, FastAPI, PostgreSQL, Docker.</li>
             </ul>
           </div>
         </section>
@@ -521,8 +442,8 @@
           <div class="frame-row">
             <h2 class="cv-section-title" data-i18n="cv.languagesTitle">Idiomas</h2>
             <ul class="cv-lang-list">
-              <li><strong>Español</strong> — nativo</li>
-              <li><strong>Inglés</strong> — B2 (avanzado-intermedio, sin certificado)</li>
+              <li data-i18n="cv.langEs">Español — nativo</li>
+              <li data-i18n="cv.langEn">Inglés — B2 (avanzado-intermedio, sin certificado)</li>
             </ul>
           </div>
         </section>
@@ -531,7 +452,7 @@
       <footer class="site-footer frame-block">
         <div class="frame-row footer-row">
           <p>© <span id="year"></span> Ulises Antonio Ponce Pretelin</p>
-          <p class="footer-note" data-i18n="cv.footerNote">Basado en CV_UlisesPoncePretelin.pdf · junio 2026</p>
+          <p class="footer-note" data-i18n="cv.footerNote">CV actualizado · junio 2026</p>
         </div>
       </footer>
     </div>

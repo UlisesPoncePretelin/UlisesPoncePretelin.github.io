@@ -3372,6 +3372,10 @@ body.cv-page .chapter-nav {
   .site-header,
   .site-footer,
   .cv-print-btn,
+  .cv-download-btn,
+  .cv-hero-actions,
+  .lang-toggle,
+  .menu-btn,
   .skip-link {
     display: none !important;
   }

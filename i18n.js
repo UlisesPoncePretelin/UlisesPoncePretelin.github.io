@@ -105,8 +105,14 @@
   };
 
   const init = async () => {
+    const urlLang = new URLSearchParams(window.location.search).get("lang");
     const saved = localStorage.getItem(STORAGE_KEY);
-    const lang = saved === "en" || saved === "es" ? saved : DEFAULT_LANG;
+    const lang =
+      urlLang === "en" || urlLang === "es"
+        ? urlLang
+        : saved === "en" || saved === "es"
+          ? saved
+          : DEFAULT_LANG;
     await setLang(lang);
 
     document.querySelectorAll(".lang-toggle-btn").forEach((btn) => {
