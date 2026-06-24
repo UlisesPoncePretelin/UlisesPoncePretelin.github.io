@@ -3,6 +3,7 @@
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+  const canHover = window.matchMedia("(hover: hover)").matches;
   const narrowQuery = window.matchMedia("(max-width: 720px)");
   let isNarrow = narrowQuery.matches;
   const canAnimate = !prefersReduced;
@@ -39,7 +40,6 @@
       document.body.classList.add("is-loaded");
       preloader?.classList.add("is-done");
       window.dispatchEvent(new CustomEvent("portfolio:ready"));
-      revealInView();
       setTimeout(() => preloader?.remove(), 900);
     };
 
@@ -229,7 +229,7 @@
 
   /* Cursor glow */
   const glow = document.getElementById("cursor-glow");
-  if (glow && canAnimate && !isCoarse && window.matchMedia("(min-width: 721px)").matches) {
+  if (glow && canAnimate && canHover && window.matchMedia("(min-width: 721px)").matches) {
     document.body.classList.add("has-cursor");
     let gx = 0;
     let gy = 0;
@@ -257,7 +257,7 @@
   /* 3D tilt helpers */
   const bindTilt = (elements, max) => {
     elements.forEach((el) => {
-      if (!canAnimate || isCoarse) return;
+      if (!canAnimate || !canHover) return;
       el.addEventListener("mousemove", (e) => {
         const rect = el.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -271,7 +271,7 @@
   };
 
   const tiltEl = document.querySelector("[data-tilt]");
-  if (tiltEl && canAnimate && !isCoarse) {
+  if (tiltEl && canAnimate && canHover) {
     const max = 14;
     tiltEl.addEventListener("mousemove", (e) => {
       const rect = tiltEl.getBoundingClientRect();
@@ -342,7 +342,7 @@
 
   /* Magnetic buttons */
   document.querySelectorAll("[data-magnetic]").forEach((el) => {
-    if (!canAnimate || isCoarse) return;
+    if (!canAnimate || !canHover) return;
     el.addEventListener("mousemove", (e) => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
@@ -374,20 +374,23 @@
   };
 
   prepareStaggerReveals();
-  const reveals = document.querySelectorAll(".reveal");
+
   let revealObserver;
 
-  const revealInView = () => {
-    reveals.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
-        el.classList.add("is-visible");
-        revealObserver?.unobserve(el);
-      }
-    });
-  };
+  const initRevealSystem = () => {
+    if (!canAnimate) {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
 
-  if (reveals.length && canAnimate) {
+    document.querySelectorAll(".reveal.is-visible").forEach((el) => {
+      el.classList.remove("is-visible");
+    });
+
+    const reveals = document.querySelectorAll(".reveal");
+    if (!reveals.length) return;
+
+    revealObserver?.disconnect();
     revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -398,16 +401,25 @@
       },
       { threshold: 0.06, rootMargin: "0px 0px -4% 0px" }
     );
+
     reveals.forEach((el, i) => {
       if (!el.style.getPropertyValue("--delay")) {
         el.style.setProperty("--delay", `${Math.min(i * 35, 280)}ms`);
       }
       revealObserver.observe(el);
     });
-    revealInView();
-  } else {
-    reveals.forEach((el) => el.classList.add("is-visible"));
-  }
+
+    reveals.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+        el.classList.add("is-visible");
+        revealObserver.unobserve(el);
+      }
+    });
+  };
+
+  window.addEventListener("portfolio:ready", initRevealSystem, { once: true });
+  if (document.body.classList.contains("is-loaded")) initRevealSystem();
 
   /* Counter animation */
   const counters = document.querySelectorAll("[data-count]");

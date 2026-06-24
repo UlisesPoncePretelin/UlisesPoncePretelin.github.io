@@ -2871,6 +2871,10 @@ body.is-loaded .chapter-nav {
   transition-delay: var(--delay, 0ms);
 }
 
+body.is-loading .reveal {
+  transition: none;
+}
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
