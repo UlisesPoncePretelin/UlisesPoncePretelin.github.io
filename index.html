@@ -189,7 +189,7 @@
           </div>
         </section>
 
-        <div class="loc-bar frame-block">
+        <div class="loc-bar frame-block reveal">
           <div class="frame-row">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -265,7 +265,7 @@
               <h2 class="section-title"><span data-i18n="path.title">Formación y</span> <em data-i18n="path.titleEm">experiencia</em></h2>
             </div>
           </div>
-          <ol class="timeline reveal">
+          <ol class="timeline reveal-stagger-list">
             <li class="timeline-item">
               <time datetime="2026">2026</time>
               <div>
@@ -344,8 +344,8 @@
             <h3 class="engines-heading"><span data-i18n="project.enginesTitle">Tres capas de</span> <em data-i18n="project.enginesTitleEm">inteligencia</em></h3>
           </div>
 
-          <div class="engines-grid reveal">
-            <article class="engine-card engine-card-featured">
+          <div class="engines-grid reveal-stagger">
+            <article class="engine-card engine-card-featured" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine1Num">01</span>
               <div class="engine-thumb module-thumb-empty" aria-hidden="true">
                 <span data-i18n="project.screenshotSoon">Captura próximamente</span>
@@ -358,7 +358,7 @@
               </div>
             </article>
 
-            <article class="engine-card">
+            <article class="engine-card" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine2Num">02</span>
               <div class="engine-thumb module-thumb-empty" aria-hidden="true">
                 <span data-i18n="project.screenshotSoon">Captura próximamente</span>
@@ -370,7 +370,7 @@
               </div>
             </article>
 
-            <article class="engine-card">
+            <article class="engine-card" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine3Num">03</span>
               <div class="engine-thumb module-thumb-empty" aria-hidden="true">
                 <span data-i18n="project.screenshotSoon">Captura próximamente</span>
@@ -391,18 +391,18 @@
               <h2 class="section-title"><span data-i18n="flows.title">Tres flujos de</span> <em data-i18n="flows.titleEm">trabajo</em></h2>
             </div>
           </div>
-          <div class="usecases-grid reveal">
-            <article class="usecase-card">
+          <div class="usecases-grid reveal-stagger">
+            <article class="usecase-card" data-tilt-card>
               <span class="usecase-num">01</span>
               <h3 data-i18n="flows.f1Title">Primera consulta</h3>
               <p data-i18n="flows.f1Desc">Crear paciente, episodio activo y nota SOAP inicial con plantillas por especialidad.</p>
             </article>
-            <article class="usecase-card">
+            <article class="usecase-card" data-tilt-card>
               <span class="usecase-num">02</span>
               <h3 data-i18n="flows.f2Title">Seguimiento EBP</h3>
               <p data-i18n="flows.f2Desc">Aplicar NDI u ODI, ver interpretación basada en evidencia y evolución en el expediente.</p>
             </article>
-            <article class="usecase-card">
+            <article class="usecase-card" data-tilt-card>
               <span class="usecase-num">03</span>
               <h3 data-i18n="flows.f3Title">Terminología prudente</h3>
               <p data-i18n="flows.f3Desc">Corrector IASP · CIF OMS · lenguaje centrado en la persona.</p>
@@ -450,7 +450,7 @@
                   <span data-i18n="demo.placeholderSub">Preparando material propio del demo en vivo</span>
                 </div>
               </div>
-              <ul class="demo-showcase-topics" aria-label="Vistas del gestor" data-i18n-attr="aria-label:demo.topicsLabel">
+              <ul class="demo-showcase-topics reveal-stagger-list" aria-label="Vistas del gestor" data-i18n-attr="aria-label:demo.topicsLabel">
                 <li data-i18n="demo.topic1">Caso clínico · plan y pruebas</li>
                 <li data-i18n="demo.topic2">Pruebas diagnósticas · Sn/Sp</li>
                 <li data-i18n="demo.topic3">Panel del día · expediente</li>
@@ -472,8 +472,8 @@
               </p>
             </div>
           </div>
-          <div class="why-grid reveal">
-            <article class="why-card">
+          <div class="why-grid reveal-stagger">
+            <article class="why-card" data-tilt-card>
               <span class="why-num">01</span>
               <h3 data-i18n="why.c1Title">Evidencia trazable</h3>
               <p data-i18n="why.c1Desc">
@@ -481,14 +481,14 @@
                 inventados ni generados al azar.
               </p>
             </article>
-            <article class="why-card">
+            <article class="why-card" data-tilt-card>
               <span class="why-num">02</span>
               <h3 data-i18n="why.c2Title">Terminología 2026</h3>
               <p data-i18n="why.c2Desc">
                 Terminología versionada y referenciada: IASP 2020, CIF OMS, lenguaje centrado en la persona.
               </p>
             </article>
-            <article class="why-card">
+            <article class="why-card" data-tilt-card>
               <span class="why-num">03</span>
               <h3 data-i18n="why.c3Title">Apoyo con IA</h3>
               <p data-i18n="why.c3Desc">
@@ -507,7 +507,7 @@
                 Primera versión pública en desarrollo activo. Lo que ya funciona y lo que sigue en curso.
               </p>
             </div>
-            <ul class="roadmap-list">
+            <ul class="roadmap-list reveal-stagger-list">
               <li class="roadmap-item is-done">
                 <span class="roadmap-marker" aria-hidden="true">✓</span>
                 <div>
@@ -550,7 +550,7 @@
               </p>
             </div>
           </div>
-          <div class="cert-grid reveal">
+          <div class="cert-grid reveal-stagger">
             <article class="cert-card">
               <span class="cert-card-tag">Clínica</span>
               <h3>Intervenciones comunitarias basadas en evidencias</h3>
@@ -597,56 +597,56 @@
               </p>
             </div>
           </div>
-          <div class="tech-grid reveal">
-            <article class="tech-chip" style="--brand: #3178c6">
+          <div class="tech-grid reveal-stagger">
+            <article class="tech-chip" data-tilt-chip style="--brand: #3178c6">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">TypeScript</span>
             </article>
-            <article class="tech-chip" style="--brand: #000000">
+            <article class="tech-chip" data-tilt-chip style="--brand: #000000">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Next.js</span>
             </article>
-            <article class="tech-chip" style="--brand: #06b6d4">
+            <article class="tech-chip" data-tilt-chip style="--brand: #06b6d4">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Tailwind CSS</span>
             </article>
-            <article class="tech-chip" style="--brand: #3776ab">
+            <article class="tech-chip" data-tilt-chip style="--brand: #3776ab">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/python/3776AB" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Python</span>
             </article>
-            <article class="tech-chip" style="--brand: #009688">
+            <article class="tech-chip" data-tilt-chip style="--brand: #009688">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/fastapi/009688" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">FastAPI</span>
             </article>
-            <article class="tech-chip" style="--brand: #d71f00">
+            <article class="tech-chip" data-tilt-chip style="--brand: #d71f00">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/sqlalchemy/D71F00" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">SQLAlchemy</span>
             </article>
-            <article class="tech-chip" style="--brand: #4169e1">
+            <article class="tech-chip" data-tilt-chip style="--brand: #4169e1">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">PostgreSQL</span>
             </article>
-            <article class="tech-chip" style="--brand: #2496ed">
+            <article class="tech-chip" data-tilt-chip style="--brand: #2496ed">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/docker/2496ED" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Docker</span>
             </article>
-            <article class="tech-chip" style="--brand: #181717">
+            <article class="tech-chip" data-tilt-chip style="--brand: #181717">
               <span class="tech-chip-icon" aria-hidden="true">
                 <img src="https://cdn.simpleicons.org/github/181717" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
@@ -662,13 +662,13 @@
               </p>
             </div>
           </div>
-          <div class="clinical-grid reveal">
-            <article class="clinical-chip"><span class="clinical-chip-sig">IASP</span><span data-i18n="stack.iaspDesc">Terminología del dolor referenciada</span></article>
-            <article class="clinical-chip"><span class="clinical-chip-sig">CIF</span><span data-i18n="stack.cifDesc">Clasificación Internacional del Funcionamiento (OMS)</span></article>
-            <article class="clinical-chip"><span class="clinical-chip-sig">openFDA</span><span data-i18n="stack.openfdaDesc">Integración de alertas de dispositivos y recalls</span></article>
-            <article class="clinical-chip"><span class="clinical-chip-sig">EBP</span><span data-i18n="stack.ebpDesc">NDI · ODI · Berg · TUG · STarT Back</span></article>
-            <article class="clinical-chip"><span class="clinical-chip-sig">RxNav</span><span data-i18n="stack.rxnavDesc">Contexto farmacológico en intake clínico</span></article>
-            <article class="clinical-chip"><span class="clinical-chip-sig">Sn/Sp</span><span data-i18n="stack.snspDesc">Valores referenciados en pruebas diagnósticas</span></article>
+          <div class="clinical-grid reveal-stagger">
+            <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">IASP</span><span data-i18n="stack.iaspDesc">Terminología del dolor referenciada</span></article>
+            <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">CIF</span><span data-i18n="stack.cifDesc">Clasificación Internacional del Funcionamiento (OMS)</span></article>
+            <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">openFDA</span><span data-i18n="stack.openfdaDesc">Integración de alertas de dispositivos y recalls</span></article>
+            <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">EBP</span><span data-i18n="stack.ebpDesc">NDI · ODI · Berg · TUG · STarT Back</span></article>
+            <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">RxNav</span><span data-i18n="stack.rxnavDesc">Contexto farmacológico en intake clínico</span></article>
+            <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">Sn/Sp</span><span data-i18n="stack.snspDesc">Valores referenciados en pruebas diagnósticas</span></article>
           </div>
         </section>
 

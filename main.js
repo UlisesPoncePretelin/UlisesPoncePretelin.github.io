@@ -287,6 +287,59 @@
   bindTilt(document.querySelectorAll("[data-tilt-card]"), 8);
   bindTilt(document.querySelectorAll("[data-tilt-chip]"), 6);
 
+  /* Hero name split + premium motion */
+  const initHeroSplit = () => {
+    if (!canAnimate) return;
+    document.querySelectorAll("[data-split]").forEach((el) => {
+      if (el.dataset.splitReady) return;
+      const text = el.textContent.trim();
+      el.dataset.splitReady = "1";
+      el.setAttribute("aria-label", text);
+      el.textContent = "";
+      el.classList.remove("word");
+      [...text].forEach((char, i) => {
+        const span = document.createElement("span");
+        span.className = "split-char";
+        span.textContent = char === " " ? "\u00a0" : char;
+        span.style.animationDelay = `${0.52 + i * 0.028}s`;
+        el.appendChild(span);
+      });
+    });
+  };
+
+  const initDemoTopicCycle = () => {
+    const topics = document.querySelectorAll(".demo-showcase-topics li");
+    if (!topics.length || !canAnimate) return;
+    let index = 0;
+    topics[0]?.classList.add("is-active");
+    window.setInterval(() => {
+      index = (index + 1) % topics.length;
+      topics.forEach((li, i) => li.classList.toggle("is-active", i === index));
+    }, 2600);
+  };
+
+  const initHeroParallax = () => {
+    const heroLeft = document.querySelector(".hero-left");
+    if (!heroLeft || !canAnimate || isNarrow) return;
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (window.scrollY > window.innerHeight * 0.85) return;
+        heroLeft.style.transform = `translate3d(0, ${window.scrollY * 0.045}px, 0)`;
+      },
+      { passive: true }
+    );
+  };
+
+  const bootPremiumMotion = () => {
+    initHeroSplit();
+    initDemoTopicCycle();
+    initHeroParallax();
+  };
+
+  window.addEventListener("portfolio:ready", bootPremiumMotion);
+  if (document.body.classList.contains("is-loaded")) bootPremiumMotion();
+
   /* Magnetic buttons */
   document.querySelectorAll("[data-magnetic]").forEach((el) => {
     if (!canAnimate || isCoarse) return;
@@ -302,6 +355,25 @@
   });
 
   /* Reveal on scroll */
+  const prepareStaggerReveals = () => {
+    document.querySelectorAll(".reveal-stagger").forEach((container) => {
+      container.classList.remove("reveal", "is-visible");
+      [...container.children].forEach((child, i) => {
+        child.classList.add("reveal");
+        child.style.setProperty("--delay", `${Math.min(i * 95, 570)}ms`);
+      });
+    });
+
+    document.querySelectorAll(".reveal-stagger-list").forEach((list) => {
+      list.classList.remove("reveal", "is-visible");
+      list.querySelectorAll(":scope > *").forEach((child, i) => {
+        child.classList.add("reveal", "reveal-left");
+        child.style.setProperty("--delay", `${Math.min(i * 72, 430)}ms`);
+      });
+    });
+  };
+
+  prepareStaggerReveals();
   const reveals = document.querySelectorAll(".reveal");
   let revealObserver;
 
