@@ -28,11 +28,11 @@
   },
   "hero": {
     "kicker": "Portfolio · 2026",
-    "tagline": "Physical Therapist & Clinical AI Engineer",
+    "taglinePrefix": "Physical Therapist &",
     "text": "Physical therapy professional with experience in clinical, community and international settings. I design and integrate <strong>PoncePretelin</strong>: clinical workflows, referenced data, safety integrations and AI support modules that respect professional judgment.",
     "exploreDemo": "Explore demo",
     "github": "GitHub",
-    "focus": "Focus · Clinical safety",
+    "focusPrefix": "Focus ·",
     "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist and clinical AI engineer"
   },
   "loc": {

@@ -56,11 +56,14 @@
     <link rel="stylesheet" href="vendor/slot-text/style.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="is-loading">
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader-inner">
         <p class="preloader-label" data-i18n="preloader.label">Cargando portafolio</p>
         <p class="preloader-name">Ulises Ponce Pretelin</p>
+        <p class="preloader-role">
+          <span data-slot-preloader>Ingeniero de IA clínica</span>
+        </p>
         <div class="preloader-bar"><span id="preloader-fill"></span></div>
         <p class="preloader-pct" id="preloader-pct">0%</p>
       </div>
@@ -148,7 +151,10 @@
                 <span class="line"><span class="word" data-split>Ulises Antonio</span></span>
                 <span class="line line-accent"><span class="word" data-split>Ponce Pretelin</span></span>
               </h1>
-              <p class="hero-tagline reveal" data-i18n="hero.tagline">Fisioterapeuta e Ingeniero de IA clínica</p>
+              <p class="hero-tagline reveal">
+                <span class="hero-tagline-prefix" data-i18n="hero.taglinePrefix">Fisioterapeuta e</span>
+                <span class="hero-tagline-slot" data-slot-tagline>Ingeniero de IA clínica</span>
+              </p>
               <p class="hero-text reveal" data-i18n-html="hero.text">
                 Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e
                 internacionales. Diseño e integro <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.
@@ -175,7 +181,10 @@
                   GitHub
                 </a>
               </div>
-              <p class="hero-focus reveal" data-i18n="hero.focus">Enfoque · Seguridad clínica</p>
+              <p class="hero-focus reveal">
+                <span data-i18n="hero.focusPrefix">Enfoque ·</span>
+                <span class="hero-focus-slot" data-slot-focus>Seguridad clínica</span>
+              </p>
             </div>
           </div>
         </section>

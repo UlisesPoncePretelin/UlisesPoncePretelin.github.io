@@ -28,11 +28,11 @@
   },
   "hero": {
     "kicker": "Portafolio · 2026",
-    "tagline": "Fisioterapeuta e Ingeniero de IA clínica",
+    "taglinePrefix": "Fisioterapeuta e",
     "text": "Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e internacionales. Diseño e integro <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.",
     "exploreDemo": "Explorar demo",
     "github": "GitHub",
-    "focus": "Enfoque · Seguridad clínica",
+    "focusPrefix": "Enfoque ·",
     "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta e ingeniero de IA clínica"
   },
   "loc": {

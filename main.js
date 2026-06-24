@@ -31,12 +31,22 @@
   const preloader = document.getElementById("preloader");
   const preloaderFill = document.getElementById("preloader-fill");
   const preloaderPct = document.getElementById("preloader-pct");
+  const loadStarted = performance.now();
 
   const finishLoad = () => {
-    document.body.classList.add("is-loaded");
-    preloader?.classList.add("is-done");
-    setTimeout(() => preloader?.remove(), 700);
-    revealInView();
+    const revealSite = () => {
+      document.body.classList.remove("is-loading");
+      document.body.classList.add("is-loaded");
+      preloader?.classList.add("is-done");
+      window.dispatchEvent(new CustomEvent("portfolio:ready"));
+      revealInView();
+      setTimeout(() => preloader?.remove(), 900);
+    };
+
+    const minDelay = 2200;
+    const elapsed = performance.now() - loadStarted;
+    const wait = Math.max(0, minDelay - elapsed);
+    setTimeout(revealSite, wait);
   };
 
   if (canAnimate && preloader && preloaderFill && preloaderPct) {

@@ -5,13 +5,21 @@ const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const slotWords = {
   es: {
     badge: ["Xalapa", "Veracruz", "2026", "IA clínica"],
+    preloader: ["Ingeniero de IA clínica", "Seguridad clínica", "PoncePretelin"],
+    tagline: ["Ingeniero de IA clínica", "Seguridad clínica"],
+    focus: ["Seguridad clínica", "Integración openFDA"],
     project: ["Gestor clínico", "Seguridad clínica"],
   },
   en: {
     badge: ["Xalapa", "Veracruz", "2026", "Clinical AI"],
+    preloader: ["Clinical AI Engineer", "Clinical safety", "PoncePretelin"],
+    tagline: ["Clinical AI Engineer", "Clinical safety"],
+    focus: ["Clinical safety", "openFDA integration"],
     project: ["Clinical manager", "Clinical safety"],
   },
 };
+
+const chromaticWarm = chromatic({ from: 12, spread: 280, saturation: 88, lightness: 58 });
 
 const slotConfigs = [
   {
@@ -19,6 +27,24 @@ const slotConfigs = [
     key: "badge",
     interval: 2600,
     options: { direction: "down", stagger: 40, duration: 280 },
+  },
+  {
+    selector: "[data-slot-preloader]",
+    key: "preloader",
+    interval: 2400,
+    options: { direction: "up", stagger: 35, duration: 320, color: chromaticWarm },
+  },
+  {
+    selector: "[data-slot-tagline]",
+    key: "tagline",
+    interval: 3400,
+    options: { direction: "up", stagger: 55, duration: 360, color: chromaticWarm },
+  },
+  {
+    selector: "[data-slot-focus]",
+    key: "focus",
+    interval: 3000,
+    options: { direction: "down", stagger: 42, duration: 300 },
   },
   {
     selector: "[data-slot-project]",
@@ -64,5 +90,15 @@ const initSlot = ({ selector, key, interval, options }) => {
 
 const initAllSlots = () => slotConfigs.forEach(initSlot);
 
-document.addEventListener("DOMContentLoaded", initAllSlots);
+const boot = () => {
+  initAllSlots();
+  window.addEventListener("portfolio:ready", initAllSlots, { once: false });
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", boot);
+} else {
+  boot();
+}
+
 window.addEventListener("langchange", initAllSlots);
