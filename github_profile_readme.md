@@ -1,6 +1,6 @@
 # Ulises Antonio Ponce Pretelin
 
-**Clinical AI Architect & Physical Therapist** · Xalapa, Veracruz, Mexico
+**Physical Therapist & Clinical AI Engineer** · Xalapa, Veracruz, Mexico
 
 I design clinical systems where evidence, safety integrations and AI support meet real rehabilitation workflows — not empty EMR forms.
 

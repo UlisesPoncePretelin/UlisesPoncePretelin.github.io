@@ -505,13 +505,15 @@ main {
 }
 
 .hero-tagline {
-  margin: -0.35rem 0 1.1rem;
+  margin: 0.15rem 0 1.35rem;
   font-family: var(--serif);
-  font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+  font-size: clamp(1.35rem, 3vw, 2rem);
   font-style: italic;
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--accent);
+  max-width: 22ch;
 }
 
 .hero-title .word {
@@ -1135,60 +1137,12 @@ body.is-loaded .hero-title .line:nth-child(2) .word {
   color: var(--muted);
 }
 
-.hero-role-block {
-  margin: 0 0 1.35rem;
-  padding: 1rem 1.15rem 1.1rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 1rem;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--accent) 5%, var(--surface)), var(--surface)),
-    var(--surface);
-}
-
-.hero-role-label {
-  margin: 0 0 0.35rem;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.hero-typing {
-  margin: 0;
-  min-height: 1.15em;
-  overflow: hidden;
-}
-
-.hero-typing-text {
-  display: inline-block;
-  min-width: 8ch;
-  font-family: var(--serif);
-  font-size: clamp(2rem, 5.5vw, 3.35rem);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-}
-
-.hero-typing-text.slot-text,
-.hero-typing-text .slot-text {
-  color: var(--ink);
-}
-
 .hero-focus {
-  margin: 1.1rem 0 0;
+  margin: 0.75rem 0 0;
   font-family: var(--mono);
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   color: var(--muted);
-}
-
-.hero-focus-slot {
-  display: inline-block;
-  min-width: 7ch;
-  font-weight: 600;
-  color: var(--accent);
 }
 
 .project-lead [data-slot-project] {

@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Ulises Ponce Pretelin — Clinical AI Architect & Physical Therapist",
-    "description": "Ulises Antonio Ponce Pretelin — clinical AI architect and physical therapist. Creator of PoncePretelin, a clinical manager with referenced evidence and safety integrations.",
-    "ogTitle": "Ulises Ponce Pretelin — Clinical AI Architect",
-    "ogDescription": "Physical therapist · clinical systems architect with AI · PoncePretelin v1",
-    "jobTitle": "Clinical AI architect and physical therapist"
+    "title": "Ulises Ponce Pretelin — Physical Therapist & Clinical AI Engineer",
+    "description": "Ulises Antonio Ponce Pretelin — physical therapist and clinical AI engineer. Creator of PoncePretelin, a clinical manager with referenced evidence and safety integrations.",
+    "ogTitle": "Ulises Ponce Pretelin — Clinical AI Engineer",
+    "ogDescription": "Physical therapist · clinical AI engineer · PoncePretelin v1",
+    "jobTitle": "Physical therapist and clinical AI engineer"
   },
   "preloader": {
     "label": "Loading portfolio"
@@ -28,13 +28,12 @@
   },
   "hero": {
     "kicker": "Portfolio · 2026",
-    "tagline": "Clinical AI Architect & Physical Therapist",
-    "roleLabel": "Current role",
-    "text": "Physical therapy professional with experience in clinical, community and international settings. I design the architecture of <strong>PoncePretelin</strong>: clinical workflows, referenced data, safety integrations and AI support modules that respect professional judgment.",
+    "tagline": "Physical Therapist & Clinical AI Engineer",
+    "text": "Physical therapy professional with experience in clinical, community and international settings. I design and integrate <strong>PoncePretelin</strong>: clinical workflows, referenced data, safety integrations and AI support modules that respect professional judgment.",
     "exploreDemo": "Explore demo",
     "github": "GitHub",
-    "focusPrefix": "Focus ·",
-    "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist and clinical AI architect"
+    "focus": "Focus · Clinical safety",
+    "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist and clinical AI engineer"
   },
   "loc": {
     "text": "Xalapa, Veracruz · Mexico · Physical Therapy & Clinical AI"
@@ -43,9 +42,9 @@
     "label": "Roles",
     "physicalTherapy": "Physical Therapy",
     "rehab": "Rehabilitation",
-    "architect": "Clinical AI",
+    "engineer": "Clinical AI Engineer",
     "poncepretelin": "PoncePretelin",
-    "clinicalAi": "Clinical AI"
+    "clinicalSafety": "Clinical safety"
   },
   "about": {
     "tag": "01 — About me",
@@ -66,7 +65,7 @@
     "t1Title": "Physical therapist",
     "t1Desc": "Speech therapy clinic · interdisciplinary setting · Xalapa",
     "t2Title": "PoncePretelin",
-    "t2Desc": "Architect and creator of the clinical manager with AI for physical therapy",
+    "t2Desc": "Engineer and creator of the clinical manager with AI for physical therapy",
     "t3Title": "Cabin Leader",
     "t3Desc": "Citizens Options Unlimited · inclusion camp · U.S.",
     "t4Title": "Physical therapist · ISSSTE",
@@ -177,7 +176,7 @@
   "endcap": {
     "label": "Portfolio closing",
     "kicker": "BSc Physical Therapy · Xalapa, Veracruz",
-    "sub": "Clinical AI Architect & Physical Therapist"
+    "sub": "Physical Therapist & Clinical AI Engineer"
   },
   "contact": {
     "tag": "07 — Contact",
@@ -195,15 +194,15 @@
   },
   "cv": {
     "title": "CV — Ulises Antonio Ponce Pretelin",
-    "description": "CV of Ulises Antonio Ponce Pretelin — Clinical AI architect and physical therapist.",
+    "description": "CV of Ulises Antonio Ponce Pretelin — Physical therapist and clinical AI engineer.",
     "tag": "Curriculum vitae",
-    "headline": "Clinical AI Architect & Physical Therapist",
+    "headline": "Physical Therapist & Clinical AI Engineer",
     "location": "Xalapa, Veracruz, Mexico",
     "backPortfolio": "← Portfolio",
     "downloadPdf": "Download PDF",
     "print": "Print",
     "summaryTitle": "Summary",
-    "summary": "Physical therapy professional with experience serving special-needs populations in clinical, community and international settings. Clinical AI systems architect: designing record workflows, referenced data, safety integrations (openFDA, RxNav), IASP/ICF terminology and support modules that respect professional judgment.",
+    "summary": "Physical therapy professional with experience serving special-needs populations in clinical, community and international settings. Clinical AI engineer: designing and integrating record workflows, referenced data, safety integrations (openFDA, RxNav), IASP/ICF terminology and support modules that respect professional judgment.",
     "recentTitle": "Recent experience",
     "educationTitle": "Education",
     "experienceTitle": "Professional experience",
@@ -219,9 +218,9 @@
     "rolePtOrg": "Speech therapy clinic",
     "rolePtLi1": "Clinical care in an interdisciplinary speech therapy and rehabilitation setting.",
     "rolePtLi2": "Progress documentation, care team coordination and functional goal tracking.",
-    "roleArchitect": "Architect & creator",
+    "roleArchitect": "Engineer & creator",
     "roleOrgSuffix": "· clinical manager with AI",
-    "roleDevLi1": "Architecture and development of the manager: multi-specialty records, episodes, SOAP, scheduling, finance and patient portal.",
+    "roleDevLi1": "Design and integration of the manager: multi-specialty records, episodes, SOAP, scheduling, finance and patient portal.",
     "roleDevLi2": "openFDA and RxNav integrations, referenced IASP/ICF terminology, EBP scales and AI support modules.",
     "roleDevLi3": "Stack: FastAPI, PostgreSQL, Next.js, TypeScript, Docker.",
     "liveDemo": "Live demo",

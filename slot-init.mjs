@@ -4,37 +4,21 @@ const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const slotWords = {
   es: {
-    hero: ["Arquitecto IA clínica", "Fisioterapeuta", "PoncePretelin", "Sistemas clínicos"],
     badge: ["Xalapa", "Veracruz", "2026", "IA clínica"],
-    focus: ["PoncePretelin", "Expediente", "Terminología", "Seguridad clínica"],
-    project: ["Gestor clínico", "Evidencia", "Integración openFDA", "IA clínica"],
+    project: ["Gestor clínico", "Seguridad clínica"],
   },
   en: {
-    hero: ["Clinical AI Architect", "Physical Therapist", "PoncePretelin", "Clinical systems"],
     badge: ["Xalapa", "Veracruz", "2026", "Clinical AI"],
-    focus: ["PoncePretelin", "Records", "Terminology", "Clinical safety"],
-    project: ["Clinical manager", "Evidence", "openFDA integration", "Clinical AI"],
+    project: ["Clinical manager", "Clinical safety"],
   },
 };
 
 const slotConfigs = [
   {
-    selector: "[data-slot-hero]",
-    key: "hero",
-    interval: 3000,
-    options: { direction: "up", stagger: 60, duration: 340, color: chromatic({ from: 12, spread: 280 }) },
-  },
-  {
     selector: "[data-slot-badge]",
     key: "badge",
     interval: 2600,
     options: { direction: "down", stagger: 40, duration: 280 },
-  },
-  {
-    selector: "[data-slot-focus]",
-    key: "focus",
-    interval: 2800,
-    options: { direction: "up", stagger: 45, duration: 300 },
   },
   {
     selector: "[data-slot-project]",

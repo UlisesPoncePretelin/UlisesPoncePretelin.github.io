@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Ulises Ponce Pretelin — Arquitecto de IA clínica & Fisioterapeuta",
-    "description": "Ulises Antonio Ponce Pretelin — arquitecto de IA clínica y fisioterapeuta. Creador de PoncePretelin, gestor clínico con evidencia referenciada e integraciones de seguridad.",
-    "ogTitle": "Ulises Ponce Pretelin — Arquitecto de IA clínica",
-    "ogDescription": "Fisioterapeuta · arquitecto de sistemas clínicos con IA · PoncePretelin v1",
-    "jobTitle": "Arquitecto de IA clínica y fisioterapeuta"
+    "title": "Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica",
+    "description": "Ulises Antonio Ponce Pretelin — fisioterapeuta e ingeniero de IA clínica. Creador de PoncePretelin, gestor clínico con evidencia referenciada e integraciones de seguridad.",
+    "ogTitle": "Ulises Ponce Pretelin — Ingeniero de IA clínica",
+    "ogDescription": "Fisioterapeuta · ingeniero de IA clínica · PoncePretelin v1",
+    "jobTitle": "Fisioterapeuta e ingeniero de IA clínica"
   },
   "preloader": {
     "label": "Cargando portafolio"
@@ -28,13 +28,12 @@
   },
   "hero": {
     "kicker": "Portafolio · 2026",
-    "tagline": "Arquitecto de IA clínica & Fisioterapeuta",
-    "roleLabel": "Rol actual",
-    "text": "Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e internacionales. Diseño la arquitectura de <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.",
+    "tagline": "Fisioterapeuta e Ingeniero de IA clínica",
+    "text": "Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e internacionales. Diseño e integro <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.",
     "exploreDemo": "Explorar demo",
     "github": "GitHub",
-    "focusPrefix": "Enfoque ·",
-    "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta y arquitecto de IA clínica"
+    "focus": "Enfoque · Seguridad clínica",
+    "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta e ingeniero de IA clínica"
   },
   "loc": {
     "text": "Xalapa, Veracruz · México · Terapia Física & IA clínica"
@@ -43,9 +42,9 @@
     "label": "Roles",
     "physicalTherapy": "Terapia Física",
     "rehab": "Rehabilitación",
-    "architect": "Arquitecto IA",
+    "engineer": "Ingeniero IA clínica",
     "poncepretelin": "PoncePretelin",
-    "clinicalAi": "IA clínica"
+    "clinicalSafety": "Seguridad clínica"
   },
   "about": {
     "tag": "01 — Sobre mí",
@@ -66,7 +65,7 @@
     "t1Title": "Fisioterapeuta",
     "t1Desc": "Clínica de terapia de lenguaje · entorno interdisciplinario · Xalapa",
     "t2Title": "PoncePretelin",
-    "t2Desc": "Arquitecto y creador del gestor clínico con IA para fisioterapia",
+    "t2Desc": "Ingeniero y creador del gestor clínico con IA para fisioterapia",
     "t3Title": "Cabin Leader",
     "t3Desc": "Citizens Options Unlimited · campamento de inclusión · EE.UU.",
     "t4Title": "Terapeuta físico · ISSSTE",
@@ -177,7 +176,7 @@
   "endcap": {
     "label": "Cierre del portafolio",
     "kicker": "Lic. en Terapia física · Xalapa, Veracruz",
-    "sub": "Arquitecto de IA clínica & Fisioterapeuta"
+    "sub": "Fisioterapeuta e Ingeniero de IA clínica"
   },
   "contact": {
     "tag": "07 — Contacto",
@@ -195,15 +194,15 @@
   },
   "cv": {
     "title": "CV — Ulises Antonio Ponce Pretelin",
-    "description": "CV de Ulises Antonio Ponce Pretelin — Arquitecto de IA clínica y fisioterapeuta.",
+    "description": "CV de Ulises Antonio Ponce Pretelin — Fisioterapeuta e ingeniero de IA clínica.",
     "tag": "Curriculum vitae",
-    "headline": "Arquitecto de IA clínica & Fisioterapeuta",
+    "headline": "Fisioterapeuta e Ingeniero de IA clínica",
     "location": "Xalapa, Veracruz, México",
     "backPortfolio": "← Portafolio",
     "downloadPdf": "Descargar PDF",
     "print": "Imprimir",
     "summaryTitle": "Resumen",
-    "summary": "Profesional en Terapia Física con experiencia en atención a poblaciones con necesidades especiales en contextos clínicos, comunitarios e internacionales. Arquitecto de sistemas clínicos con IA: diseño flujos de expediente, datos referenciados, integraciones de seguridad (openFDA, RxNav), terminología IASP/CIF y módulos de apoyo que respetan el juicio profesional.",
+    "summary": "Profesional en Terapia Física con experiencia en atención a poblaciones con necesidades especiales en contextos clínicos, comunitarios e internacionales. Ingeniero de IA clínica: diseño e integro flujos de expediente, datos referenciados, integraciones de seguridad (openFDA, RxNav), terminología IASP/CIF y módulos de apoyo que respetan el juicio profesional.",
     "recentTitle": "Experiencia reciente",
     "educationTitle": "Educación",
     "experienceTitle": "Experiencia profesional",
@@ -219,9 +218,9 @@
     "rolePtOrg": "Clínica de terapia de lenguaje",
     "rolePtLi1": "Atención clínica en contexto interdisciplinario de terapia de lenguaje y rehabilitación.",
     "rolePtLi2": "Documentación de evolución, coordinación con equipo terapéutico y seguimiento de objetivos funcionales del paciente.",
-    "roleArchitect": "Arquitecto & creador",
+    "roleArchitect": "Ingeniero & creador",
     "roleOrgSuffix": "· gestor clínico con IA",
-    "roleDevLi1": "Arquitectura y desarrollo del gestor: expediente multi-especialidad, episodios, SOAP, agenda, finanzas y portal paciente.",
+    "roleDevLi1": "Diseño e integración del gestor: expediente multi-especialidad, episodios, SOAP, agenda, finanzas y portal paciente.",
     "roleDevLi2": "Integraciones openFDA y RxNav, terminología referenciada IASP/CIF, escalas EBP y módulos de apoyo con IA.",
     "roleDevLi3": "Stack: FastAPI, PostgreSQL, Next.js, TypeScript, Docker.",
     "liveDemo": "Demo en vivo",
