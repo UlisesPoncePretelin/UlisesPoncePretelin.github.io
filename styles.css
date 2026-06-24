@@ -365,6 +365,14 @@ main {
   min-height: min(82vh, 52rem);
 }
 
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 24rem);
+  margin-inline: auto;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -380,6 +388,7 @@ main {
   background: var(--surface);
   border: 1px solid var(--line-strong);
   border-radius: 999px;
+  max-width: 100%;
 }
 
 .hero-badge-dot {
@@ -397,8 +406,7 @@ main {
 
 .portrait-stage {
   position: relative;
-  width: min(100%, 24rem);
-  margin-inline: auto;
+  width: 100%;
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -2661,6 +2669,7 @@ body.is-loaded .chapter-nav {
 
   .hero-left {
     order: -1;
+    width: min(100%, 20rem);
   }
 
   .metrics-row {
