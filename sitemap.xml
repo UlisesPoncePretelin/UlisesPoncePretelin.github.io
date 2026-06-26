@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ulisesponcepretelin.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ulisesponcepretelin.github.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ulisesponcepretelin.github.io/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ulisesponcepretelin.github.io/" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ulisesponcepretelin.github.io/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ulisesponcepretelin.github.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ulisesponcepretelin.github.io/?lang=en" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ulisesponcepretelin.github.io/cv.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ulisesponcepretelin.github.io/cv.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ulisesponcepretelin.github.io/cv.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ulisesponcepretelin.github.io/cv.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ulisesponcepretelin.github.io/cv.html?lang=en</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ulisesponcepretelin.github.io/assets/CV_UlisesPoncePretelin.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ulisesponcepretelin.github.io/assets/CV_UlisesPoncePretelin_EN.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

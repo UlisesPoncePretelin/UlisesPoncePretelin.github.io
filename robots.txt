@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ulisesponcepretelin.github.io/sitemap.xml

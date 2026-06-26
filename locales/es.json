@@ -2,7 +2,7 @@
   "meta": {
     "title": "Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica",
     "description": "Ulises Antonio Ponce Pretelin — fisioterapeuta e ingeniero de IA clínica. Creador de PoncePretelin, gestor clínico con evidencia referenciada e integraciones de seguridad.",
-    "ogTitle": "Ulises Ponce Pretelin — Ingeniero de IA clínica",
+    "ogTitle": "Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica",
     "ogDescription": "Fisioterapeuta · ingeniero de IA clínica · PoncePretelin v1",
     "jobTitle": "Fisioterapeuta e ingeniero de IA clínica"
   },
@@ -124,7 +124,19 @@
     "topic2": "Pruebas diagnósticas · Sn/Sp",
     "topic3": "Panel del día · expediente",
     "topic4": "Inicio · acciones rápidas",
-    "topic5": "Atlas de evidencia · PMID"
+    "topic5": "Atlas de evidencia · PMID",
+    "slide1Alt": "Caso clínico con seguridad clínica y pruebas estructuradas en PoncePretelin",
+    "slide2Alt": "Biblioteca de pruebas diagnósticas con sensibilidad y especificidad referenciadas",
+    "slide3Alt": "Panel del día con ficha del paciente y expediente documental",
+    "slide4Alt": "Dashboard de PoncePretelin con acciones rápidas y resumen matutino",
+    "slide5Alt": "Atlas de evidencia muscular con estudios indexados por PMID",
+    "slide1Cap": "Caso clínico · plan y pruebas",
+    "slide2Cap": "Pruebas diagnósticas · Sn/Sp citadas",
+    "slide3Cap": "Panel del día · modo consultorio",
+    "slide4Cap": "Inicio · acciones rápidas",
+    "slide5Cap": "Atlas de evidencia · PMID",
+    "prevLabel": "Captura anterior",
+    "nextLabel": "Captura siguiente"
   },
   "why": {
     "tag": "Diferencial",

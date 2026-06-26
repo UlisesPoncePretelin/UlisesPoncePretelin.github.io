@@ -3,6 +3,7 @@
 
   const STORAGE_KEY = "portfolio-lang";
   const DEFAULT_LANG = "es";
+  const SITE_ORIGIN = "https://ulisesponcepretelin.github.io";
   let currentLang = DEFAULT_LANG;
   let messages = {};
 
@@ -15,11 +16,45 @@
     return response.json();
   };
 
+  const isHomePage = () => {
+    const path = window.location.pathname;
+    return path === "/" || path.endsWith("/index.html");
+  };
+
+  const buildLangUrl = (lang) => {
+    const path = window.location.pathname;
+    if (isHomePage()) {
+      return lang === "en" ? `${SITE_ORIGIN}/?lang=en` : `${SITE_ORIGIN}/`;
+    }
+    return lang === "en" ? `${SITE_ORIGIN}${path}?lang=en` : `${SITE_ORIGIN}${path}`;
+  };
+
+  const syncSeoUrls = () => {
+    const canonical = buildLangUrl(currentLang);
+    document.getElementById("canonical-link")?.setAttribute("href", canonical);
+    document.getElementById("hreflang-es")?.setAttribute("href", buildLangUrl("es"));
+    document.getElementById("hreflang-en")?.setAttribute("href", buildLangUrl("en"));
+    document.getElementById("hreflang-default")?.setAttribute("href", buildLangUrl("es"));
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonical);
+    document.querySelector('meta[property="og:locale"]')?.setAttribute("content", currentLang === "en" ? "en_US" : "es_MX");
+    document.querySelector('meta[property="og:locale:alternate"]')?.setAttribute(
+      "content",
+      currentLang === "en" ? "es_MX" : "en_US"
+    );
+
+    const url = new URL(window.location.href);
+    if (currentLang === "en") url.searchParams.set("lang", "en");
+    else url.searchParams.delete("lang");
+    window.history.replaceState({}, "", url);
+  };
+
   const applyMeta = () => {
-    const title = getNested(messages, "meta.title") || getNested(messages, "cv.title");
-    const description = getNested(messages, "meta.description") || getNested(messages, "cv.description");
-    const ogTitle = getNested(messages, "meta.ogTitle");
-    const ogDescription = getNested(messages, "meta.ogDescription");
+    const isCv = document.body.classList.contains("cv-page");
+    const title = getNested(messages, isCv ? "cv.title" : "meta.title");
+    const description = getNested(messages, isCv ? "cv.description" : "meta.description");
+    const ogTitle = getNested(messages, isCv ? "cv.title" : "meta.ogTitle") || title;
+    const ogDescription = getNested(messages, isCv ? "cv.description" : "meta.ogDescription") || description;
+    const portraitAlt = getNested(messages, "hero.portraitAlt");
 
     if (title) document.title = title;
     if (description) {
@@ -33,18 +68,39 @@
     if (ogDescription) {
       document.querySelector('meta[property="og:description"]')?.setAttribute("content", ogDescription);
     }
+    if (portraitAlt) {
+      document.querySelector('meta[property="og:image:alt"]')?.setAttribute("content", portraitAlt);
+      document.querySelector('meta[name="twitter:image:alt"]')?.setAttribute("content", portraitAlt);
+    }
 
-    const schemaEl = document.getElementById("schema-person");
-    if (schemaEl) {
+    const schemaPerson = document.getElementById("schema-person");
+    if (schemaPerson) {
       try {
-        const data = JSON.parse(schemaEl.textContent);
+        const data = JSON.parse(schemaPerson.textContent);
         const jobTitle = getNested(messages, "meta.jobTitle");
         if (jobTitle) data.jobTitle = jobTitle;
-        schemaEl.textContent = JSON.stringify(data);
+        schemaPerson.textContent = JSON.stringify(data);
       } catch {
         /* ignore */
       }
     }
+
+    const schemaCv = document.getElementById("schema-cv");
+    if (schemaCv) {
+      try {
+        const data = JSON.parse(schemaCv.textContent);
+        if (title) data.name = title;
+        data.inLanguage = currentLang;
+        data.url = buildLangUrl(currentLang);
+        const jobTitle = getNested(messages, "meta.jobTitle");
+        if (jobTitle && data.mainEntity) data.mainEntity.jobTitle = jobTitle;
+        schemaCv.textContent = JSON.stringify(data);
+      } catch {
+        /* ignore */
+      }
+    }
+
+    syncSeoUrls();
   };
 
   const applyToDom = () => {

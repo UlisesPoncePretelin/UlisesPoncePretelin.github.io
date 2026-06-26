@@ -2,7 +2,7 @@
   "meta": {
     "title": "Ulises Ponce Pretelin — Physical Therapist & Clinical AI Engineer",
     "description": "Ulises Antonio Ponce Pretelin — physical therapist and clinical AI engineer. Creator of PoncePretelin, a clinical manager with referenced evidence and safety integrations.",
-    "ogTitle": "Ulises Ponce Pretelin — Clinical AI Engineer",
+    "ogTitle": "Ulises Ponce Pretelin — Physical Therapist & Clinical AI Engineer",
     "ogDescription": "Physical therapist · clinical AI engineer · PoncePretelin v1",
     "jobTitle": "Physical therapist and clinical AI engineer"
   },
@@ -124,7 +124,19 @@
     "topic2": "Diagnostic tests · Sn/Sp",
     "topic3": "Day panel · record",
     "topic4": "Home · quick actions",
-    "topic5": "Evidence atlas · PMID"
+    "topic5": "Evidence atlas · PMID",
+    "slide1Alt": "Clinical case with safety checks and structured tests in PoncePretelin",
+    "slide2Alt": "Diagnostic test library with referenced sensitivity and specificity",
+    "slide3Alt": "Day panel with patient chart and clinical record",
+    "slide4Alt": "PoncePretelin dashboard with quick actions and morning summary",
+    "slide5Alt": "Muscle evidence atlas with PMID-indexed studies",
+    "slide1Cap": "Clinical case · plan and tests",
+    "slide2Cap": "Diagnostic tests · cited Sn/Sp",
+    "slide3Cap": "Day panel · clinic mode",
+    "slide4Cap": "Home · quick actions",
+    "slide5Cap": "Evidence atlas · PMID",
+    "prevLabel": "Previous screenshot",
+    "nextLabel": "Next screenshot"
   },
   "why": {
     "tag": "Differentiator",

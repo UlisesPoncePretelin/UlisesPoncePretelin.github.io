@@ -39,30 +39,54 @@
       document.body.classList.remove("is-loading");
       document.body.classList.add("is-loaded");
       preloader?.classList.add("is-done");
+      try {
+        sessionStorage.setItem("portfolio-seen", "1");
+      } catch {
+        /* ignore */
+      }
       window.dispatchEvent(new CustomEvent("portfolio:ready"));
       setTimeout(() => preloader?.remove(), 900);
     };
 
-    const minDelay = 2200;
+    const hasSeenSite = (() => {
+      try {
+        return sessionStorage.getItem("portfolio-seen") === "1";
+      } catch {
+        return false;
+      }
+    })();
+    const minDelay = hasSeenSite ? 0 : canAnimate ? 1400 : 0;
     const elapsed = performance.now() - loadStarted;
     const wait = Math.max(0, minDelay - elapsed);
     setTimeout(revealSite, wait);
   };
 
   if (canAnimate && preloader && preloaderFill && preloaderPct) {
-    let progress = 0;
-    const tick = () => {
-      progress = Math.min(progress + Math.random() * 14 + 6, 100);
-      preloaderFill.style.width = `${progress}%`;
-      preloaderPct.textContent = `${Math.round(progress)}%`;
-      if (progress < 100) {
-        requestAnimationFrame(tick);
-      } else {
-        setTimeout(finishLoad, 250);
+    const hasSeenSite = (() => {
+      try {
+        return sessionStorage.getItem("portfolio-seen") === "1";
+      } catch {
+        return false;
       }
-    };
-    window.addEventListener("load", () => requestAnimationFrame(tick), { once: true });
-    setTimeout(finishLoad, 3500);
+    })();
+
+    if (hasSeenSite) {
+      finishLoad();
+    } else {
+      let progress = 0;
+      const tick = () => {
+        progress = Math.min(progress + Math.random() * 14 + 6, 100);
+        preloaderFill.style.width = `${progress}%`;
+        preloaderPct.textContent = `${Math.round(progress)}%`;
+        if (progress < 100) {
+          requestAnimationFrame(tick);
+        } else {
+          setTimeout(finishLoad, 200);
+        }
+      };
+      window.addEventListener("load", () => requestAnimationFrame(tick), { once: true });
+      setTimeout(finishLoad, 2800);
+    }
   } else {
     finishLoad();
   }
@@ -307,15 +331,89 @@
     });
   };
 
-  const initDemoTopicCycle = () => {
-    const topics = document.querySelectorAll(".demo-showcase-topics li");
-    if (!topics.length || !canAnimate) return;
+  const initDemoShowcase = () => {
+    const showcase = document.querySelector("[data-demo-showcase]");
+    const wheel = showcase?.querySelector("[data-demo-wheel]");
+    const slides = wheel ? [...wheel.querySelectorAll("[data-demo-slide]")] : [];
+    const dotsRoot = showcase?.querySelector("[data-demo-dots]");
+    const prevBtn = showcase?.querySelector("[data-demo-prev]");
+    const nextBtn = showcase?.querySelector("[data-demo-next]");
+
+    if (!showcase || !wheel || !slides.length || !dotsRoot) return;
+
     let index = 0;
-    topics[0]?.classList.add("is-active");
-    window.setInterval(() => {
-      index = (index + 1) % topics.length;
-      topics.forEach((li, i) => li.classList.toggle("is-active", i === index));
-    }, 2600);
+    let timer;
+
+    slides.forEach((slide, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "demo-showcase-dot";
+      dot.setAttribute("role", "tab");
+      dot.setAttribute("aria-label", slide.querySelector("figcaption")?.textContent || `Captura ${i + 1}`);
+      dot.addEventListener("click", () => goTo(i, true));
+      dotsRoot.appendChild(dot);
+    });
+
+    const dots = [...dotsRoot.querySelectorAll(".demo-showcase-dot")];
+
+    const renderSlides = () => {
+      const total = slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.remove("is-active", "is-prev", "is-next", "is-far");
+        let diff = i - index;
+        if (diff > total / 2) diff -= total;
+        if (diff < -total / 2) diff += total;
+
+        if (diff === 0) slide.classList.add("is-active");
+        else if (diff === 1) slide.classList.add("is-next");
+        else if (diff === -1) slide.classList.add("is-prev");
+        else slide.classList.add("is-far");
+      });
+      dots.forEach((dot, i) => {
+        const active = i === index;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", active ? "true" : "false");
+        dot.setAttribute("aria-label", slides[i].querySelector("figcaption")?.textContent || `Captura ${i + 1}`);
+      });
+    };
+
+    const goTo = (nextIndex, manual = false) => {
+      index = (nextIndex + slides.length) % slides.length;
+      renderSlides();
+      if (manual) restartAuto();
+    };
+
+    const restartAuto = () => {
+      clearInterval(timer);
+      if (!canAnimate || isNarrow) return;
+      timer = setInterval(() => goTo(index + 1), 5200);
+    };
+
+    prevBtn?.addEventListener("click", () => goTo(index - 1, true));
+    nextBtn?.addEventListener("click", () => goTo(index + 1, true));
+
+    showcase.addEventListener("mouseenter", () => clearInterval(timer));
+    showcase.addEventListener("mouseleave", restartAuto);
+
+    wheel.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          goTo(index - 1, true);
+        }
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          goTo(index + 1, true);
+        }
+      },
+      { passive: false }
+    );
+
+    window.addEventListener("langchange", () => renderSlides());
+
+    renderSlides();
+    restartAuto();
   };
 
   const initHeroParallax = () => {
@@ -333,7 +431,7 @@
 
   const bootPremiumMotion = () => {
     initHeroSplit();
-    initDemoTopicCycle();
+    initDemoShowcase();
     initHeroParallax();
   };
 
