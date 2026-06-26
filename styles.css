@@ -1005,14 +1005,16 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   color: var(--ink);
 }
 
-.hero-geo-summary {
-  margin: 0 0 1rem;
-  padding: 0.85rem 1rem;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: var(--ink);
-  background: color-mix(in srgb, var(--accent-tint) 55%, var(--surface));
-  border-left: 3px solid var(--accent);
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .faq-section {

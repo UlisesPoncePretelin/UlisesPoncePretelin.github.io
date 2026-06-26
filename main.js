@@ -71,7 +71,8 @@
     })();
 
     if (hasSeenSite) {
-      finishLoad();
+      /* Defer so portfolio:ready listeners below are registered first */
+      setTimeout(finishLoad, 0);
     } else {
       let progress = 0;
       const tick = () => {
@@ -513,6 +514,11 @@
         el.classList.add("is-visible");
         revealObserver.unobserve(el);
       }
+    });
+
+    document.querySelectorAll(".hero-row .reveal, .loc-bar.reveal").forEach((el) => {
+      el.classList.add("is-visible");
+      revealObserver.unobserve(el);
     });
   };
 
