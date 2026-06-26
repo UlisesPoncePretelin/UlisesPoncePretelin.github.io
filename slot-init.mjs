@@ -6,14 +6,12 @@ const slotWords = {
   es: {
     badge: ["Xalapa", "Veracruz", "2026", "IA clínica"],
     preloader: ["Ingeniero de IA clínica", "Seguridad clínica", "PoncePretelin"],
-    tagline: ["Ingeniero de IA clínica", "Seguridad clínica"],
     focus: ["Seguridad clínica", "Integración openFDA"],
     project: ["Gestor clínico", "Seguridad clínica"],
   },
   en: {
     badge: ["Xalapa", "Veracruz", "2026", "Clinical AI"],
     preloader: ["Clinical AI Engineer", "Clinical safety", "PoncePretelin"],
-    tagline: ["Clinical AI Engineer", "Clinical safety"],
     focus: ["Clinical safety", "openFDA integration"],
     project: ["Clinical manager", "Clinical safety"],
   },
@@ -33,12 +31,6 @@ const slotConfigs = [
     key: "preloader",
     interval: 2400,
     options: { direction: "up", stagger: 35, duration: 320, color: chromaticWarm },
-  },
-  {
-    selector: "[data-slot-tagline]",
-    key: "tagline",
-    interval: 3400,
-    options: { direction: "up", stagger: 55, duration: 360, color: chromaticWarm },
   },
   {
     selector: "[data-slot-focus]",

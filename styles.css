@@ -1220,9 +1220,17 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   letter-spacing: -0.02em;
 }
 
+.engines-lead {
+  margin: 0.65rem 0 0;
+  max-width: 42rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
 .engines-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   padding-inline: clamp(1rem, 4vw, 2rem);
   max-width: calc(var(--frame) + 4rem);
@@ -1286,7 +1294,26 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
 }
 
 .engine-thumb {
-  min-height: 8rem;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 40%, var(--surface));
+}
+
+.engine-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.engine-card-featured .engine-thumb {
+  border-bottom-color: color-mix(in srgb, #fff 12%, transparent);
+}
+
+.demo-section {
+  padding-bottom: clamp(2rem, 5vw, 3rem);
 }
 
 .engine-tags {
