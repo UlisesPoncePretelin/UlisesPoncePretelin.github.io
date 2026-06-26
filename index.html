@@ -71,6 +71,94 @@
         ]
       }
     </script>
+    <script type="application/ld+json" id="schema-product">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PoncePretelin",
+        "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Clinical management system",
+        "operatingSystem": "Web",
+        "description": "Gestor clínico con evidencia referenciada, integraciones openFDA/RxNav y módulos de apoyo con IA para fisioterapia — no un EMR genérico.",
+        "url": "https://poncepretelin-web.onrender.com",
+        "downloadUrl": "https://github.com/UlisesPoncePretelin/Poncepretelin",
+        "codeRepository": "https://github.com/UlisesPoncePretelin/Poncepretelin",
+        "softwareVersion": "1.0",
+        "inLanguage": ["es", "en"],
+        "author": {
+          "@type": "Person",
+          "name": "Ulises Antonio Ponce Pretelin",
+          "url": "https://ulisesponcepretelin.github.io/"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Ulises Antonio Ponce Pretelin",
+          "url": "https://ulisesponcepretelin.github.io/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+    <script type="application/ld+json" id="schema-faq">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Quién es Ulises Antonio Ponce Pretelin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ulises Antonio Ponce Pretelin es fisioterapeuta e ingeniero de IA clínica en Xalapa, Veracruz, México. Es creador de PoncePretelin y combina experiencia clínica con desarrollo de sistemas de expediente con evidencia referenciada."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es PoncePretelin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PoncePretelin es un gestor clínico con IA para fisioterapia: expediente multi-especialidad, episodios, notas SOAP, agenda, bibliotecas clínicas con valores referenciados e integraciones de seguridad openFDA y RxNav."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es PoncePretelin un EMR genérico?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. PoncePretelin no es un EMR genérico de formularios vacíos. Está diseñado para fisioterapia con automatizaciones clínicas, terminología IASP/CIF OMS, escalas EBP y evidencia trazable en pruebas diagnósticas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿PoncePretelin usa IA para diagnosticar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No sustituye el criterio profesional. Los módulos de IA apoyan imagenología y asistencia clínica dentro del expediente; las decisiones clínicas siguen en manos del fisioterapeuta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué integraciones de seguridad clínica incluye?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Integra openFDA para alertas de dispositivos y recalls, y RxNav para contexto farmacológico en el intake clínico, como capa de validación dentro del flujo de consulta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Para qué especialidades sirve PoncePretelin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente."
+            }
+          }
+        ]
+      }
+    </script>
     <title>Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -179,6 +267,9 @@
               <p class="hero-tagline reveal">
                 <span class="hero-tagline-prefix" data-i18n="hero.taglinePrefix">Fisioterapeuta e</span>
                 <span class="hero-tagline-slot" data-slot-tagline>Ingeniero de IA clínica</span>
+              </p>
+              <p class="hero-geo-summary reveal" data-i18n="hero.geoSummary">
+                Ulises Antonio Ponce Pretelin es fisioterapeuta e ingeniero de IA clínica en Xalapa, México. Es creador de PoncePretelin, un gestor clínico con evidencia referenciada, integraciones openFDA/RxNav y módulos de apoyo con IA para fisioterapia — no un EMR genérico.
               </p>
               <p class="hero-text reveal" data-i18n-html="hero.text">
                 Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e
@@ -780,6 +871,56 @@
             <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">RxNav</span><span data-i18n="stack.rxnavDesc">Contexto farmacológico en intake clínico</span></article>
             <article class="clinical-chip" data-tilt-chip><span class="clinical-chip-sig">Sn/Sp</span><span data-i18n="stack.snspDesc">Valores referenciados en pruebas diagnósticas</span></article>
           </div>
+        </section>
+
+        <section class="section frame-block faq-section" id="faq">
+          <div class="frame-row">
+            <div class="section-intro reveal">
+              <p class="section-tag" data-i18n="faq.tag">Preguntas frecuentes</p>
+              <h2 class="section-title"><span data-i18n="faq.title">Sobre</span> <em data-i18n="faq.titleEm">Ulises y PoncePretelin</em></h2>
+              <p class="section-lead" data-i18n="faq.lead">
+                Respuestas directas para entender el proyecto, el rol profesional y los límites de la IA clínica.
+              </p>
+            </div>
+          </div>
+          <dl class="faq-list reveal-stagger">
+            <div class="faq-item">
+              <dt data-i18n="faq.q1">¿Quién es Ulises Antonio Ponce Pretelin?</dt>
+              <dd data-i18n="faq.a1">
+                Ulises Antonio Ponce Pretelin es fisioterapeuta e ingeniero de IA clínica en Xalapa, Veracruz, México. Es creador de PoncePretelin y combina experiencia clínica con desarrollo de sistemas de expediente con evidencia referenciada.
+              </dd>
+            </div>
+            <div class="faq-item">
+              <dt data-i18n="faq.q2">¿Qué es PoncePretelin?</dt>
+              <dd data-i18n="faq.a2">
+                PoncePretelin es un gestor clínico con IA para fisioterapia: expediente multi-especialidad, episodios, notas SOAP, agenda, bibliotecas clínicas con valores referenciados e integraciones de seguridad openFDA y RxNav.
+              </dd>
+            </div>
+            <div class="faq-item">
+              <dt data-i18n="faq.q3">¿Es PoncePretelin un EMR genérico?</dt>
+              <dd data-i18n="faq.a3">
+                No. PoncePretelin no es un EMR genérico de formularios vacíos. Está diseñado para fisioterapia con automatizaciones clínicas, terminología IASP/CIF OMS, escalas EBP y evidencia trazable en pruebas diagnósticas.
+              </dd>
+            </div>
+            <div class="faq-item">
+              <dt data-i18n="faq.q4">¿PoncePretelin usa IA para diagnosticar?</dt>
+              <dd data-i18n="faq.a4">
+                No sustituye el criterio profesional. Los módulos de IA apoyan imagenología y asistencia clínica dentro del expediente; las decisiones clínicas siguen en manos del fisioterapeuta.
+              </dd>
+            </div>
+            <div class="faq-item">
+              <dt data-i18n="faq.q5">¿Qué integraciones de seguridad clínica incluye?</dt>
+              <dd data-i18n="faq.a5">
+                Integra openFDA para alertas de dispositivos y recalls, y RxNav para contexto farmacológico en el intake clínico, como capa de validación dentro del flujo de consulta.
+              </dd>
+            </div>
+            <div class="faq-item">
+              <dt data-i18n="faq.q6">¿Para qué especialidades sirve PoncePretelin?</dt>
+              <dd data-i18n="faq.a6">
+                Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente.
+              </dd>
+            </div>
+          </dl>
         </section>
 
         <section class="endcap frame-block" data-endcap aria-label="Cierre del portafolio" data-i18n-attr="aria-label:endcap.label">

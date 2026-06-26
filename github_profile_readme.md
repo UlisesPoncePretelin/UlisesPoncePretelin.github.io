@@ -2,6 +2,8 @@
 
 **Physical Therapist & Clinical AI Engineer** · Xalapa, Veracruz, Mexico
 
+Ulises Antonio Ponce Pretelin is a physical therapist and clinical AI engineer in Xalapa, Mexico. He created **PoncePretelin**, a clinical manager with referenced evidence, openFDA/RxNav integrations and AI support modules for physical therapy — not a generic EMR.
+
 I design clinical systems where evidence, safety integrations and AI support meet real rehabilitation workflows — not empty EMR forms.
 
 ## Featured project — PoncePretelin

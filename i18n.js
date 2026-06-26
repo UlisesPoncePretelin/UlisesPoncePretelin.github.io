@@ -100,6 +100,41 @@
       }
     }
 
+    const schemaProduct = document.getElementById("schema-product");
+    if (schemaProduct) {
+      try {
+        const data = JSON.parse(schemaProduct.textContent);
+        const desc = getNested(messages, "geo.productDescription");
+        if (desc) data.description = desc;
+        data.inLanguage = currentLang;
+        schemaProduct.textContent = JSON.stringify(data);
+      } catch {
+        /* ignore */
+      }
+    }
+
+    const schemaFaq = document.getElementById("schema-faq");
+    if (schemaFaq) {
+      const mainEntity = [];
+      for (let i = 1; i <= 6; i += 1) {
+        const name = getNested(messages, `faq.q${i}`);
+        const text = getNested(messages, `faq.a${i}`);
+        if (!name || !text) continue;
+        mainEntity.push({
+          "@type": "Question",
+          name,
+          acceptedAnswer: { "@type": "Answer", text },
+        });
+      }
+      if (mainEntity.length) {
+        schemaFaq.textContent = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity,
+        });
+      }
+    }
+
     syncSeoUrls();
   };
 

@@ -33,7 +33,8 @@
     "exploreDemo": "Explore demo",
     "github": "GitHub",
     "focusPrefix": "Focus ·",
-    "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist and clinical AI engineer"
+    "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist and clinical AI engineer",
+    "geoSummary": "Ulises Antonio Ponce Pretelin is a physical therapist and clinical AI engineer in Xalapa, Mexico. He created PoncePretelin, a clinical manager with referenced evidence, openFDA/RxNav integrations and AI support modules for physical therapy — not a generic EMR."
   },
   "loc": {
     "text": "Xalapa, Veracruz · Mexico · Physical Therapy & Clinical AI"
@@ -184,6 +185,27 @@
     "ebpDesc": "NDI · ODI · Berg · TUG · STarT Back",
     "rxnavDesc": "Medication context in clinical intake",
     "snspDesc": "Referenced values in diagnostic tests"
+  },
+  "geo": {
+    "productDescription": "Clinical manager with referenced evidence, openFDA/RxNav integrations and AI support modules for physical therapy — not a generic EMR."
+  },
+  "faq": {
+    "tag": "FAQ",
+    "title": "About",
+    "titleEm": "Ulises & PoncePretelin",
+    "lead": "Direct answers about the project, professional role and limits of clinical AI.",
+    "q1": "Who is Ulises Antonio Ponce Pretelin?",
+    "a1": "Ulises Antonio Ponce Pretelin is a physical therapist and clinical AI engineer in Xalapa, Veracruz, Mexico. He created PoncePretelin and combines clinical experience with clinical record systems built on referenced evidence.",
+    "q2": "What is PoncePretelin?",
+    "a2": "PoncePretelin is a clinical manager with AI for physical therapy: multi-specialty records, episodes, SOAP notes, scheduling, clinical libraries with referenced values and openFDA/RxNav safety integrations.",
+    "q3": "Is PoncePretelin a generic EMR?",
+    "a3": "No. PoncePretelin is not a generic empty-form EMR. It is designed for physical therapy with clinical automations, IASP/WHO ICF terminology, EBP scales and traceable evidence in diagnostic tests.",
+    "q4": "Does PoncePretelin use AI to diagnose?",
+    "a4": "It does not replace professional judgment. AI modules support imaging and clinical assistance within the record; clinical decisions remain with the physical therapist.",
+    "q5": "What clinical safety integrations does it include?",
+    "a5": "It integrates openFDA for device alerts and recalls, and RxNav for medication context in clinical intake, as a validation layer within the consultation workflow.",
+    "q6": "Which specialties does PoncePretelin support?",
+    "a6": "It focuses on physical therapy and rehabilitation, with multi-specialty support, SOAP templates by clinic and workflows for first visit, EBP follow-up and prudent clinical terminology."
   },
   "endcap": {
     "label": "Portfolio closing",
