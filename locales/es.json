@@ -105,15 +105,14 @@
     "engine4Title": "Motor de apoyo con IA",
     "engine4Desc": "Asistencia en notas SOAP, atlas de evidencia referenciada y módulos de imagenología — apoyo al criterio, no sustituto clínico.",
     "engine4Tags": "IA SOAP · Evidencia · Imagenología",
-    "engine4ImgAlt": "Workspace de imagenología IA con análisis orientativo y vínculo al expediente",
-    "openDemo": "Abrir demo →"
+    "engine4ImgAlt": "Workspace de imagenología IA con análisis orientativo y vínculo al expediente"
   },
   "demo": {
     "tag": "Interfaz real",
     "title": "Capturas del",
     "titleEm": "gestor",
-    "lead": "Capturas reales desde el gestor en desarrollo local — inicio, expediente, SOAP, alertas e imagenología.",
-    "openLive": "Instalar demo local",
+    "lead": "Capturas reales del gestor en la demo en vivo — inicio, expediente, SOAP, alertas e imagenología.",
+    "openLive": "Abrir demo en vivo",
     "source": "Ver código fuente",
     "topicsLabel": "Vistas del gestor",
     "slide1Alt": "Inicio de PoncePretelin con acciones rápidas y resumen matutino",

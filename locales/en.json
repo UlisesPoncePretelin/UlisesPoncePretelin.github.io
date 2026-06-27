@@ -105,15 +105,14 @@
     "engine4Title": "AI support engine",
     "engine4Desc": "SOAP note assistance, referenced evidence atlas and imaging modules — support for judgment, not a clinical substitute.",
     "engine4Tags": "AI SOAP · Evidence · Imaging",
-    "engine4ImgAlt": "AI imaging workspace with orientative analysis and record linkage",
-    "openDemo": "Open demo →"
+    "engine4ImgAlt": "AI imaging workspace with orientative analysis and record linkage"
   },
   "demo": {
     "tag": "Real interface",
     "title": "Manager",
     "titleEm": "screenshots",
-    "lead": "Real screenshots from the manager in local development — home, record, SOAP, alerts and imaging.",
-    "openLive": "Install local demo",
+    "lead": "Real screenshots from the live demo — home, record, SOAP, alerts and imaging.",
+    "openLive": "Open live demo",
     "source": "View source code",
     "topicsLabel": "Manager views",
     "slide1Alt": "PoncePretelin home with quick actions and morning summary",
