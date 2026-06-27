@@ -3773,3 +3773,26 @@ body.cv-page .chapter-nav {
     color: #000;
   }
 }
+
+/* Satellite SEO page — fisioterapia-xalapa.html (not used by portfolio) */
+.local-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.local-hero {
+  padding-top: clamp(4rem, 10vw, 6rem);
+}
+
+.local-lead {
+  max-width: 46rem;
+  margin-top: 0.75rem;
+}
+
+.local-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
