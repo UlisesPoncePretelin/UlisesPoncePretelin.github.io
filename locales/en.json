@@ -162,7 +162,7 @@
     "r3Title": "AI modules",
     "r3Desc": "Imaging and clinical assistance support integrated into the record.",
     "r4Title": "Docs & deployment",
-    "r4Desc": "Clearer install guides, more clinical presets and updated demo screenshots."
+    "r4Desc": "Install guides, more clinical presets and stable Render deployment."
   },
   "certs": {
     "tag": "Continuing education",

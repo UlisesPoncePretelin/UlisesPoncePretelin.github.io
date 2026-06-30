@@ -12,11 +12,12 @@ Clinical manager for physical therapy (v1 in active development).
 
 | Engine | What it does |
 |--------|----------------|
-| **Clinical core** | Multi-specialty episodes, SOAP notes, scheduling, patient portal |
+| **Clinical core** | Dashboard, schedule, patients, episodes and clinic workflow |
 | **Safety & validation** | openFDA + RxNav integrations for device alerts and medication context |
-| **Terminology** | Referenced IASP / WHO ICF terms for prudent clinical language |
+| **Terminology** | IASP / WHO ICF clinical language corrector in notes and reports |
+| **AI support** | SOAP assistance, evidence atlas and imaging modules — support, not substitute |
 
-- [Live demo](https://poncepretelin-web.onrender.com) · `demo@poncepretelin.app` / `DemoCloud2026`
+- [Live demo](https://poncepretelin-web.onrender.com)
 - [Portfolio](https://ulisesponcepretelin.github.io/)
 - [Repository](https://github.com/UlisesPoncePretelin/Poncepretelin)
 

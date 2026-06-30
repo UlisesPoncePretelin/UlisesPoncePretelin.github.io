@@ -17,7 +17,7 @@ const slotWords = {
   },
 };
 
-const chromaticWarm = chromatic({ from: 12, spread: 280, saturation: 88, lightness: 58 });
+const chromaticTeal = chromatic({ from: 168, spread: 260, saturation: 62, lightness: 42 });
 
 const slotConfigs = [
   {
@@ -30,7 +30,7 @@ const slotConfigs = [
     selector: "[data-slot-preloader]",
     key: "preloader",
     interval: 2400,
-    options: { direction: "up", stagger: 35, duration: 320, color: chromaticWarm },
+    options: { direction: "up", stagger: 35, duration: 320, color: chromaticTeal },
   },
   {
     selector: "[data-slot-focus]",

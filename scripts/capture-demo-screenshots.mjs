@@ -2,31 +2,29 @@ import { chromium } from "playwright";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const BASE = process.env.DEMO_BASE_URL || "http://localhost:3002";
+const BASE = process.env.DEMO_BASE_URL || "https://poncepretelin-web.onrender.com";
 const OUT = path.resolve("assets/demo");
-const EMAIL = process.env.DEMO_EMAIL || "admin@local.com";
-const PASS = process.env.DEMO_PASS || "Admin12345!";
-
-const PATIENT_VALERIA = "a9e4c2a1-3f3d-4e89-bc1a-2d4f6a8b0e42";
-const EPISODE_VALERIA = "88074fee-53de-4cfd-abc8-119befad5e94";
-const EPISODE_MANUEL = "08258b25-8c95-4951-ba45-5a4f4901547f";
-const SESSION_VALERIA = "7cab2e9a-7ddf-4ee7-ab32-6b239bfb8938";
+const EMAIL = process.env.DEMO_EMAIL || "demo@poncepretelin.app";
+const PASS = process.env.DEMO_PASS || "DemoCloud2026";
 
 const shots = [
-  { name: "01-dashboard", path: "/dashboard", wait: 2500 },
-  { name: "02-diagnostic-tests", path: "/settings/diagnostic-tests", wait: 3000 },
-  { name: "03-evidence-atlas", path: "/settings/evidence-atlas", wait: 2500 },
-  { name: "04-agenda", path: "/agenda", wait: 2500 },
-  { name: "05-patients", path: "/patients", wait: 2500 },
+  { name: "01-dashboard", path: "/dashboard", wait: 4000 },
+  { name: "02-diagnostic-tests", path: "/settings/diagnostic-tests", wait: 3500 },
+  { name: "03-evidence-atlas", path: "/settings/evidence-atlas", wait: 3500 },
+  { name: "04-agenda", path: "/agenda", wait: 3500 },
+  { name: "05-patients", path: "/patients", wait: 3500 },
 ];
 
 async function login(page) {
-  await page.goto(`${BASE}/login`, { waitUntil: "networkidle", timeout: 60000 });
-  await page.locator('input[type="email"], input[name="email"]').first().fill(EMAIL);
-  await page.locator('input[type="password"]').first().fill(PASS);
+  await page.goto(`${BASE}/login`, { waitUntil: "domcontentloaded", timeout: 180000 });
+  await page.waitForTimeout(5000);
+  const email = page.locator('input[type="email"], input[name="email"], #email').first();
+  await email.waitFor({ state: "visible", timeout: 120000 });
+  await email.fill(EMAIL);
+  await page.locator('input[type="password"], #password').first().fill(PASS);
   await page.locator('button[type="submit"]').first().click();
-  await page.waitForURL((url) => !url.pathname.includes("/login"), { timeout: 60000 });
-  await page.waitForTimeout(1500);
+  await page.waitForURL((url) => !url.pathname.includes("/login"), { timeout: 180000 });
+  await page.waitForTimeout(3000);
 }
 
 async function screenshot(page, name) {
@@ -45,22 +43,83 @@ async function dismissDraftModal(page) {
   }
 }
 
-async function capturePatientRecord(page) {
-  await page.goto(`${BASE}/patients/${PATIENT_VALERIA}`, { waitUntil: "networkidle", timeout: 60000 });
+async function patientIdByFolio(page, folio) {
+  await page.goto(`${BASE}/patients`, { waitUntil: "domcontentloaded", timeout: 120000 });
   await page.waitForTimeout(3000);
+  const row = page.locator("tr, [class*='row'], li").filter({ hasText: folio }).first();
+  if (await row.count()) {
+    const link = row.locator('a[href*="/patients/"]').first();
+    if (await link.count()) {
+      const href = await link.getAttribute("href");
+      const match = href?.match(/\/patients\/([^/?#]+)/);
+      if (match) return match[1];
+    }
+  }
+  const direct = page.locator(`a[href*="/patients/"]`).filter({ hasText: folio }).first();
+  if (await direct.count()) {
+    const href = await direct.getAttribute("href");
+    return href?.match(/\/patients\/([^/?#]+)/)?.[1] ?? null;
+  }
+  return null;
+}
+
+async function episodeIdForPatient(page, patientId) {
+  await page.goto(`${BASE}/patients/${patientId}`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(3000);
+  const link = page.locator('a[href*="/episodes/"]').first();
+  if (!(await link.count())) return null;
+  const href = await link.getAttribute("href");
+  return href?.match(/\/episodes\/([^/?#]+)/)?.[1] ?? null;
+}
+
+async function sessionEditPath(page, episodeId) {
+  await page.goto(`${BASE}/episodes/${episodeId}`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(3000);
+  let link = page.locator('a[href*="/sessions/"][href*="/edit"]').first();
+  if (!(await link.count())) {
+    link = page.locator('a[href*="/sessions/"]').filter({ hasNotText: /nueva|new/i }).first();
+  }
+  if (!(await link.count())) return null;
+  const href = await link.getAttribute("href");
+  if (!href || href.includes("/sessions/new")) return null;
+  return href.startsWith("http") ? new URL(href).pathname : href;
+}
+
+async function resolveDemoIds(page) {
+  const valeriaId = await patientIdByFolio(page, "DEMOVEST42");
+  const manuelId = await patientIdByFolio(page, "DEMONEURO72");
+  if (!valeriaId) throw new Error("No se encontró paciente DEMOVEST42 (Valeria) en la demo");
+  if (!manuelId) throw new Error("No se encontró paciente DEMONEURO72 (Manuel) en la demo");
+
+  const episodeValeria = await episodeIdForPatient(page, valeriaId);
+  const episodeManuel = await episodeIdForPatient(page, manuelId);
+  if (!episodeValeria || !episodeManuel) {
+    throw new Error("No se encontraron episodios demo para Valeria o Manuel");
+  }
+
+  const sessionPath = await sessionEditPath(page, episodeValeria);
+  console.log("demo ids", { valeriaId, manuelId, episodeValeria, episodeManuel, sessionPath });
+
+  return { valeriaId, manuelId, episodeValeria, episodeManuel, sessionPath };
+}
+
+async function capturePatientRecord(page, valeriaId, episodeValeria) {
+  await page.goto(`${BASE}/patients/${valeriaId}`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(3500);
   await screenshot(page, "06-patient-record");
 
-  await page.goto(`${BASE}/episodes/${EPISODE_VALERIA}`, { waitUntil: "networkidle", timeout: 60000 });
-  await page.waitForTimeout(3000);
+  await page.goto(`${BASE}/episodes/${episodeValeria}`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(3500);
   await screenshot(page, "07-episode");
 }
 
-async function captureSoapNote(page) {
-  await page.goto(`${BASE}/episodes/${EPISODE_VALERIA}/sessions/${SESSION_VALERIA}/edit`, {
-    waitUntil: "networkidle",
-    timeout: 60000,
-  });
-  await page.waitForTimeout(3500);
+async function captureSoapNote(page, sessionPath) {
+  if (!sessionPath) {
+    console.warn("skip 08-soap-note: no session path");
+    return;
+  }
+  await page.goto(`${BASE}${sessionPath}`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(4000);
 
   const moreBtn = page.getByRole("button", { name: /^Más$/i }).first();
   if (await moreBtn.count()) {
@@ -72,12 +131,12 @@ async function captureSoapNote(page) {
   await screenshot(page, "08-soap-note");
 }
 
-async function captureTerminologyCorrector(page) {
-  await page.goto(`${BASE}/episodes/${EPISODE_VALERIA}/sessions/new`, {
-    waitUntil: "networkidle",
-    timeout: 60000,
+async function captureTerminologyCorrector(page, episodeValeria) {
+  await page.goto(`${BASE}/episodes/${episodeValeria}/sessions/new`, {
+    waitUntil: "domcontentloaded",
+    timeout: 120000,
   });
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(3500);
   await dismissDraftModal(page);
 
   for (let step = 0; step < 8; step++) {
@@ -91,6 +150,11 @@ async function captureTerminologyCorrector(page) {
   }
 
   const ta = page.locator("div.relative.overflow-hidden textarea").first();
+  if (!(await ta.count())) {
+    console.warn("skip 09-terminology-corrector: no textarea");
+    return;
+  }
+
   await ta.scrollIntoViewIfNeeded();
   const text =
     "Paciente refiere dolor crónico en región cervical con limitación funcional progresiva.";
@@ -109,50 +173,43 @@ async function captureTerminologyCorrector(page) {
   await screenshot(page, "09-terminology-corrector");
 }
 
-async function captureSafetyAlerts(page) {
-  await page.goto(`${BASE}/episodes/${EPISODE_MANUEL}/edit`, { waitUntil: "networkidle", timeout: 60000 });
-  await page.waitForTimeout(2500);
+async function captureSafetyAlerts(page, episodeManuel) {
+  await page.goto(`${BASE}/episodes/${episodeManuel}/edit`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(3000);
   await dismissDraftModal(page);
 
   await page.getByRole("button", { name: /Cribado y función/i }).click();
-  await page.waitForTimeout(1200);
-  await page.getByText("1. Antecedentes Clínicos y Médicos").click();
-  await page.waitForTimeout(600);
+  await page.waitForTimeout(1500);
+  await page.getByText(/1\. Antecedentes \(NOM-004\)/i).click();
+  await page.waitForTimeout(800);
 
-  const medQuestion = page.getByText("¿Registrar medicamentos o alergias activas?");
-  await medQuestion.scrollIntoViewIfNeeded();
-  await medQuestion.locator("xpath=following::button[normalize-space()='Sí'][1]").click();
-  await page.waitForTimeout(500);
+  const meds = page.getByLabel("Medicamentos actuales").first();
+  if (await meds.count()) {
+    await meds.fill("Warfarina 5 mg/día, Metformina 850 mg c/12h, Aspirina 100 mg");
+  }
 
-  const surgQuestion = page.getByText(/quirúrgicos o traumáticos|quirurgicos o traumaticos/i);
-  await surgQuestion.scrollIntoViewIfNeeded();
-  await surgQuestion.locator("xpath=following::button[normalize-space()='Sí'][1]").click();
-  await page.waitForTimeout(500);
-
-  await page.getByPlaceholder(/Medicamentos actuales/i).fill(
-    "Warfarina 5 mg/día, Metformina 850 mg c/12h, Aspirina 100 mg"
-  );
-  await page
-    .getByPlaceholder(/Marcapasos Medtronic|Cirugías|lesiones/i)
-    .first()
-    .fill("Marcapasos Medtronic Advisa DR MRI SureScan, implante 2019");
+  const surg = page.getByLabel(/Quirúrgicos \/ traumáticos/i).first();
+  if (await surg.count()) {
+    await surg.fill("Marcapasos Medtronic Advisa DR MRI SureScan, implante 2019");
+  }
 
   await page.waitForTimeout(6000);
   await page.getByText(/Integraciones clínicas activas/i).first().scrollIntoViewIfNeeded().catch(() => {});
   await screenshot(page, "10-safety-alerts");
 }
 
-async function captureImaging(page) {
+async function captureImaging(page, valeriaId, episodeValeria) {
   await page.goto(
-    `${BASE}/settings/imaging?patientId=${PATIENT_VALERIA}&episodeId=${EPISODE_VALERIA}`,
-    { waitUntil: "networkidle", timeout: 60000 }
+    `${BASE}/settings/imaging?patientId=${valeriaId}&episodeId=${episodeValeria}`,
+    { waitUntil: "domcontentloaded", timeout: 120000 }
   );
-  await page.waitForTimeout(3500);
+  await page.waitForTimeout(4000);
   await screenshot(page, "11-imaging");
 }
 
 async function main() {
   await mkdir(OUT, { recursive: true });
+  console.log(`Capturing from ${BASE} as ${EMAIL}`);
 
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
@@ -163,18 +220,19 @@ async function main() {
 
   try {
     await login(page);
+    const ids = await resolveDemoIds(page);
 
     for (const shot of shots) {
-      await page.goto(`${BASE}${shot.path}`, { waitUntil: "networkidle", timeout: 60000 });
+      await page.goto(`${BASE}${shot.path}`, { waitUntil: "domcontentloaded", timeout: 120000 });
       await page.waitForTimeout(shot.wait);
       await screenshot(page, shot.name);
     }
 
-    await capturePatientRecord(page);
-    await captureSoapNote(page);
-    await captureTerminologyCorrector(page);
-    await captureSafetyAlerts(page);
-    await captureImaging(page);
+    await capturePatientRecord(page, ids.valeriaId, ids.episodeValeria);
+    await captureSoapNote(page, ids.sessionPath);
+    await captureTerminologyCorrector(page, ids.episodeValeria);
+    await captureSafetyAlerts(page, ids.episodeManuel);
+    await captureImaging(page, ids.valeriaId, ids.episodeValeria);
   } finally {
     await browser.close();
   }
