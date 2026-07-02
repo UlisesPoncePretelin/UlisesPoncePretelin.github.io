@@ -112,7 +112,7 @@
   const nav = document.getElementById("site-nav");
   const navLinks = nav?.querySelectorAll('.nav-link[href^="#"]');
   const chapterLinks = document.querySelectorAll("[data-chapter]");
-  const sectionIds = ["top", "sobre", "trayectoria", "proyecto", "certificaciones", "stack", "contacto"];
+  const sectionIds = ["top", "sobre", "trayectoria", "proyecto", "demo", "certificaciones", "stack", "faq", "contacto"];
 
   const applyPinTransform = () => {
     if (!pinTrack || isNarrow) return;

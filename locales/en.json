@@ -31,6 +31,7 @@
   "hero": {
     "kicker": "Portfolio · 2026",
     "tagline": "Physical Therapist & Clinical AI Engineer",
+    "geoLine": "Xalapa, Mexico · Creator of PoncePretelin · clinical manager with referenced evidence",
     "text": "Physical therapy professional with experience in clinical, community and international settings. I design and integrate <strong>PoncePretelin</strong>: clinical workflows, referenced data, safety integrations and AI support modules that respect professional judgment.",
     "exploreDemo": "Explore demo",
     "github": "GitHub",
@@ -97,26 +98,9 @@
     "t6Desc": "Camp Counselor and Behavior Helper · disability population · U.S.",
     "t7Title": "BSc Physical Therapy · ICES",
     "t7Desc": "Xalapa campus · studies completed · degree in progress",
-    "cardsLead": "Expanded CV milestones — clinical, international and education, with verifiable links.",
-    "cardsFootnote": "From the published CV — no invented experience or certifications.",
-    "c1Source": "2026 · Clinic · Xalapa",
-    "c1Quote": "Physical therapist at a speech therapy clinic: interdisciplinary care, progress documentation and functional patient follow-up.",
-    "c1Link": "View CV →",
-    "c2Source": "2023 — 2024 · ISSSTE",
-    "c2Quote": "Social service at ISSSTE Hospital Clinic Xalapa: assessment, treatment and physiotherapy follow-up in a public hospital setting.",
-    "c2Link": "View CV →",
-    "c3Source": "2025 · USA",
-    "c3Quote": "Cabin Leader at Citizens Options Unlimited: cabin supervision, accessibility, counselor leadership and inclusion for campers with disabilities.",
-    "c3Link": "View CV →",
-    "c4Source": "2022 — 2023 · USA",
-    "c4Quote": "Camp Counselor and Behavior Helper at Citizens Options Unlimited: positive behavior support, social inclusion and activities of daily living.",
-    "c4Link": "View CV →",
-    "c5Source": "2023 — 2024 · Internships",
-    "c5Quote": "INECOL (occupational health) and Xalapa International Velodrome: injury prevention, ergonomics and functional assessment in institutional and sports settings.",
-    "c5Link": "View CV →",
-    "c6Source": "2019 — 2023 · ICES",
-    "c6Quote": "BSc Physical Therapy (ICES Xalapa campus): studies completed, degree in progress — clinical foundation of current practice.",
-    "c6Link": "LinkedIn →"
+    "orderNote": "Ordered from most recent to oldest.",
+    "cvLink": "View full CV →",
+    "footnote": "From the published CV — no invented experience or certifications."
   },
   "project": {
     "tag": "03 — Featured project",
@@ -148,7 +132,7 @@
     "engine4ImgAlt": "AI imaging workspace with orientative analysis and record linkage"
   },
   "demo": {
-    "tag": "Real interface",
+    "tag": "04 — Demo",
     "title": "Manager",
     "titleEm": "screenshots",
     "lead": "Real PoncePretelin interface: home, schedule, record, SOAP, openFDA/RxNav alerts, IASP corrector and AI imaging.",
@@ -205,13 +189,13 @@
     "r4Desc": "Install guides, more clinical presets and stable Render deployment."
   },
   "certs": {
-    "tag": "Continuing education",
+    "tag": "05 — Certifications",
     "title": "Certifications",
     "lead": "18+ courses in clinical care, mental health and online platforms — from CV data.",
     "viewAll": "View all on CV"
   },
   "stack": {
-    "tag": "PoncePretelin",
+    "tag": "06 — Technologies",
     "techTitle": "Technologies",
     "techTitleEm": "used",
     "techLead": "Technical stack used to build and deploy the clinical manager.",
@@ -229,7 +213,7 @@
     "productDescription": "Clinical manager with referenced evidence, openFDA/RxNav integrations and AI support modules for physical therapy — not a generic EMR."
   },
   "faq": {
-    "tag": "FAQ",
+    "tag": "07 — FAQ",
     "title": "About",
     "titleEm": "Ulises & PoncePretelin",
     "lead": "Direct answers about the project, professional role and limits of clinical AI.",
@@ -252,13 +236,16 @@
     "sub": "Physical Therapist & Clinical AI Engineer"
   },
   "contact": {
-    "tag": "07 — Contact",
+    "tag": "08 — Contact",
     "title": "Let's collaborate?",
     "text": "If you're reviewing the project, want to collaborate or deploy PoncePretelin in your clinic.",
     "socialLabel": "Social media"
   },
   "footer": {
-    "socialLabel": "Social media"
+    "socialLabel": "Social media",
+    "linksLabel": "Portfolio links",
+    "certs": "Certifications",
+    "cv": "CV"
   },
   "lang": {
     "es": "ES",

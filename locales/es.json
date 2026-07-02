@@ -31,6 +31,7 @@
   "hero": {
     "kicker": "Portafolio · 2026",
     "tagline": "Fisioterapeuta e Ingeniero de IA clínica",
+    "geoLine": "Xalapa, México · Creador de PoncePretelin · gestor clínico con evidencia referenciada",
     "text": "Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e internacionales. Diseño e integro <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.",
     "exploreDemo": "Explorar demo",
     "github": "GitHub",
@@ -97,26 +98,9 @@
     "t6Desc": "Camp Counselor y Behavior Helper · población con discapacidad · EE.UU.",
     "t7Title": "Lic. Terapia Física · ICES",
     "t7Desc": "Campus Xalapa · estudios finalizados · titulación en curso",
-    "cardsLead": "Hitos ampliados del CV — clínica, internacional y formación, con enlaces verificables.",
-    "cardsFootnote": "Datos del CV publicado — sin inventar experiencia ni certificaciones.",
-    "c1Source": "2026 · Clínica · Xalapa",
-    "c1Quote": "Fisioterapeuta en clínica de terapia de lenguaje: atención interdisciplinaria, documentación de evolución y seguimiento funcional del paciente.",
-    "c1Link": "Ver en CV →",
-    "c2Source": "2023 — 2024 · ISSSTE",
-    "c2Quote": "Servicio social en Clínica Hospital ISSSTE Xalapa: valoración, tratamiento y seguimiento fisioterapéutico en contexto hospitalario público.",
-    "c2Link": "Ver en CV →",
-    "c3Source": "2025 · EE.UU.",
-    "c3Quote": "Cabin Leader en Citizens Options Unlimited: supervisión de cabaña, accesibilidad, liderazgo de counselors e inclusión de campistas con discapacidad.",
-    "c3Link": "Ver en CV →",
-    "c4Source": "2022 — 2023 · EE.UU.",
-    "c4Quote": "Camp Counselor y Behavior Helper en Citizens Options Unlimited: intervención conductual positiva, inclusión social y apoyo en actividades de la vida diaria.",
-    "c4Link": "Ver en CV →",
-    "c5Source": "2023 — 2024 · Prácticas",
-    "c5Quote": "INECOL (salud ocupacional) y Velódromo Internacional de Xalapa: prevención de lesiones, ergonomía y evaluación funcional en contextos institucional y deportivo.",
-    "c5Link": "Ver en CV →",
-    "c6Source": "2019 — 2023 · ICES",
-    "c6Quote": "Licenciatura en Terapia Física (ICES Campus Xalapa): estudios finalizados, titulación en curso, base clínica de la práctica actual.",
-    "c6Link": "LinkedIn →"
+    "orderNote": "Ordenado del más reciente al más antiguo.",
+    "cvLink": "Ver CV completo →",
+    "footnote": "Datos del CV publicado — sin inventar experiencia ni certificaciones."
   },
   "project": {
     "tag": "03 — Proyecto destacado",
@@ -148,7 +132,7 @@
     "engine4ImgAlt": "Workspace de imagenología IA con análisis orientativo y vínculo al expediente"
   },
   "demo": {
-    "tag": "Interfaz real",
+    "tag": "04 — Demo",
     "title": "Capturas del",
     "titleEm": "gestor",
     "lead": "Interfaz real de PoncePretelin: inicio, agenda, expediente, SOAP, alertas openFDA/RxNav, corrector IASP e imagenología con IA.",
@@ -205,13 +189,13 @@
     "r4Desc": "Guías de instalación, más presets clínicos y despliegue estable en Render."
   },
   "certs": {
-    "tag": "Formación continua",
+    "tag": "05 — Certificaciones",
     "title": "Certificaciones",
     "lead": "18+ cursos en clínica, salud mental y plataformas en línea — datos del CV, sin inventar.",
     "viewAll": "Ver todas en el CV"
   },
   "stack": {
-    "tag": "PoncePretelin",
+    "tag": "06 — Tecnologías",
     "techTitle": "Tecnologías",
     "techTitleEm": "usadas",
     "techLead": "Stack técnico con el que construyo y despliego el gestor clínico.",
@@ -229,7 +213,7 @@
     "productDescription": "Gestor clínico con evidencia referenciada, integraciones openFDA/RxNav y módulos de apoyo con IA para fisioterapia — no un EMR genérico."
   },
   "faq": {
-    "tag": "Preguntas frecuentes",
+    "tag": "07 — FAQ",
     "title": "Sobre",
     "titleEm": "Ulises y PoncePretelin",
     "lead": "Respuestas directas para entender el proyecto, el rol profesional y los límites de la IA clínica.",
@@ -252,13 +236,16 @@
     "sub": "Fisioterapeuta e Ingeniero de IA clínica"
   },
   "contact": {
-    "tag": "07 — Contacto",
+    "tag": "08 — Contacto",
     "title": "¿Colaboramos?",
     "text": "Si revisas el proyecto, quieres colaborar o desplegar PoncePretelin en tu consultorio.",
     "socialLabel": "Redes sociales"
   },
   "footer": {
-    "socialLabel": "Redes sociales"
+    "socialLabel": "Redes sociales",
+    "linksLabel": "Enlaces del portafolio",
+    "certs": "Certificaciones",
+    "cv": "CV"
   },
   "lang": {
     "es": "ES",
