@@ -573,4 +573,41 @@
       });
     });
   }
+
+  const initShareCopy = () => {
+    const btn = document.querySelector("[data-copy-url]");
+    if (!btn) return;
+
+    const hint = btn.querySelector(".share-copy-hint");
+    const done = btn.querySelector(".share-copy-done");
+    const portfolioUrl = "https://ulisesponcepretelin.github.io/";
+
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(portfolioUrl);
+      } catch {
+        const fallback = document.createElement("textarea");
+        fallback.value = portfolioUrl;
+        fallback.setAttribute("readonly", "");
+        fallback.style.position = "fixed";
+        fallback.style.left = "-9999px";
+        document.body.appendChild(fallback);
+        fallback.select();
+        document.execCommand("copy");
+        document.body.removeChild(fallback);
+      }
+
+      btn.classList.add("is-copied");
+      if (hint) hint.hidden = true;
+      if (done) done.hidden = false;
+
+      window.setTimeout(() => {
+        btn.classList.remove("is-copied");
+        if (hint) hint.hidden = false;
+        if (done) done.hidden = true;
+      }, 2400);
+    });
+  };
+
+  initShareCopy();
 })();
