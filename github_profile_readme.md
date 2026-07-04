@@ -8,7 +8,7 @@ I design clinical systems where evidence, safety integrations and AI support mee
 
 ## Featured project — PoncePretelin
 
-Clinical manager for physical therapy (v1 in active development). Free clinical core; optional AI add-on.
+Clinical manager for physical therapy (v1 in active development). Free clinical core; optional AI add-on. **Source code is not public yet.**
 
 | Engine | What it does |
 |--------|----------------|
@@ -19,7 +19,6 @@ Clinical manager for physical therapy (v1 in active development). Free clinical 
 
 - [Live demo](https://poncepretelin-web.vercel.app) · `demo@poncepretelin.app` / `PoncePretelinDemo2026!`
 - [Portfolio](https://ulisesponcepretelin.github.io/)
-- [Repository](https://github.com/UlisesPoncePretelin/Poncepretelin)
 
 ## Dual stack
 

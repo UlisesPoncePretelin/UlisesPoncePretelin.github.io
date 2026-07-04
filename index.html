@@ -81,8 +81,6 @@
         "operatingSystem": "Web",
         "description": "Gestor clínico con evidencia referenciada, integraciones openFDA/RxNav y módulos de apoyo con IA para fisioterapia — no un EMR genérico.",
         "url": "https://poncepretelin-web.vercel.app",
-        "downloadUrl": "https://github.com/UlisesPoncePretelin/Poncepretelin",
-        "codeRepository": "https://github.com/UlisesPoncePretelin/Poncepretelin",
         "softwareVersion": "1.0",
         "inLanguage": ["es", "en"],
         "author": {
@@ -290,13 +288,13 @@
                 </a>
                 <a
                   class="btn btn-outline magnetic"
-                  href="https://github.com/UlisesPoncePretelin/Poncepretelin"
+                  href="https://poncepretelin-web.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-magnetic
-                  data-i18n="hero.github"
+                  data-i18n="hero.liveDemo"
                 >
-                  GitHub
+                  Demo en vivo
                 </a>
               </div>
               <p class="hero-focus reveal">
@@ -484,16 +482,17 @@
               <p class="section-lead project-lead">
                 <span data-slot-project>Gestor clínico</span> <span data-i18n="project.leadPrefix">con IA opcional y evidencia referenciada — núcleo clínico gratuito, no formularios vacíos.</span>
               </p>
+              <p class="project-private-note" data-i18n="project.privateNote">Código no público por ahora — evalúalo en la demo en vivo o escríbeme para colaborar.</p>
             </div>
             <a
               class="btn btn-outline magnetic"
-              href="https://github.com/UlisesPoncePretelin/Poncepretelin"
+              href="https://poncepretelin-web.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               data-magnetic
-              data-i18n="project.repo"
+              data-i18n="project.demoLive"
             >
-              Repositorio
+              Demo en vivo
             </a>
           </div>
 
@@ -576,15 +575,14 @@
                 </a>
                 <a
                   class="btn btn-outline magnetic"
-                  href="https://github.com/UlisesPoncePretelin/Poncepretelin"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contacto"
                   data-magnetic
-                  data-i18n="demo.source"
+                  data-i18n="demo.contact"
                 >
-                  Ver código fuente
+                  Colaborar
                 </a>
               </div>
+              <p class="demo-private-note" data-i18n="demo.privateNote">El código fuente no es open source aún. La demo en vivo es la forma de evaluar el gestor.</p>
             </div>
 
             <div class="demo-showcase-stage">
@@ -871,11 +869,17 @@
               </span>
               <span class="tech-chip-label">Docker</span>
             </article>
-            <article class="tech-chip" data-tilt-chip style="--brand: #181717">
+            <article class="tech-chip" data-tilt-chip style="--brand: #000000">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/github/181717" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="https://cdn.simpleicons.org/vercel/000000" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
-              <span class="tech-chip-label">GitHub</span>
+              <span class="tech-chip-label">Vercel</span>
+            </article>
+            <article class="tech-chip" data-tilt-chip style="--brand: #0b0d0e">
+              <span class="tech-chip-icon" aria-hidden="true">
+                <img src="https://cdn.simpleicons.org/railway/0B0D0E" alt="" width="22" height="22" loading="lazy" decoding="async" />
+              </span>
+              <span class="tech-chip-label">Railway</span>
             </article>
           </div>
 
@@ -942,6 +946,12 @@
               <dt data-i18n="faq.q6">¿Para qué especialidades sirve PoncePretelin?</dt>
               <dd data-i18n="faq.a6">
                 Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente.
+              </dd>
+            </div>
+            <div class="faq-item">
+              <dt data-i18n="faq.q7">¿Puedo ver el código fuente?</dt>
+              <dd data-i18n="faq.a7">
+                No por ahora. PoncePretelin no es open source en esta etapa y aún no hay repositorio público. Puedes evaluar el producto en la demo en vivo o contactarme si te interesa colaborar o desplegarlo en tu consultorio.
               </dd>
             </div>
           </dl>

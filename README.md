@@ -7,7 +7,8 @@ Landing personal en GitHub Pages. Presenta **PoncePretelin** y el perfil profesi
 | **Portafolio** | https://ulisesponcepretelin.github.io |
 | **CV** | https://ulisesponcepretelin.github.io/cv.html |
 | **Demo del gestor** | https://poncepretelin-web.vercel.app |
-| **Repositorio clínico** | https://github.com/UlisesPoncePretelin/Poncepretelin |
+
+El código de PoncePretelin **no es público** por ahora. Evalúalo en la demo en vivo.
 
 ## Foto de perfil
 

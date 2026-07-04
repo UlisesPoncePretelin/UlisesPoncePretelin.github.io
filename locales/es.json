@@ -34,7 +34,7 @@
     "geoLine": "Xalapa, México · Creador de PoncePretelin · gestor clínico con evidencia referenciada",
     "text": "Profesional en Terapia Física con experiencia en contextos clínicos, comunitarios e internacionales. Diseño e integro <strong>PoncePretelin</strong>: flujos clínicos, datos referenciados, integraciones de seguridad y módulos de apoyo con IA que respetan el juicio profesional.",
     "exploreDemo": "Explorar demo",
-    "github": "GitHub",
+    "liveDemo": "Demo en vivo",
     "focusPrefix": "Enfoque ·",
     "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta e ingeniero de IA clínica",
     "geoSummary": "Ulises Antonio Ponce Pretelin es fisioterapeuta e ingeniero de IA clínica en Xalapa, México. Es creador de PoncePretelin, un gestor clínico con evidencia referenciada, integraciones openFDA/RxNav y módulos de apoyo con IA para fisioterapia — no un EMR genérico."
@@ -105,7 +105,8 @@
   "project": {
     "tag": "03 — Proyecto destacado",
     "leadPrefix": "con IA opcional y evidencia referenciada — núcleo clínico gratuito, no formularios vacíos.",
-    "repo": "Repositorio",
+    "privateNote": "Código no público por ahora — evalúalo en la demo en vivo o escríbeme para colaborar.",
+    "demoLive": "Demo en vivo",
     "enginesTag": "Motores clínicos",
     "enginesTitle": "Cuatro motores de",
     "enginesTitleEm": "inteligencia",
@@ -137,7 +138,8 @@
     "titleEm": "gestor",
     "lead": "Interfaz real de PoncePretelin v1: inicio, agenda con reserva pública, expediente, SOAP en vivo, alertas openFDA/RxNav, corrector IASP e imagenología con IA.",
     "openLive": "Abrir demo en vivo",
-    "source": "Ver código fuente",
+    "contact": "Colaborar",
+    "privateNote": "El código fuente no es open source aún. La demo en vivo es la forma de evaluar el gestor.",
     "topicsLabel": "Vistas del gestor",
     "slide1Alt": "Inicio de PoncePretelin con acciones rápidas y resumen matutino",
     "slide2Alt": "Agenda del consultorio con citas, teleconsulta y cancelaciones",
@@ -228,7 +230,9 @@
     "q5": "¿Qué integraciones de seguridad clínica incluye?",
     "a5": "Integra openFDA para alertas de dispositivos y recalls, y RxNav para contexto farmacológico en el intake clínico, como capa de validación dentro del flujo de consulta.",
     "q6": "¿Para qué especialidades sirve PoncePretelin?",
-    "a6": "Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente."
+    "a6": "Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente.",
+    "q7": "¿Puedo ver el código fuente?",
+    "a7": "No por ahora. PoncePretelin no es open source en esta etapa y aún no hay repositorio público. Puedes evaluar el producto en la demo en vivo o contactarme si te interesa colaborar o desplegarlo en tu consultorio."
   },
   "endcap": {
     "label": "Cierre del portafolio",
