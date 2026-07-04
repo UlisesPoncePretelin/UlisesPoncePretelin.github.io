@@ -2,10 +2,10 @@ import { chromium } from "playwright";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const BASE = process.env.DEMO_BASE_URL || "https://poncepretelin-web.onrender.com";
+const BASE = process.env.DEMO_BASE_URL || "https://poncepretelin-web.vercel.app";
 const OUT = path.resolve("assets/demo");
 const EMAIL = process.env.DEMO_EMAIL || "demo@poncepretelin.app";
-const PASS = process.env.DEMO_PASS || "DemoCloud2026";
+const PASS = process.env.DEMO_PASS || "PoncePretelinDemo2026!";
 
 const shots = [
   { name: "01-dashboard", path: "/dashboard", wait: 4000 },
@@ -85,15 +85,46 @@ async function sessionEditPath(page, episodeId) {
   return href.startsWith("http") ? new URL(href).pathname : href;
 }
 
+async function fallbackDemoIds(page) {
+  await page.goto(`${BASE}/patients`, { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.waitForTimeout(3000);
+  const links = page.locator('a[href*="/patients/"]');
+  const count = await links.count();
+  const ids = [];
+  for (let i = 0; i < count && ids.length < 2; i++) {
+    const href = await links.nth(i).getAttribute("href");
+    const id = href?.match(/\/patients\/([^/?#]+)/)?.[1];
+    if (id && !ids.includes(id)) ids.push(id);
+  }
+  if (ids.length < 2) return null;
+  const episodeValeria = await episodeIdForPatient(page, ids[0]);
+  const episodeManuel = await episodeIdForPatient(page, ids[1]);
+  if (!episodeValeria || !episodeManuel) return null;
+  const sessionPath = await sessionEditPath(page, episodeValeria);
+  console.warn("using fallback demo patients", { ids, episodeValeria, episodeManuel, sessionPath });
+  return {
+    valeriaId: ids[0],
+    manuelId: ids[1],
+    episodeValeria,
+    episodeManuel,
+    sessionPath,
+  };
+}
+
 async function resolveDemoIds(page) {
   const valeriaId = await patientIdByFolio(page, "DEMOVEST42");
   const manuelId = await patientIdByFolio(page, "DEMONEURO72");
-  if (!valeriaId) throw new Error("No se encontró paciente DEMOVEST42 (Valeria) en la demo");
-  if (!manuelId) throw new Error("No se encontró paciente DEMONEURO72 (Manuel) en la demo");
+  if (!valeriaId || !manuelId) {
+    const fallback = await fallbackDemoIds(page);
+    if (fallback) return fallback;
+    throw new Error("No se encontraron pacientes demo (DEMOVEST42/DEMONEURO72 ni fallback)");
+  }
 
   const episodeValeria = await episodeIdForPatient(page, valeriaId);
   const episodeManuel = await episodeIdForPatient(page, manuelId);
   if (!episodeValeria || !episodeManuel) {
+    const fallback = await fallbackDemoIds(page);
+    if (fallback) return fallback;
     throw new Error("No se encontraron episodios demo para Valeria o Manuel");
   }
 
