@@ -116,7 +116,7 @@
     const schemaFaq = document.getElementById("schema-faq");
     if (schemaFaq) {
       const mainEntity = [];
-      for (let i = 1; i <= 7; i += 1) {
+      for (let i = 1; i <= 6; i += 1) {
         const name = getNested(messages, `faq.q${i}`);
         const text = getNested(messages, `faq.a${i}`);
         if (!name || !text) continue;

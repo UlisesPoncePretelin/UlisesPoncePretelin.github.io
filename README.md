@@ -8,8 +8,6 @@ Landing personal en GitHub Pages. Presenta **PoncePretelin** y el perfil profesi
 | **CV** | https://ulisesponcepretelin.github.io/cv.html |
 | **Demo del gestor** | https://poncepretelin-web.vercel.app |
 
-El código de PoncePretelin **no es público** por ahora. Evalúalo en la demo en vivo.
-
 ## Foto de perfil
 
 Guarda tu retrato en `assets/portrait.jpg` (recomendado 4:5, mín. 1280×1600 px).

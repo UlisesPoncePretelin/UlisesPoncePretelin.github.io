@@ -105,7 +105,6 @@
   "project": {
     "tag": "03 — Featured project",
     "leadPrefix": "with optional AI and referenced evidence — free clinical core, not empty forms.",
-    "privateNote": "Code is not public yet — try the live demo or get in touch to collaborate.",
     "demoLive": "Live demo",
     "enginesTag": "Clinical engines",
     "enginesTitle": "Four engines of",
@@ -139,7 +138,6 @@
     "lead": "Real PoncePretelin v1 interface: home, schedule with public booking, records, live SOAP, openFDA/RxNav alerts, IASP corrector and AI imaging.",
     "openLive": "Open live demo",
     "contact": "Collaborate",
-    "privateNote": "Source code is not open source yet. The live demo is how you evaluate the manager.",
     "topicsLabel": "Manager views",
     "slide1Alt": "PoncePretelin home with quick actions and morning summary",
     "slide2Alt": "Clinic schedule with appointments, teleconsult and cancellations",
@@ -230,9 +228,7 @@
     "q5": "What clinical safety integrations does it include?",
     "a5": "It integrates openFDA for device alerts and recalls, and RxNav for medication context in clinical intake, as a validation layer within the consultation workflow.",
     "q6": "Which specialties does PoncePretelin support?",
-    "a6": "It focuses on physical therapy and rehabilitation, with multi-specialty support, SOAP templates by clinic and workflows for first visit, EBP follow-up and prudent clinical terminology.",
-    "q7": "Can I see the source code?",
-    "a7": "Not at this time. PoncePretelin is not open source in this stage and there is no public repository yet. You can evaluate the product in the live demo or contact me if you are interested in collaborating or deploying it in your clinic."
+    "a6": "It focuses on physical therapy and rehabilitation, with multi-specialty support, SOAP templates by clinic and workflows for first visit, EBP follow-up and prudent clinical terminology."
   },
   "endcap": {
     "label": "Portfolio closing",

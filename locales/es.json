@@ -105,7 +105,6 @@
   "project": {
     "tag": "03 — Proyecto destacado",
     "leadPrefix": "con IA opcional y evidencia referenciada — núcleo clínico gratuito, no formularios vacíos.",
-    "privateNote": "Código no público por ahora — evalúalo en la demo en vivo o escríbeme para colaborar.",
     "demoLive": "Demo en vivo",
     "enginesTag": "Motores clínicos",
     "enginesTitle": "Cuatro motores de",
@@ -139,7 +138,6 @@
     "lead": "Interfaz real de PoncePretelin v1: inicio, agenda con reserva pública, expediente, SOAP en vivo, alertas openFDA/RxNav, corrector IASP e imagenología con IA.",
     "openLive": "Abrir demo en vivo",
     "contact": "Colaborar",
-    "privateNote": "El código fuente no es open source aún. La demo en vivo es la forma de evaluar el gestor.",
     "topicsLabel": "Vistas del gestor",
     "slide1Alt": "Inicio de PoncePretelin con acciones rápidas y resumen matutino",
     "slide2Alt": "Agenda del consultorio con citas, teleconsulta y cancelaciones",
@@ -230,9 +228,7 @@
     "q5": "¿Qué integraciones de seguridad clínica incluye?",
     "a5": "Integra openFDA para alertas de dispositivos y recalls, y RxNav para contexto farmacológico en el intake clínico, como capa de validación dentro del flujo de consulta.",
     "q6": "¿Para qué especialidades sirve PoncePretelin?",
-    "a6": "Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente.",
-    "q7": "¿Puedo ver el código fuente?",
-    "a7": "No por ahora. PoncePretelin no es open source en esta etapa y aún no hay repositorio público. Puedes evaluar el producto en la demo en vivo o contactarme si te interesa colaborar o desplegarlo en tu consultorio."
+    "a6": "Está orientado a fisioterapia y rehabilitación, con soporte multi-especialidad, plantillas SOAP por consultorio y flujos de primera consulta, seguimiento EBP y terminología clínica prudente."
   },
   "endcap": {
     "label": "Cierre del portafolio",
