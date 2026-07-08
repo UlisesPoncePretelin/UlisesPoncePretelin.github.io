@@ -18,6 +18,24 @@
   --header: 4.25rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --expo-out: linear(
+    0 0%,
+    0.1684 2.66%,
+    0.3165 5.49%,
+    0.446 8.52%,
+    0.5581 11.78%,
+    0.6535 15.29%,
+    0.7341 19.11%,
+    0.8011 23.3%,
+    0.8557 27.93%,
+    0.8962 32.68%,
+    0.9283 38.01%,
+    0.9529 44.08%,
+    0.9711 51.14%,
+    0.9833 59.06%,
+    0.9915 68.74%,
+    1 100%
+  );
 }
 
 *,
@@ -384,6 +402,51 @@ body.has-cursor .cursor-glow {
 .lang-toggle-btn.is-active {
   background: color-mix(in srgb, var(--accent) 12%, var(--surface));
   color: var(--ink);
+}
+
+.header-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s, transform 0.25s var(--ease-out);
+}
+
+.theme-toggle:hover {
+  border-color: var(--line-strong);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.theme-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.theme-icon-moon {
+  display: none;
+}
+
+html.dark .theme-icon-sun {
+  display: none;
+}
+
+html.dark .theme-icon-moon {
+  display: block;
 }
 
 .menu-btn {
@@ -3472,6 +3535,10 @@ body.is-loading .reveal {
   }
 
   .lang-toggle {
+    margin-left: 0;
+  }
+
+  .header-tools {
     margin-left: auto;
   }
 
@@ -4084,6 +4151,7 @@ body.cv-page .chapter-nav {
   .cv-download-btn,
   .cv-hero-actions,
   .lang-toggle,
+  .theme-toggle,
   .menu-btn,
   .skip-link {
     display: none !important;
@@ -4112,11 +4180,85 @@ body.cv-page .chapter-nav {
   }
 }
 
+/* Theme toggle — circle view transition (theme-toggle.rdsx.dev) */
+::view-transition-group(root) {
+  animation-timing-function: var(--expo-out);
+}
+
+::view-transition-old(root),
+html.dark::view-transition-old(root) {
+  animation: none;
+  animation-fill-mode: both;
+  z-index: -1;
+}
+
+::view-transition-new(root) {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='white'/%3E%3C/svg%3E")
+    center / 0 no-repeat;
+  animation: theme-toggle-scale 1s;
+  animation-fill-mode: both;
+}
+
+html.dark ::view-transition-new(root) {
+  animation: theme-toggle-scale 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes theme-toggle-scale {
+  to {
+    mask-size: 200vmax;
+  }
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg: #0e1715;
+  --bg-dark: #060b0a;
+  --surface: #162624;
+  --ink: #e8f2f0;
+  --muted: #8aa39f;
+  --line: rgba(232, 242, 240, 0.1);
+  --line-strong: rgba(232, 242, 240, 0.18);
+  --accent: #3db8ab;
+  --accent-soft: #5fd4c8;
+  --accent-tint: rgba(61, 184, 171, 0.14);
+  --slate: #a8bdb9;
+  --warm: #7d9692;
+}
+
+html.dark body {
+  background:
+    radial-gradient(ellipse 90% 70% at 0% 0%, rgba(29, 142, 130, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 100% 8%, rgba(74, 99, 96, 0.16), transparent 50%),
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(29, 142, 130, 0.1), transparent 55%),
+    linear-gradient(180deg, #121f1d 0%, var(--bg) 38%, #0a1211 100%);
+}
+
+html.dark .preloader {
+  background: var(--bg);
+}
+
+html.dark .btn-light {
+  background: var(--surface);
+}
+
+html.dark .nav.open {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .chapter-nav {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+}
+
 /* Satellite SEO page — fisioterapia-xalapa.html (not used by portfolio) */
 .local-page .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
+}
+
+.local-page .header-row .theme-toggle {
+  margin-left: auto;
 }
 
 .local-hero {

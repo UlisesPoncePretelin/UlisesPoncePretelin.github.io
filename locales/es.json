@@ -252,6 +252,9 @@
     "en": "EN",
     "switchLabel": "Idioma"
   },
+  "theme": {
+    "toggleLabel": "Cambiar tema claro/oscuro"
+  },
   "cv": {
     "title": "CV — Ulises Antonio Ponce Pretelin",
     "description": "CV de Ulises Antonio Ponce Pretelin — Fisioterapeuta e ingeniero de IA clínica.",

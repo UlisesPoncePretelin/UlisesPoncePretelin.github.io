@@ -2,6 +2,16 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("portfolio-theme");
+          if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -75,9 +85,27 @@
             <a class="nav-link is-active" href="cv.html"><span data-i18n="nav.cv">CV</span></a>
             <a class="nav-link" href="index.html#contacto"><span data-i18n="nav.contact">Contacto</span></a>
           </nav>
-          <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.switchLabel">
-            <button type="button" class="lang-toggle-btn is-active" data-lang="es" aria-pressed="true">ES</button>
-            <button type="button" class="lang-toggle-btn" data-lang="en" aria-pressed="false">EN</button>
+          <div class="header-tools">
+            <button
+              type="button"
+              class="theme-toggle"
+              data-theme-toggle
+              aria-pressed="false"
+              aria-label="Cambiar tema claro/oscuro"
+              data-i18n-attr="aria-label:theme.toggleLabel"
+            >
+              <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+              </svg>
+              <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+            <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.switchLabel">
+              <button type="button" class="lang-toggle-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+              <button type="button" class="lang-toggle-btn" data-lang="en" aria-pressed="false">EN</button>
+            </div>
           </div>
           <div class="cv-hero-actions">
             <a class="btn btn-outline cv-download-btn" href="assets/CV_UlisesPoncePretelin.pdf" download data-cv-pdf data-i18n="cv.downloadPdf"
@@ -502,6 +530,7 @@
     </div>
 
     <script src="i18n.js"></script>
+    <script src="theme-toggle.js"></script>
     <script src="main.js"></script>
     <script>
       document.getElementById("print-cv")?.addEventListener("click", () => window.print());
