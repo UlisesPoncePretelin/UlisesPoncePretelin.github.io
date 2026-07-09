@@ -115,12 +115,10 @@
       }
     </script>
     <title>Fisioterapia en Xalapa · Ulises Ponce Pretelin | Fisioterapeuta</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/syne-normal-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="prefetch" href="index.html" as="document" />
   </head>
   <body class="local-page is-loaded">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -247,7 +245,8 @@
       </footer>
     </div>
 
-    <script src="theme-toggle.js"></script>
+    <script src="theme-toggle.js" defer></script>
+    <script src="prefetch.js" defer></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>

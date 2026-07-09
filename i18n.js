@@ -11,6 +11,7 @@
     path.split(".").reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : null), obj);
 
   const loadLocale = async (lang) => {
+    if (lang === "es" && window.__LOCALE_ES__) return window.__LOCALE_ES__;
     const response = await fetch(`locales/${lang}.json`);
     if (!response.ok) throw new Error(`Locale ${lang} not found`);
     return response.json();

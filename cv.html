@@ -64,13 +64,15 @@
       }
     </script>
     <title>CV — Ulises Antonio Ponce Pretelin</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/syne-normal-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/fonts.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="prefetch" href="index.html" as="document" />
+    <script type="speculationrules">
+      {
+        "prefetch": [{ "source": "list", "urls": ["index.html"] }]
+      }
+    </script>
   </head>
   <body class="cv-page is-loaded">
     <a class="skip-link" href="#cv-contenido" data-i18n="nav.skip">Saltar al contenido</a>
@@ -529,9 +531,11 @@
       </footer>
     </div>
 
-    <script src="i18n.js"></script>
-    <script src="theme-toggle.js"></script>
-    <script src="main.js"></script>
+    <script src="locales/es.inline.js"></script>
+    <script src="i18n.js" defer></script>
+    <script src="theme-toggle.js" defer></script>
+    <script src="prefetch.js" defer></script>
+    <script src="main-lite.js" defer></script>
     <script>
       document.getElementById("print-cv")?.addEventListener("click", () => window.print());
     </script>

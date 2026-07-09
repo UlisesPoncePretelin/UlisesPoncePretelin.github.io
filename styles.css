@@ -203,7 +203,7 @@ body.is-loading .scroll-progress {
 }
 
 body.is-loaded .site-shell {
-  animation: siteReveal 1.05s var(--ease-out) forwards;
+  animation: siteReveal 0.55s var(--ease-out) forwards;
 }
 
 @keyframes siteReveal {
@@ -4180,7 +4180,22 @@ body.cv-page .chapter-nav {
   }
 }
 
-/* Theme toggle — circle view transition (theme-toggle.rdsx.dev) */
+.section.frame-block:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
+.demo-section,
+.project-modules-section,
+.endcap {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+.demo-showcase-device img[data-demo-img]:not([src]) {
+  visibility: hidden;
+}
+
 ::view-transition-group(root) {
   animation-timing-function: var(--expo-out);
 }

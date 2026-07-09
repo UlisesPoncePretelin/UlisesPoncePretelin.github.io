@@ -168,14 +168,17 @@
       }
     </script>
     <title>Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/portrait.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="assets/fonts/syne-normal-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/fonts.css" />
     <link rel="stylesheet" href="vendor/slot-text/style.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="prefetch" href="cv.html" as="document" />
+    <script type="speculationrules">
+      {
+        "prefetch": [{ "source": "list", "urls": ["cv.html"] }]
+      }
+    </script>
   </head>
   <body class="is-loading">
     <div class="preloader" id="preloader" aria-hidden="true">
@@ -273,16 +276,20 @@
                 <div class="portrait-glow" aria-hidden="true"></div>
                 <div class="portrait-ring" aria-hidden="true"></div>
                 <div class="portrait-inner">
-                  <img
-                    class="portrait"
-                    src="assets/portrait.jpg"
-                    alt="Ulises Antonio Ponce Pretelin, fisioterapeuta"
-                    data-i18n-attr="alt:hero.portraitAlt"
-                    width="720"
-                    height="900"
-                    loading="eager"
-                    decoding="async"
-                  />
+                  <picture>
+                    <source type="image/webp" srcset="assets/portrait.webp" />
+                    <img
+                      class="portrait"
+                      src="assets/portrait.jpg"
+                      alt="Ulises Antonio Ponce Pretelin, fisioterapeuta"
+                      data-i18n-attr="alt:hero.portraitAlt"
+                      width="720"
+                      height="900"
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="sync"
+                    />
+                  </picture>
                 </div>
                 <div class="portrait-shine" aria-hidden="true"></div>
               </div>
@@ -533,7 +540,10 @@
             <article class="engine-card engine-card-featured" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine1Num">01</span>
               <div class="engine-thumb">
-                <img src="assets/demo/01-dashboard.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine1ImgAlt" />
+                <picture>
+                  <source type="image/webp" srcset="assets/demo/01-dashboard.webp" />
+                  <img src="assets/demo/01-dashboard.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine1ImgAlt" />
+                </picture>
               </div>
               <p class="engine-tags" data-i18n="project.engine1Tags">Inicio · Agenda · Teleconsulta</p>
               <div class="engine-body">
@@ -545,7 +555,10 @@
             <article class="engine-card" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine2Num">02</span>
               <div class="engine-thumb">
-                <img src="assets/demo/10-safety-alerts.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine2ImgAlt" />
+                <picture>
+                  <source type="image/webp" srcset="assets/demo/10-safety-alerts.webp" />
+                  <img src="assets/demo/10-safety-alerts.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine2ImgAlt" />
+                </picture>
               </div>
               <p class="engine-tags" data-i18n="project.engine2Tags">openFDA · RxNav · Alertas</p>
               <div class="engine-body">
@@ -557,7 +570,10 @@
             <article class="engine-card" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine3Num">03</span>
               <div class="engine-thumb">
-                <img src="assets/demo/09-terminology-corrector.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine3ImgAlt" />
+                <picture>
+                  <source type="image/webp" srcset="assets/demo/09-terminology-corrector.webp" />
+                  <img src="assets/demo/09-terminology-corrector.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine3ImgAlt" />
+                </picture>
               </div>
               <p class="engine-tags" data-i18n="project.engine3Tags">IASP · CIF · Corrector</p>
               <div class="engine-body">
@@ -569,7 +585,10 @@
             <article class="engine-card" data-tilt-card>
               <span class="engine-num" data-i18n="project.engine4Num">04</span>
               <div class="engine-thumb">
-                <img src="assets/demo/11-imaging.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine4ImgAlt" />
+                <picture>
+                  <source type="image/webp" srcset="assets/demo/11-imaging.webp" />
+                  <img src="assets/demo/11-imaging.png" alt="" width="640" height="400" loading="lazy" decoding="async" data-i18n-attr="alt:project.engine4ImgAlt" />
+                </picture>
               </div>
               <p class="engine-tags" data-i18n="project.engine4Tags">SOAP en vivo · Evidencia · Imagenología</p>
               <div class="engine-body">
@@ -616,70 +635,70 @@
                 <figure class="demo-showcase-slide" data-demo-slide="0">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/01-dashboard.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide1Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/01-dashboard.webp" data-src-fallback="assets/demo/01-dashboard.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide1Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide1Cap">Inicio · acciones rápidas</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="1">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/04-agenda.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide2Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/04-agenda.webp" data-src-fallback="assets/demo/04-agenda.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide2Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide2Cap">Agenda · citas y reserva pública</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="2">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/06-patient-record.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide3Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/06-patient-record.webp" data-src-fallback="assets/demo/06-patient-record.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide3Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide3Cap">Panel del día · expediente</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="3">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/10-safety-alerts.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide4Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/10-safety-alerts.webp" data-src-fallback="assets/demo/10-safety-alerts.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide4Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide4Cap">Intake · alertas RxNav y openFDA</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="4">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/08-soap-note.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide5Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/08-soap-note.webp" data-src-fallback="assets/demo/08-soap-note.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide5Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide5Cap">SOAP · organización en vivo</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="5">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/09-terminology-corrector.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide6Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/09-terminology-corrector.webp" data-src-fallback="assets/demo/09-terminology-corrector.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide6Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide6Cap">Corrector clínico · IASP</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="6">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/11-imaging.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide7Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/11-imaging.webp" data-src-fallback="assets/demo/11-imaging.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide7Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide7Cap">Imagenología IA · workspace</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="7">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/02-diagnostic-tests.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide8Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/02-diagnostic-tests.webp" data-src-fallback="assets/demo/02-diagnostic-tests.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide8Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide8Cap">Biblioteca · pruebas Sn/Sp</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="8">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/03-evidence-atlas.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide9Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/03-evidence-atlas.webp" data-src-fallback="assets/demo/03-evidence-atlas.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide9Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide9Cap">Atlas de evidencia · PMID</figcaption>
                 </figure>
                 <figure class="demo-showcase-slide" data-demo-slide="9">
                   <div class="demo-showcase-device">
                     <div class="demo-showcase-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <img src="assets/demo/05-patients.png" alt="" width="960" height="600" loading="lazy" decoding="async" data-i18n-attr="alt:demo.slide10Alt" />
+                    <img data-demo-img data-src-webp="assets/demo/05-patients.webp" data-src-fallback="assets/demo/05-patients.png" alt="" width="960" height="600" decoding="async" data-i18n-attr="alt:demo.slide10Alt" />
                   </div>
                   <figcaption data-i18n="demo.slide10Cap">Pacientes · vista consultorio</figcaption>
                 </figure>
@@ -849,61 +868,61 @@
           <div class="tech-grid reveal-stagger">
             <article class="tech-chip" data-tilt-chip style="--brand: #3178c6">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/typescript.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">TypeScript</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #000000">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/nextjs.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Next.js</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #06b6d4">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/tailwindcss.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Tailwind CSS</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #3776ab">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/python/3776AB" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/python.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Python</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #009688">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/fastapi/009688" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/fastapi.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">FastAPI</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #d71f00">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/sqlalchemy/D71F00" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/sqlalchemy.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">SQLAlchemy</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #4169e1">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/postgresql.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">PostgreSQL</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #2496ed">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/docker/2496ED" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/docker.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Docker</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #000000">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/vercel/000000" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/vercel.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Vercel</span>
             </article>
             <article class="tech-chip" data-tilt-chip style="--brand: #0b0d0e">
               <span class="tech-chip-icon" aria-hidden="true">
-                <img src="https://cdn.simpleicons.org/railway/0B0D0E" alt="" width="22" height="22" loading="lazy" decoding="async" />
+                <img src="assets/icons/railway.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
               </span>
               <span class="tech-chip-label">Railway</span>
             </article>
@@ -1047,17 +1066,17 @@
                 </li>
                 <li>
                   <a href="https://www.instagram.com/ulisesponcepretelin/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                    <img src="assets/icons/instagram.svg" alt="" width="20" height="20" loading="lazy" decoding="async" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com/poncepretelin" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <img src="https://cdn.simpleicons.org/facebook/0866FF" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                    <img src="assets/icons/facebook.svg" alt="" width="20" height="20" loading="lazy" decoding="async" />
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/UlisesPoncePretelin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <img src="https://cdn.simpleicons.org/github/181717" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                    <img src="assets/icons/github.svg" alt="" width="20" height="20" loading="lazy" decoding="async" />
                   </a>
                 </li>
               </ul>
@@ -1083,17 +1102,17 @@
             </li>
             <li>
               <a href="https://www.instagram.com/ulisesponcepretelin/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                <img src="assets/icons/instagram.svg" alt="" width="20" height="20" loading="lazy" decoding="async" />
               </a>
             </li>
             <li>
               <a href="https://www.facebook.com/poncepretelin" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <img src="https://cdn.simpleicons.org/facebook/0866FF" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                <img src="assets/icons/facebook.svg" alt="" width="20" height="20" loading="lazy" decoding="async" />
               </a>
             </li>
             <li>
               <a href="https://github.com/UlisesPoncePretelin" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <img src="https://cdn.simpleicons.org/github/181717" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                <img src="assets/icons/github.svg" alt="" width="20" height="20" loading="lazy" decoding="async" />
               </a>
             </li>
           </ul>
@@ -1101,9 +1120,11 @@
       </footer>
     </div>
 
-    <script src="i18n.js"></script>
-    <script src="theme-toggle.js"></script>
-    <script src="main.js"></script>
+    <script src="locales/es.inline.js"></script>
+    <script src="i18n.js" defer></script>
+    <script src="theme-toggle.js" defer></script>
+    <script src="prefetch.js" defer></script>
+    <script src="main.js" defer></script>
     <script type="module" src="slot-init.mjs"></script>
   </body>
 </html>

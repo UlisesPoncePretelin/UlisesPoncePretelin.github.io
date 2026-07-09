@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "build:locale": "node scripts/build-locale-inline.mjs",
+    "build:images": "node scripts/optimize-images.mjs",
+    "build:fonts": "node scripts/download-fonts.mjs",
+    "build:assets": "npm run build:locale && npm run build:images"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}
