@@ -31,13 +31,13 @@
   "hero": {
     "kicker": "Portfolio · 2026",
     "tagline": "Physical therapist · digital health",
-    "geoLine": "Xalapa, Mexico · Physical therapy · systems and applied AI",
-    "text": "Physical therapist in Xalapa with clinical, community and international experience. I build digital systems and tools for rehabilitation, using AI when it helps day-to-day work.",
+    "geoLine": "Xalapa, Mexico · Physical therapy · applied AI",
+    "text": "Physical therapist in Xalapa with clinical, community and international experience. I build digital tools for rehabilitation, using AI when it helps day-to-day work.",
     "exploreAbout": "About me",
     "viewWork": "My work",
     "focusPrefix": "Focus ·",
     "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist",
-    "geoSummary": "Ulises Antonio Ponce Pretelin is a physical therapist in Xalapa, Mexico. He works in digital health: clinical systems and rehabilitation tools, with clinical training (ICES) and IT studies (UNAM)."
+    "geoSummary": "Ulises Antonio Ponce Pretelin is a physical therapist in Xalapa, Mexico. He works in digital health and applied AI for rehabilitation, with clinical training (ICES) and IT studies (UNAM)."
   },
   "loc": {
     "text": "Xalapa, Veracruz · Mexico · Physical therapy and digital health"
@@ -78,7 +78,7 @@
     "pill4": "EBP",
     "pill5": "Digital health",
     "p1": "I trained in Physical Therapy at ICES Campus Xalapa. I have worked in interdisciplinary clinics, hospital service (ISSSTE) and inclusion with people with disabilities in Mexico and the United States.",
-    "p2": "I also studied Information Technologies in Sciences (ENES Morelia, UNAM). That grounds the systems and applied AI side: tools for records and care, not shortcuts that replace clinical judgment."
+    "p2": "I also studied Information Technologies in Sciences (ENES Morelia, UNAM). That grounds the applied AI side: tools for records and care, without replacing clinical judgment."
   },
   "path": {
     "tag": "02 — Path",
@@ -97,7 +97,7 @@
     "t6Title": "Citizens Options Unlimited",
     "t6Desc": "Camp Counselor and Behavior Helper · disability population · U.S.",
     "t7Title": "BSc Physical Therapy · ICES",
-    "t7Desc": "Xalapa campus · studies completed · degree in progress",
+    "t7Desc": "Xalapa campus 2026",
     "orderNote": "Ordered from most recent to oldest.",
     "cvLink": "View full CV →",
     "footnote": "From the published CV — no invented experience or certifications."
@@ -153,7 +153,7 @@
     "aiItem4Title": "AI Development: Agents Program",
     "aiItem4Meta": "mouredev × BIG school · Jun 2026",
     "clinicalDegreeTitle": "BSc Physical Therapy · ICES",
-    "clinicalDegreeMeta": "Xalapa campus · studies completed · degree in progress",
+    "clinicalDegreeMeta": "Xalapa campus 2026",
     "aiDegreeTitle": "Information Technologies in Sciences · UNAM",
     "aiDegreeMeta": "ENES Morelia · 2018 – 2021"
   },
@@ -161,19 +161,10 @@
     "tag": "04 — Technologies",
     "techTitle": "Tools",
     "techTitleEm": "I build with",
-    "techLead": "Product and infrastructure tools, plus clinical standards I apply in real systems.",
-    "clinicalTitle": "Clinical",
-    "clinicalTitleEm": "standards",
-    "clinicalLead": "References and frameworks applied in the system architecture.",
-    "iaspDesc": "Referenced pain terminology",
-    "cifDesc": "International Classification of Functioning (WHO)",
-    "openfdaDesc": "Device alerts and recalls integration",
-    "ebpDesc": "NDI · ODI · Berg · TUG · STarT Back",
-    "rxnavDesc": "Medication context in clinical intake",
-    "snspDesc": "Referenced values in diagnostic tests"
+    "techLead": "Product and infrastructure tools I build with in digital health and applied AI."
   },
   "geo": {
-    "productDescription": "Portfolio of Ulises Antonio Ponce Pretelin: physical therapist in Xalapa. Digital health, clinical systems, ICES + UNAM training."
+    "productDescription": "Portfolio of Ulises Antonio Ponce Pretelin: physical therapist in Xalapa. Digital health, applied AI, ICES + UNAM training."
   },
   "faq": {
     "tag": "06 — FAQ",
@@ -181,7 +172,7 @@
     "titleEm": "Ulises",
     "lead": "Short answers on role, training and how I use technology in health.",
     "q1": "Who is Ulises Antonio Ponce Pretelin?",
-    "a1": "A physical therapist in Xalapa, Veracruz. He combines clinical care and inclusion (Mexico and the U.S.) with digital systems and tools for rehabilitation.",
+    "a1": "A physical therapist in Xalapa, Veracruz. He combines clinical care and inclusion (Mexico and the U.S.) with digital tools and applied AI for rehabilitation.",
     "q2": "What is his training?",
     "a2": "Physical Therapy degree (ICES, Xalapa) and Information Technologies in Sciences studies (ENES Morelia, UNAM), plus ongoing Anthropic/Claude, MCP and agents training.",
     "q3": "How does he combine clinical care and technology?",
@@ -197,7 +188,7 @@
   "contact": {
     "tag": "07 — Contact",
     "title": "Shall we talk?",
-    "text": "Clinical collaboration, digital-health projects or rehabilitation systems. Get in touch.",
+    "text": "Clinical collaboration, digital-health projects or applied AI for rehabilitation. Get in touch.",
     "socialLabel": "Social media"
   },
   "footer": {
@@ -224,7 +215,7 @@
     "downloadPdf": "Download PDF",
     "print": "Print",
     "summaryTitle": "Summary",
-    "summary": "Physical therapist with clinical, community and international experience. Digital health: systems and tools for rehabilitation, with ICES (Physical Therapy), UNAM (IT) and applied AI training.",
+    "summary": "Physical therapist with clinical, community and international experience. Digital health and applied AI for rehabilitation, with ICES (Physical Therapy), UNAM (IT) and ongoing training.",
     "recentTitle": "Recent experience",
     "educationTitle": "Education",
     "experienceTitle": "Professional experience",

@@ -31,13 +31,13 @@
   "hero": {
     "kicker": "Portafolio · 2026",
     "tagline": "Fisioterapeuta · salud digital",
-    "geoLine": "Xalapa, México · Fisioterapia · sistemas e IA aplicada",
-    "text": "Fisioterapeuta en Xalapa con experiencia clínica, comunitaria e internacional. Construyo sistemas y herramientas digitales para rehabilitación, usando IA cuando suma al trabajo diario.",
+    "geoLine": "Xalapa, México · Fisioterapia · IA aplicada",
+    "text": "Fisioterapeuta en Xalapa con experiencia clínica, comunitaria e internacional. Construyo herramientas digitales para rehabilitación, usando IA cuando suma al trabajo diario.",
     "exploreAbout": "Sobre mí",
     "viewWork": "Mis trabajos",
     "focusPrefix": "Enfoque ·",
     "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta",
-    "geoSummary": "Ulises Antonio Ponce Pretelin es fisioterapeuta en Xalapa, México. Trabaja en salud digital: sistemas clínicos y herramientas para rehabilitación, con formación clínica (ICES) y en tecnologías (UNAM)."
+    "geoSummary": "Ulises Antonio Ponce Pretelin es fisioterapeuta en Xalapa, México. Trabaja en salud digital e IA aplicada para rehabilitación, con formación clínica (ICES) y en tecnologías (UNAM)."
   },
   "loc": {
     "text": "Xalapa, Veracruz · México · Fisioterapia y salud digital"
@@ -78,7 +78,7 @@
     "pill4": "EBP",
     "pill5": "Salud digital",
     "p1": "Me formé en Terapia Física en el ICES Campus Xalapa. He trabajado en clínica interdisciplinaria, servicio hospitalario (ISSSTE) e inclusión con personas con discapacidad en México y Estados Unidos.",
-    "p2": "También estudié Tecnologías para la Información en Ciencias (ENES Morelia, UNAM). Ahí sustento el lado de sistemas e IA aplicada: herramientas para el expediente y la atención, no atajos que sustituyan el criterio clínico."
+    "p2": "También estudié Tecnologías para la Información en Ciencias (ENES Morelia, UNAM). Ahí sustento el lado de IA aplicada: herramientas para el expediente y la atención, sin sustituir el criterio clínico."
   },
   "path": {
     "tag": "02 — Trayectoria",
@@ -97,7 +97,7 @@
     "t6Title": "Citizens Options Unlimited",
     "t6Desc": "Camp Counselor y Behavior Helper · población con discapacidad · EE.UU.",
     "t7Title": "Lic. Terapia Física · ICES",
-    "t7Desc": "Campus Xalapa · estudios finalizados · titulación en curso",
+    "t7Desc": "Campus Xalapa 2026",
     "orderNote": "Ordenado del más reciente al más antiguo.",
     "cvLink": "Ver CV completo →",
     "footnote": "Datos del CV publicado — sin inventar experiencia ni certificaciones."
@@ -153,7 +153,7 @@
     "aiItem4Title": "Desarrollo con IA: Programa con Agentes",
     "aiItem4Meta": "mouredev × BIG school · jun 2026",
     "clinicalDegreeTitle": "Lic. Terapia Física · ICES",
-    "clinicalDegreeMeta": "Campus Xalapa · estudios finalizados · titulación en curso",
+    "clinicalDegreeMeta": "Campus Xalapa 2026",
     "aiDegreeTitle": "Tecnologías para la Información en Ciencias · UNAM",
     "aiDegreeMeta": "ENES Morelia · 2018-2021"
   },
@@ -161,19 +161,10 @@
     "tag": "04 — Tecnologías",
     "techTitle": "Herramientas",
     "techTitleEm": "con las que construyo",
-    "techLead": "Herramientas de producto e infraestructura, más estándares clínicos que aplico en sistemas reales.",
-    "clinicalTitle": "Estándares",
-    "clinicalTitleEm": "clínicos",
-    "clinicalLead": "Referencias y frameworks que aplico en la arquitectura del sistema.",
-    "iaspDesc": "Terminología del dolor referenciada",
-    "cifDesc": "Clasificación Internacional del Funcionamiento (OMS)",
-    "openfdaDesc": "Integración de alertas de dispositivos y recalls",
-    "ebpDesc": "NDI · ODI · Berg · TUG · STarT Back",
-    "rxnavDesc": "Contexto farmacológico en intake clínico",
-    "snspDesc": "Valores referenciados en pruebas diagnósticas"
+    "techLead": "Herramientas de producto e infraestructura con las que construyo en salud digital e IA aplicada."
   },
   "geo": {
-    "productDescription": "Portafolio de Ulises Antonio Ponce Pretelin: fisioterapeuta en Xalapa. Salud digital, sistemas clínicos y formación ICES + UNAM."
+    "productDescription": "Portafolio de Ulises Antonio Ponce Pretelin: fisioterapeuta en Xalapa. Salud digital, IA aplicada y formación ICES + UNAM."
   },
   "faq": {
     "tag": "06 — FAQ",
@@ -181,7 +172,7 @@
     "titleEm": "Ulises",
     "lead": "Respuestas breves sobre el rol, la formación y cómo uso la tecnología en salud.",
     "q1": "¿Quién es Ulises Antonio Ponce Pretelin?",
-    "a1": "Fisioterapeuta en Xalapa, Veracruz. Une atención clínica e inclusión (México y EE.UU.) con sistemas y herramientas digitales para rehabilitación.",
+    "a1": "Fisioterapeuta en Xalapa, Veracruz. Une atención clínica e inclusión (México y EE.UU.) con herramientas digitales e IA aplicada para rehabilitación.",
     "q2": "¿Cuál es su formación?",
     "a2": "Licenciatura en Terapia Física (ICES, Xalapa) y estudios en Tecnologías para la Información en Ciencias (ENES Morelia, UNAM), más capacitación continua en Anthropic/Claude, MCP y agentes.",
     "q3": "¿Cómo combina clínica y tecnología?",
@@ -197,7 +188,7 @@
   "contact": {
     "tag": "07 — Contacto",
     "title": "¿Hablamos?",
-    "text": "Colaboración clínica, proyectos de salud digital o sistemas para rehabilitación. Escríbeme.",
+    "text": "Colaboración clínica, proyectos de salud digital o IA aplicada a rehabilitación. Escríbeme.",
     "socialLabel": "Redes sociales"
   },
   "footer": {
@@ -224,7 +215,7 @@
     "downloadPdf": "Descargar PDF",
     "print": "Imprimir",
     "summaryTitle": "Resumen",
-    "summary": "Fisioterapeuta con experiencia clínica, comunitaria e internacional. Salud digital: sistemas y herramientas para rehabilitación, con formación ICES (Terapia Física), UNAM (TIC) y capacitación en IA aplicada.",
+    "summary": "Fisioterapeuta con experiencia clínica, comunitaria e internacional. Salud digital e IA aplicada a rehabilitación, con formación ICES (Terapia Física), UNAM (TIC) y capacitación continua.",
     "recentTitle": "Experiencia reciente",
     "educationTitle": "Educación",
     "experienceTitle": "Experiencia profesional",
