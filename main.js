@@ -101,7 +101,7 @@
   const nav = document.getElementById("site-nav");
   const navLinks = nav?.querySelectorAll('.nav-link[href^="#"]');
   const chapterLinks = document.querySelectorAll("[data-chapter]");
-  const sectionIds = ["top", "sobre", "trayectoria", "proyecto", "demo", "certificaciones", "stack", "faq", "contacto"];
+  const sectionIds = ["top", "sobre", "trayectoria", "certificaciones", "stack", "proyecto", "faq", "contacto"];
   const sectionEls = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 
   const computeEndcap = () => {
@@ -289,24 +289,6 @@
   bindTilt(document.querySelectorAll("[data-tilt-card]"), 8);
   bindTilt(document.querySelectorAll("[data-tilt-chip]"), 6);
 
-  const supportsWebp = (() => {
-    try {
-      return document.createElement("canvas").toDataURL("image/webp").startsWith("data:image/webp");
-    } catch {
-      return false;
-    }
-  })();
-
-  const loadDemoImage = (img) => {
-    if (!img || img.dataset.loaded === "1") return;
-    const webp = img.dataset.srcWebp;
-    const fallback = img.dataset.srcFallback;
-    const src = supportsWebp && webp ? webp : fallback;
-    if (!src) return;
-    img.src = src;
-    img.dataset.loaded = "1";
-  };
-
   const initHeroSplit = () => {
     if (!canAnimate) return;
     document.querySelectorAll("[data-split]").forEach((el) => {
@@ -326,119 +308,8 @@
     });
   };
 
-  const initDemoShowcase = () => {
-    const showcase = document.querySelector("[data-demo-showcase]");
-    const wheel = showcase?.querySelector("[data-demo-wheel]");
-    const slides = wheel ? [...wheel.querySelectorAll("[data-demo-slide]")] : [];
-    const dotsRoot = showcase?.querySelector("[data-demo-dots]");
-    const prevBtn = showcase?.querySelector("[data-demo-prev]");
-    const nextBtn = showcase?.querySelector("[data-demo-next]");
-
-    if (!showcase || !wheel || !slides.length || !dotsRoot) return;
-
-    let index = 0;
-    let timer;
-    let showcaseVisible = false;
-
-    slides.forEach((slide, i) => {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = "demo-showcase-dot";
-      dot.setAttribute("role", "tab");
-      dot.setAttribute("aria-label", slide.querySelector("figcaption")?.textContent || `Captura ${i + 1}`);
-      dot.addEventListener("click", () => goTo(i, true));
-      dotsRoot.appendChild(dot);
-    });
-
-    const dots = [...dotsRoot.querySelectorAll(".demo-showcase-dot")];
-
-    const hydrateNearbySlides = () => {
-      const total = slides.length;
-      slides.forEach((slide, i) => {
-        let diff = i - index;
-        if (diff > total / 2) diff -= total;
-        if (diff < -total / 2) diff += total;
-        if (Math.abs(diff) <= 1) loadDemoImage(slide.querySelector("[data-demo-img]"));
-      });
-    };
-
-    const renderSlides = () => {
-      const total = slides.length;
-      slides.forEach((slide, i) => {
-        slide.classList.remove("is-active", "is-prev", "is-next", "is-far");
-        let diff = i - index;
-        if (diff > total / 2) diff -= total;
-        if (diff < -total / 2) diff += total;
-
-        if (diff === 0) slide.classList.add("is-active");
-        else if (diff === 1) slide.classList.add("is-next");
-        else if (diff === -1) slide.classList.add("is-prev");
-        else slide.classList.add("is-far");
-      });
-      dots.forEach((dot, i) => {
-        const active = i === index;
-        dot.classList.toggle("is-active", active);
-        dot.setAttribute("aria-selected", active ? "true" : "false");
-        dot.setAttribute("aria-label", slides[i].querySelector("figcaption")?.textContent || `Captura ${i + 1}`);
-      });
-      if (showcaseVisible) hydrateNearbySlides();
-    };
-
-    const goTo = (nextIndex, manual = false) => {
-      index = (nextIndex + slides.length) % slides.length;
-      renderSlides();
-      if (manual) restartAuto();
-    };
-
-    const restartAuto = () => {
-      clearInterval(timer);
-      if (!canAnimate || isNarrow || !showcaseVisible) return;
-      timer = setInterval(() => goTo(index + 1), 5200);
-    };
-
-    prevBtn?.addEventListener("click", () => goTo(index - 1, true));
-    nextBtn?.addEventListener("click", () => goTo(index + 1, true));
-
-    showcase.addEventListener("mouseenter", () => clearInterval(timer));
-    showcase.addEventListener("mouseleave", restartAuto);
-
-    wheel.addEventListener(
-      "keydown",
-      (event) => {
-        if (event.key === "ArrowLeft") {
-          event.preventDefault();
-          goTo(index - 1, true);
-        }
-        if (event.key === "ArrowRight") {
-          event.preventDefault();
-          goTo(index + 1, true);
-        }
-      },
-      { passive: false }
-    );
-
-    window.addEventListener("langchange", () => renderSlides());
-
-    const showcaseObserver = new IntersectionObserver(
-      (entries) => {
-        showcaseVisible = entries.some((entry) => entry.isIntersecting);
-        if (showcaseVisible) {
-          hydrateNearbySlides();
-          restartAuto();
-        } else {
-          clearInterval(timer);
-        }
-      },
-      { rootMargin: "120px 0px" }
-    );
-    showcaseObserver.observe(showcase);
-
-    renderSlides();
-  };
-
   const bootPremiumMotion = () => {
     initHeroSplit();
-    initDemoShowcase();
   };
 
   window.addEventListener("portfolio:ready", bootPremiumMotion);

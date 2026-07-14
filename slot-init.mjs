@@ -6,14 +6,14 @@ const slotWords = {
   es: {
     badge: ["Xalapa", "Veracruz", "2026", "IA clínica"],
     preloader: ["Ingeniero de IA clínica", "Seguridad clínica", "PoncePretelin"],
-    focus: ["Seguridad clínica", "Integración openFDA"],
-    project: ["Gestor clínico", "Seguridad clínica"],
+    focus: ["IA responsable", "MCP · agentes"],
+    project: ["IA clínica", "Claude · MCP"],
   },
   en: {
     badge: ["Xalapa", "Veracruz", "2026", "Clinical AI"],
     preloader: ["Clinical AI Engineer", "Clinical safety", "PoncePretelin"],
-    focus: ["Clinical safety", "openFDA integration"],
-    project: ["Clinical manager", "Clinical safety"],
+    focus: ["Responsible AI", "MCP · agents"],
+    project: ["Clinical AI", "Claude · MCP"],
   },
 };
 
