@@ -1,10 +1,10 @@
 window.__LOCALE_ES__={
   "meta": {
-    "title": "Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica",
-    "description": "Ulises Antonio Ponce Pretelin — fisioterapeuta e ingeniero de IA clínica en Xalapa. Formación clínica y en Anthropic/Claude, MCP y agentes; experiencia internacional y sistemas clínicos.",
-    "ogTitle": "Ulises Ponce Pretelin — Fisioterapeuta e Ingeniero de IA clínica",
-    "ogDescription": "Fisioterapeuta · ingeniero de IA clínica · Xalapa, México",
-    "jobTitle": "Fisioterapeuta e ingeniero de IA clínica"
+    "title": "Ulises Ponce Pretelin — Fisioterapeuta · salud digital",
+    "description": "Ulises Antonio Ponce Pretelin, fisioterapeuta en Xalapa. Sistemas y herramientas digitales para rehabilitación, con formación en UNAM (TIC) y capacitación en IA aplicada.",
+    "ogTitle": "Ulises Ponce Pretelin — Fisioterapeuta · salud digital",
+    "ogDescription": "Fisioterapeuta · salud digital · Xalapa, México",
+    "jobTitle": "Fisioterapeuta · salud digital"
   },
   "preloader": {
     "label": "Cargando portafolio"
@@ -14,7 +14,7 @@ window.__LOCALE_ES__={
     "home": "Inicio",
     "about": "Sobre",
     "path": "Trayectoria",
-    "project": "Trabajo",
+    "project": "Mis trabajos",
     "certs": "Formación",
     "stack": "Tecnologías",
     "contact": "Contacto",
@@ -23,48 +23,48 @@ window.__LOCALE_ES__={
     "cv": "CV",
     "technologies": "Tecnologías",
     "demoLive": "Demo en vivo",
-    "work": "Trabajo",
+    "work": "Mis trabajos",
     "faq": "FAQ",
     "menu": "Menú",
     "skip": "Saltar al contenido"
   },
   "hero": {
     "kicker": "Portafolio · 2026",
-    "tagline": "Fisioterapeuta e Ingeniero de IA clínica",
-    "geoLine": "Xalapa, México · Clínica · IA aplicada · sistemas clínicos",
-    "text": "Profesional en Terapia Física con experiencia clínica, comunitaria e internacional. Combino razonamiento clínico con diseño de sistemas e IA aplicada — siempre al servicio del criterio profesional, no en su lugar.",
+    "tagline": "Fisioterapeuta · salud digital",
+    "geoLine": "Xalapa, México · Fisioterapia · sistemas e IA aplicada",
+    "text": "Fisioterapeuta en Xalapa con experiencia clínica, comunitaria e internacional. Construyo sistemas y herramientas digitales para rehabilitación, usando IA cuando suma al trabajo diario.",
     "exploreAbout": "Sobre mí",
-    "viewWork": "Trabajo seleccionado",
+    "viewWork": "Mis trabajos",
     "focusPrefix": "Enfoque ·",
-    "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta e ingeniero de IA clínica",
-    "geoSummary": "Ulises Antonio Ponce Pretelin es fisioterapeuta e ingeniero de IA clínica en Xalapa, México. Une experiencia clínica e internacional con formación en Anthropic/Claude, MCP y agentes, y construye sistemas clínicos con evidencia referenciada."
+    "portraitAlt": "Ulises Antonio Ponce Pretelin, fisioterapeuta",
+    "geoSummary": "Ulises Antonio Ponce Pretelin es fisioterapeuta en Xalapa, México. Trabaja en salud digital: sistemas clínicos y herramientas para rehabilitación, con formación clínica (ICES) y en tecnologías (UNAM)."
   },
   "loc": {
-    "text": "Xalapa, Veracruz · México · Terapia Física & IA clínica"
+    "text": "Xalapa, Veracruz · México · Fisioterapia y salud digital"
   },
   "marquee": {
     "label": "Roles",
     "physicalTherapy": "Terapia Física",
     "rehab": "Rehabilitación",
-    "engineer": "Ingeniero IA clínica",
-    "claude": "Claude · MCP",
-    "clinicalSafety": "Seguridad clínica"
+    "engineer": "Salud digital",
+    "claude": "Sistemas clínicos",
+    "clinicalSafety": "Atención centrada en la persona"
   },
   "marqueeStandards": {
     "label": "Referencias",
     "iasp": "IASP 2020",
     "cif": "CIF OMS",
-    "mcp": "MCP",
-    "claude": "Claude API",
+    "mcp": "Expediente digital",
+    "claude": "Herramientas clínicas",
     "ebp": "EBP · NDI · ODI · Berg",
-    "agents": "Agentes · Skills"
+    "agents": "Rehabilitación"
   },
   "share": {
     "sectionLabel": "Compartir portafolio",
     "tag": "Compartir",
     "title": "¿Conoces a alguien",
     "titleEm": "interesado?",
-    "lead": "Copia el enlace del portafolio para compartir trayectoria, formación o colaborar en fisioterapia e IA clínica.",
+    "lead": "Copia el enlace del portafolio para compartir trayectoria, formación o colaborar en fisioterapia y salud digital.",
     "hint": "Toca para copiar enlace",
     "done": "¡Copiado al portapapeles!"
   },
@@ -76,9 +76,9 @@ window.__LOCALE_ES__={
     "pill2": "Rehabilitación",
     "pill3": "Sistemas clínicos",
     "pill4": "EBP",
-    "pill5": "IA clínica",
-    "p1": "Licenciado en Terapia Física (ICES, Xalapa). Experiencia con poblaciones con necesidades especiales en México, Estados Unidos y entornos interdisciplinarios, incluyendo terapia de lenguaje y campamentos de inclusión con Citizens Options Unlimited.",
-    "p2": "Formo y aplico IA con responsabilidad: Anthropic/Claude, API, MCP, skills y agentes. Uso el mismo rigor clínico (EBP, terminología IASP/CIF) al diseñar herramientas que apoyan — nunca sustituyen — el juicio profesional."
+    "pill5": "Salud digital",
+    "p1": "Me formé en Terapia Física en el ICES Campus Xalapa. He trabajado en clínica interdisciplinaria, servicio hospitalario (ISSSTE) e inclusión con personas con discapacidad en México y Estados Unidos.",
+    "p2": "También estudié Tecnologías para la Información en Ciencias (ENES Morelia, UNAM). Ahí sustento el lado de sistemas e IA aplicada: herramientas para el expediente y la atención, no atajos que sustituyan el criterio clínico."
   },
   "path": {
     "tag": "02 — Trayectoria",
@@ -87,7 +87,7 @@ window.__LOCALE_ES__={
     "t1Title": "Fisioterapeuta",
     "t1Desc": "Clínica de terapia de lenguaje · entorno interdisciplinario · Xalapa",
     "t2Title": "PoncePretelin",
-    "t2Desc": "Ingeniero y creador del gestor clínico con IA para fisioterapia",
+    "t2Desc": "Creador del gestor clínico para fisioterapia",
     "t3Title": "Cabin Leader",
     "t3Desc": "Citizens Options Unlimited · campamento de inclusión · EE.UU.",
     "t4Title": "Terapeuta físico · ISSSTE",
@@ -103,15 +103,16 @@ window.__LOCALE_ES__={
     "footnote": "Datos del CV publicado — sin inventar experiencia ni certificaciones."
   },
   "project": {
-    "tag": "05 — Trabajo seleccionado",
+    "tag": "05 — Mis trabajos",
+    "sectionTitle": "Mis trabajos",
     "title": "Ponce",
     "titleEm": "Pretelin",
-    "lead": "Gestor clínico que construí a partir de práctica real en fisioterapia: expediente, seguridad y apoyo con IA opcional — no un EMR genérico de formularios vacíos.",
+    "lead": "Gestor clínico nacido de la práctica en fisioterapia: expediente, seguridad y apoyo digital opcional.",
     "roleLabel": "Rol",
-    "role": "Diseño, arquitectura e ingeniería de punta a punta.",
-    "point1": "Flujos clínicos con evidencia referenciada y terminología IASP / CIF.",
-    "point2": "Integraciones de seguridad (openFDA, RxNav) dentro del expediente.",
-    "point3": "Módulos de IA como apoyo al criterio — con límites explícitos.",
+    "role": "Creador · diseño y desarrollo de punta a punta",
+    "point1": "Evidencia y terminología clínica referenciada (IASP / CIF).",
+    "point2": "Alertas de seguridad en el flujo del expediente.",
+    "point3": "Apoyo con IA solo como ayuda al trabajo clínico.",
     "demoLive": "Abrir demo en vivo",
     "imgAlt": "Inicio de PoncePretelin con acciones rápidas y resumen del día"
   },
@@ -119,11 +120,11 @@ window.__LOCALE_ES__={
     "tag": "03 — Formación",
     "title": "Dos ejes,",
     "titleEm": "misma disciplina",
-    "lead": "Capacitación continua en clínica y en IA aplicada. En la home, lo más relevante; el inventario completo vive en el CV.",
+    "lead": "Capacitación continua en clínica y en IA aplicada. Aquí lo más relevante; el inventario completo está en el CV.",
     "viewAll": "Ver inventario completo en el CV",
     "clinicalTitle": "Clínica",
     "clinicalCount": "18+ cursos",
-    "clinicalLead": "Atención, evidencia y contexto asistencial.",
+    "clinicalLead": "Licenciatura en Terapia Física · ICES Xalapa. Atención, evidencia y contexto asistencial.",
     "clinicalChip1": "Geriatría",
     "clinicalChip2": "Heridas",
     "clinicalChip3": "Salud mental",
@@ -138,7 +139,7 @@ window.__LOCALE_ES__={
     "clinicalItem4Meta": "Rendimiento y entrenamiento",
     "aiTitle": "IA & Tecnología",
     "aiCount": "20+ cursos",
-    "aiLead": "Claude, API, MCP, skills y agentes — práctica aplicada.",
+    "aiLead": "Formación en UNAM (TIC) y capacitación continua en Claude, API, MCP y agentes.",
     "aiChip1": "Anthropic · Claude",
     "aiChip2": "API & MCP",
     "aiChip3": "Agents · Skills",
@@ -150,13 +151,17 @@ window.__LOCALE_ES__={
     "aiItem3Title": "Claude Code 101 · in Action",
     "aiItem3Meta": "Anthropic · 2026",
     "aiItem4Title": "Desarrollo con IA: Programa con Agentes",
-    "aiItem4Meta": "mouredev × BIG school · jun 2026"
+    "aiItem4Meta": "mouredev × BIG school · jun 2026",
+    "clinicalDegreeTitle": "Lic. Terapia Física · ICES",
+    "clinicalDegreeMeta": "Campus Xalapa · estudios finalizados · titulación en curso",
+    "aiDegreeTitle": "Tecnologías para la Información en Ciencias · UNAM",
+    "aiDegreeMeta": "ENES Morelia · 2018-2021"
   },
   "stack": {
     "tag": "04 — Tecnologías",
     "techTitle": "Herramientas",
     "techTitleEm": "con las que construyo",
-    "techLead": "Stack de producto e infraestructura — frontend, API y despliegue — más estándares clínicos que aplico en sistemas reales.",
+    "techLead": "Herramientas de producto e infraestructura, más estándares clínicos que aplico en sistemas reales.",
     "clinicalTitle": "Estándares",
     "clinicalTitleEm": "clínicos",
     "clinicalLead": "Referencias y frameworks que aplico en la arquitectura del sistema.",
@@ -168,31 +173,31 @@ window.__LOCALE_ES__={
     "snspDesc": "Valores referenciados en pruebas diagnósticas"
   },
   "geo": {
-    "productDescription": "Portafolio de Ulises Antonio Ponce Pretelin: fisioterapeuta e ingeniero de IA clínica en Xalapa. Formación Anthropic/Claude, MCP y agentes; experiencia clínica e internacional."
+    "productDescription": "Portafolio de Ulises Antonio Ponce Pretelin: fisioterapeuta en Xalapa. Salud digital, sistemas clínicos y formación ICES + UNAM."
   },
   "faq": {
     "tag": "06 — FAQ",
     "title": "Sobre",
     "titleEm": "Ulises",
-    "lead": "Respuestas breves sobre el rol profesional, la formación y el uso responsable de la IA.",
+    "lead": "Respuestas breves sobre el rol, la formación y cómo uso la tecnología en salud.",
     "q1": "¿Quién es Ulises Antonio Ponce Pretelin?",
-    "a1": "Fisioterapeuta e ingeniero de IA clínica en Xalapa, Veracruz. Une atención clínica e inclusión (México y EE.UU.) con diseño de sistemas clínicos e IA aplicada.",
-    "q2": "¿Cuál es su formación en IA?",
-    "a2": "Capacitación continua con Anthropic (Claude, API, MCP, Claude Code, skills y agentes), más el programa Desarrollo con IA con agentes de mouredev × BIG school (2026).",
-    "q3": "¿Cómo combina clínica e IA?",
-    "a3": "Parte del razonamiento clínico y la EBP para diseñar herramientas; la IA apoya documentación, seguridad y flujos — no diagnostica ni sustituye al profesional.",
+    "a1": "Fisioterapeuta en Xalapa, Veracruz. Une atención clínica e inclusión (México y EE.UU.) con sistemas y herramientas digitales para rehabilitación.",
+    "q2": "¿Cuál es su formación?",
+    "a2": "Licenciatura en Terapia Física (ICES, Xalapa) y estudios en Tecnologías para la Información en Ciencias (ENES Morelia, UNAM), más capacitación continua en Anthropic/Claude, MCP y agentes.",
+    "q3": "¿Cómo combina clínica y tecnología?",
+    "a3": "Parte del razonamiento clínico y la evidencia. La tecnología apoya expediente, seguridad y flujos; no diagnostica ni sustituye al profesional.",
     "q4": "¿Qué es PoncePretelin?",
-    "a4": "Un trabajo seleccionado: gestor clínico con evidencia referenciada e IA opcional para fisioterapia. Tiene demo propia; este portafolio habla de Ulises, no del catálogo del producto."
+    "a4": "Uno de mis trabajos: gestor clínico para fisioterapia, con demo propia. Este portafolio habla de Ulises; el producto se ve en su demo."
   },
   "endcap": {
     "label": "Cierre del portafolio",
     "kicker": "Lic. en Terapia física · Xalapa, Veracruz",
-    "sub": "Fisioterapeuta e Ingeniero de IA clínica"
+    "sub": "Fisioterapeuta · salud digital"
   },
   "contact": {
     "tag": "07 — Contacto",
     "title": "¿Hablamos?",
-    "text": "Colaboración clínica, proyectos de IA aplicada o diseño de sistemas clínicos — escríbeme.",
+    "text": "Colaboración clínica, proyectos de salud digital o sistemas para rehabilitación. Escríbeme.",
     "socialLabel": "Redes sociales"
   },
   "footer": {
@@ -211,15 +216,15 @@ window.__LOCALE_ES__={
   },
   "cv": {
     "title": "CV — Ulises Antonio Ponce Pretelin",
-    "description": "CV de Ulises Antonio Ponce Pretelin — Fisioterapeuta e ingeniero de IA clínica.",
+    "description": "CV de Ulises Antonio Ponce Pretelin — Fisioterapeuta · salud digital.",
     "tag": "Curriculum vitae",
-    "headline": "Fisioterapeuta e Ingeniero de IA clínica",
+    "headline": "Fisioterapeuta · salud digital",
     "location": "Xalapa, Veracruz, México",
     "backPortfolio": "← Portafolio",
     "downloadPdf": "Descargar PDF",
     "print": "Imprimir",
     "summaryTitle": "Resumen",
-    "summary": "Profesional en Terapia Física con experiencia clínica, comunitaria e internacional. Ingeniero de IA clínica: formación Anthropic/Claude (API, MCP, Code, skills y agentes), criterio clínico y sistemas con evidencia referenciada.",
+    "summary": "Fisioterapeuta con experiencia clínica, comunitaria e internacional. Salud digital: sistemas y herramientas para rehabilitación, con formación ICES (Terapia Física), UNAM (TIC) y capacitación en IA aplicada.",
     "recentTitle": "Experiencia reciente",
     "educationTitle": "Educación",
     "experienceTitle": "Experiencia profesional",
@@ -235,10 +240,10 @@ window.__LOCALE_ES__={
     "rolePtOrg": "Clínica de terapia de lenguaje",
     "rolePtLi1": "Atención clínica en contexto interdisciplinario de terapia de lenguaje y rehabilitación.",
     "rolePtLi2": "Documentación de evolución, coordinación con equipo terapéutico y seguimiento de objetivos funcionales del paciente.",
-    "roleArchitect": "Ingeniero & creador",
-    "roleOrgSuffix": "· gestor clínico con IA",
-    "roleDevLi1": "Diseño e integración del gestor: expediente multi-especialidad, episodios, SOAP en vivo, agenda con reserva pública, finanzas y portal paciente.",
-    "roleDevLi2": "Integraciones openFDA y RxNav, terminología referenciada IASP/CIF, escalas EBP y módulos de apoyo con IA (add-on opcional).",
+    "roleArchitect": "Creador",
+    "roleOrgSuffix": "· gestor clínico para fisioterapia",
+    "roleDevLi1": "Diseño e integración del gestor: expediente, episodios, SOAP, agenda con reserva pública, finanzas y portal paciente.",
+    "roleDevLi2": "Integraciones openFDA y RxNav, terminología IASP/CIF, escalas EBP y módulos de apoyo digitales opcionales.",
     "roleDevLi3": "Stack: FastAPI, PostgreSQL, Next.js 15, React 19, TypeScript, Docker, Vercel + Railway.",
     "liveDemo": "Demo en vivo",
     "eduPtTitle": "Licenciatura en Terapia física",

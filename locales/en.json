@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Ulises Ponce Pretelin — Physical Therapist & Clinical AI Engineer",
-    "description": "Ulises Antonio Ponce Pretelin — physical therapist and clinical AI engineer in Xalapa. Clinical training plus Anthropic/Claude, MCP and agents; international experience and clinical systems.",
-    "ogTitle": "Ulises Ponce Pretelin — Physical Therapist & Clinical AI Engineer",
-    "ogDescription": "Physical therapist · clinical AI engineer · Xalapa, Mexico",
-    "jobTitle": "Physical therapist and clinical AI engineer"
+    "title": "Ulises Ponce Pretelin — Physical Therapist · Digital Health",
+    "description": "Ulises Antonio Ponce Pretelin, physical therapist in Xalapa. Digital systems and tools for rehabilitation, with UNAM (IT) background and applied AI training.",
+    "ogTitle": "Ulises Ponce Pretelin — Physical Therapist · Digital Health",
+    "ogDescription": "Physical therapist · digital health · Xalapa, Mexico",
+    "jobTitle": "Physical therapist · digital health"
   },
   "preloader": {
     "label": "Loading portfolio"
@@ -14,7 +14,7 @@
     "home": "Home",
     "about": "About",
     "path": "Path",
-    "project": "Work",
+    "project": "My work",
     "certs": "Training",
     "stack": "Technologies",
     "contact": "Contact",
@@ -26,45 +26,45 @@
     "faq": "FAQ",
     "menu": "Menu",
     "skip": "Skip to content",
-    "work": "Work"
+    "work": "My work"
   },
   "hero": {
     "kicker": "Portfolio · 2026",
-    "tagline": "Physical Therapist & Clinical AI Engineer",
-    "geoLine": "Xalapa, Mexico · Clinical care · Applied AI · clinical systems",
-    "text": "Physical therapy professional with clinical, community and international experience. I combine clinical reasoning with systems design and applied AI — always in service of professional judgment, never replacing it.",
+    "tagline": "Physical therapist · digital health",
+    "geoLine": "Xalapa, Mexico · Physical therapy · systems and applied AI",
+    "text": "Physical therapist in Xalapa with clinical, community and international experience. I build digital systems and tools for rehabilitation, using AI when it helps day-to-day work.",
     "exploreAbout": "About me",
-    "viewWork": "Selected work",
+    "viewWork": "My work",
     "focusPrefix": "Focus ·",
-    "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist and clinical AI engineer",
-    "geoSummary": "Ulises Antonio Ponce Pretelin is a physical therapist and clinical AI engineer in Xalapa, Mexico. He brings clinical and international experience with Anthropic/Claude, MCP and agents training, and builds clinical systems grounded in referenced evidence."
+    "portraitAlt": "Ulises Antonio Ponce Pretelin, physical therapist",
+    "geoSummary": "Ulises Antonio Ponce Pretelin is a physical therapist in Xalapa, Mexico. He works in digital health: clinical systems and rehabilitation tools, with clinical training (ICES) and IT studies (UNAM)."
   },
   "loc": {
-    "text": "Xalapa, Veracruz · Mexico · Physical Therapy & Clinical AI"
+    "text": "Xalapa, Veracruz · Mexico · Physical therapy and digital health"
   },
   "marquee": {
     "label": "Roles",
     "physicalTherapy": "Physical Therapy",
     "rehab": "Rehabilitation",
-    "engineer": "Clinical AI Engineer",
-    "claude": "Claude · MCP",
-    "clinicalSafety": "Clinical safety"
+    "engineer": "Digital health",
+    "claude": "Clinical systems",
+    "clinicalSafety": "Person-centered care"
   },
   "marqueeStandards": {
     "label": "References",
     "iasp": "IASP 2020",
     "cif": "WHO ICF",
-    "mcp": "MCP",
-    "claude": "Claude API",
+    "mcp": "Digital records",
+    "claude": "Clinical tools",
     "ebp": "EBP · NDI · ODI · Berg",
-    "agents": "Agents · Skills"
+    "agents": "Rehabilitation"
   },
   "share": {
     "sectionLabel": "Share portfolio",
     "tag": "Share",
     "title": "Know someone",
     "titleEm": "interested?",
-    "lead": "Copy the portfolio link to share background, training or collaborate on physical therapy and clinical AI.",
+    "lead": "Copy the portfolio link to share background, training or collaborate on physical therapy and digital health.",
     "hint": "Tap to copy link",
     "done": "Copied to clipboard!"
   },
@@ -76,9 +76,9 @@
     "pill2": "Rehabilitation",
     "pill3": "Clinical systems",
     "pill4": "EBP",
-    "pill5": "Clinical AI",
-    "p1": "Physical Therapy graduate (ICES, Xalapa). Experience with special-needs populations in Mexico, the United States and interdisciplinary settings, including speech therapy and inclusion camps with Citizens Options Unlimited.",
-    "p2": "I train and apply AI responsibly: Anthropic/Claude, API, MCP, skills and agents. I bring the same clinical rigor (EBP, IASP/ICF terminology) when designing tools that support — never replace — professional judgment."
+    "pill5": "Digital health",
+    "p1": "I trained in Physical Therapy at ICES Campus Xalapa. I have worked in interdisciplinary clinics, hospital service (ISSSTE) and inclusion with people with disabilities in Mexico and the United States.",
+    "p2": "I also studied Information Technologies in Sciences (ENES Morelia, UNAM). That grounds the systems and applied AI side: tools for records and care, not shortcuts that replace clinical judgment."
   },
   "path": {
     "tag": "02 — Path",
@@ -87,7 +87,7 @@
     "t1Title": "Physical therapist",
     "t1Desc": "Speech therapy clinic · interdisciplinary setting · Xalapa",
     "t2Title": "PoncePretelin",
-    "t2Desc": "Engineer and creator of the clinical manager with AI for physical therapy",
+    "t2Desc": "Creator of the clinical manager for physical therapy",
     "t3Title": "Cabin Leader",
     "t3Desc": "Citizens Options Unlimited · inclusion camp · U.S.",
     "t4Title": "Physical therapist · ISSSTE",
@@ -103,15 +103,16 @@
     "footnote": "From the published CV — no invented experience or certifications."
   },
   "project": {
-    "tag": "05 — Selected work",
+    "tag": "05 — My work",
+    "sectionTitle": "My work",
     "title": "Ponce",
     "titleEm": "Pretelin",
-    "lead": "A clinical manager I built from real physical-therapy practice: records, safety and optional AI support — not a generic empty-form EMR.",
+    "lead": "A clinical manager born from physical-therapy practice: records, safety and optional digital support.",
     "roleLabel": "Role",
-    "role": "End-to-end design, architecture and engineering.",
-    "point1": "Clinical workflows with referenced evidence and IASP / ICF terminology.",
-    "point2": "Safety integrations (openFDA, RxNav) inside the record.",
-    "point3": "AI modules as support for judgment — with explicit limits.",
+    "role": "Creator · end-to-end design and development",
+    "point1": "Referenced clinical evidence and terminology (IASP / ICF).",
+    "point2": "Safety alerts inside the clinical workflow.",
+    "point3": "AI support only as help for day-to-day clinical work.",
     "demoLive": "Open live demo",
     "imgAlt": "PoncePretelin home with quick actions and daily summary"
   },
@@ -119,11 +120,11 @@
     "tag": "03 — Training",
     "title": "Two axes,",
     "titleEm": "same discipline",
-    "lead": "Ongoing training in clinical care and applied AI. The home page shows what matters most; the full inventory lives on the CV.",
+    "lead": "Ongoing training in clinical care and applied AI. Highlights here; the full inventory is on the CV.",
     "viewAll": "View full inventory on CV",
     "clinicalTitle": "Clinical",
     "clinicalCount": "18+ courses",
-    "clinicalLead": "Care, evidence and care contexts.",
+    "clinicalLead": "BSc Physical Therapy · ICES Xalapa. Care, evidence and healthcare context.",
     "clinicalChip1": "Geriatrics",
     "clinicalChip2": "Wound care",
     "clinicalChip3": "Mental health",
@@ -138,7 +139,7 @@
     "clinicalItem4Meta": "Training and athletic performance",
     "aiTitle": "AI & Technology",
     "aiCount": "20+ courses",
-    "aiLead": "Claude, API, MCP, skills and agents — applied practice.",
+    "aiLead": "UNAM (IT) background plus ongoing Claude, API, MCP and agents training.",
     "aiChip1": "Anthropic · Claude",
     "aiChip2": "API & MCP",
     "aiChip3": "Agents · Skills",
@@ -150,13 +151,17 @@
     "aiItem3Title": "Claude Code 101 · in Action",
     "aiItem3Meta": "Anthropic · 2026",
     "aiItem4Title": "AI Development: Agents Program",
-    "aiItem4Meta": "mouredev × BIG school · Jun 2026"
+    "aiItem4Meta": "mouredev × BIG school · Jun 2026",
+    "clinicalDegreeTitle": "BSc Physical Therapy · ICES",
+    "clinicalDegreeMeta": "Xalapa campus · studies completed · degree in progress",
+    "aiDegreeTitle": "Information Technologies in Sciences · UNAM",
+    "aiDegreeMeta": "ENES Morelia · 2018 – 2021"
   },
   "stack": {
     "tag": "04 — Technologies",
     "techTitle": "Tools",
     "techTitleEm": "I build with",
-    "techLead": "Product and infrastructure stack — frontend, API and deploy — plus clinical standards I apply in real systems.",
+    "techLead": "Product and infrastructure tools, plus clinical standards I apply in real systems.",
     "clinicalTitle": "Clinical",
     "clinicalTitleEm": "standards",
     "clinicalLead": "References and frameworks applied in the system architecture.",
@@ -168,31 +173,31 @@
     "snspDesc": "Referenced values in diagnostic tests"
   },
   "geo": {
-    "productDescription": "Portfolio of Ulises Antonio Ponce Pretelin: physical therapist and clinical AI engineer in Xalapa. Anthropic/Claude, MCP and agents training; clinical and international experience."
+    "productDescription": "Portfolio of Ulises Antonio Ponce Pretelin: physical therapist in Xalapa. Digital health, clinical systems, ICES + UNAM training."
   },
   "faq": {
     "tag": "06 — FAQ",
     "title": "About",
     "titleEm": "Ulises",
-    "lead": "Short answers on professional role, training and responsible AI use.",
+    "lead": "Short answers on role, training and how I use technology in health.",
     "q1": "Who is Ulises Antonio Ponce Pretelin?",
-    "a1": "A physical therapist and clinical AI engineer in Xalapa, Veracruz. He combines clinical care and inclusion work (Mexico and the U.S.) with clinical systems design and applied AI.",
-    "q2": "What is his AI training?",
-    "a2": "Ongoing Anthropic training (Claude, API, MCP, Claude Code, skills and agents), plus the mouredev × BIG school AI Development with Agents program (2026).",
-    "q3": "How does he combine clinical care and AI?",
-    "a3": "He starts from clinical reasoning and EBP to design tools; AI supports documentation, safety and workflows — it does not diagnose or replace the professional.",
+    "a1": "A physical therapist in Xalapa, Veracruz. He combines clinical care and inclusion (Mexico and the U.S.) with digital systems and tools for rehabilitation.",
+    "q2": "What is his training?",
+    "a2": "Physical Therapy degree (ICES, Xalapa) and Information Technologies in Sciences studies (ENES Morelia, UNAM), plus ongoing Anthropic/Claude, MCP and agents training.",
+    "q3": "How does he combine clinical care and technology?",
+    "a3": "He starts from clinical reasoning and evidence. Technology supports records, safety and workflows; it does not diagnose or replace the professional.",
     "q4": "What is PoncePretelin?",
-    "a4": "Selected work: a clinical manager with referenced evidence and optional AI for physical therapy. It has its own demo; this portfolio is about Ulises, not a product catalog."
+    "a4": "One of my projects: a clinical manager for physical therapy, with its own demo. This portfolio is about Ulises; the product lives in its demo."
   },
   "endcap": {
     "label": "Portfolio closing",
     "kicker": "BSc Physical Therapy · Xalapa, Veracruz",
-    "sub": "Physical Therapist & Clinical AI Engineer"
+    "sub": "Physical therapist · digital health"
   },
   "contact": {
     "tag": "07 — Contact",
     "title": "Shall we talk?",
-    "text": "Clinical collaboration, applied AI projects or clinical systems design — get in touch.",
+    "text": "Clinical collaboration, digital-health projects or rehabilitation systems. Get in touch.",
     "socialLabel": "Social media"
   },
   "footer": {
@@ -211,15 +216,15 @@
   },
   "cv": {
     "title": "CV — Ulises Antonio Ponce Pretelin",
-    "description": "CV of Ulises Antonio Ponce Pretelin — Physical therapist and clinical AI engineer.",
+    "description": "CV of Ulises Antonio Ponce Pretelin — Physical therapist · digital health.",
     "tag": "Curriculum vitae",
-    "headline": "Physical Therapist & Clinical AI Engineer",
+    "headline": "Physical therapist · digital health",
     "location": "Xalapa, Veracruz, Mexico",
     "backPortfolio": "← Portfolio",
     "downloadPdf": "Download PDF",
     "print": "Print",
     "summaryTitle": "Summary",
-    "summary": "Physical therapy professional with clinical, community and international experience. Clinical AI engineer: Anthropic/Claude training (API, MCP, Code, skills and agents), clinical judgment and systems with referenced evidence.",
+    "summary": "Physical therapist with clinical, community and international experience. Digital health: systems and tools for rehabilitation, with ICES (Physical Therapy), UNAM (IT) and applied AI training.",
     "recentTitle": "Recent experience",
     "educationTitle": "Education",
     "experienceTitle": "Professional experience",
@@ -235,10 +240,10 @@
     "rolePtOrg": "Speech therapy clinic",
     "rolePtLi1": "Clinical care in an interdisciplinary speech therapy and rehabilitation setting.",
     "rolePtLi2": "Progress documentation, care team coordination and functional goal tracking.",
-    "roleArchitect": "Engineer & creator",
-    "roleOrgSuffix": "· clinical manager with AI",
-    "roleDevLi1": "Design and integration of the manager: multi-specialty records, episodes, live SOAP, scheduling with public booking, finance and patient portal.",
-    "roleDevLi2": "openFDA and RxNav integrations, referenced IASP/ICF terminology, EBP scales and optional AI support modules.",
+    "roleArchitect": "Creator",
+    "roleOrgSuffix": "· clinical manager for physical therapy",
+    "roleDevLi1": "Design and integration of the manager: records, episodes, SOAP, scheduling with public booking, finance and patient portal.",
+    "roleDevLi2": "openFDA and RxNav integrations, IASP/ICF terminology, EBP scales and optional digital support modules.",
     "roleDevLi3": "Stack: FastAPI, PostgreSQL, Next.js 15, React 19, TypeScript, Docker, Vercel + Railway.",
     "liveDemo": "Live demo",
     "eduPtTitle": "BSc Physical Therapy",

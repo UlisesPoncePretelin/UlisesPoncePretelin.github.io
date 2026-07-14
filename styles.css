@@ -2027,6 +2027,13 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   padding-block: clamp(3.5rem, 8vw, 5.5rem);
 }
 
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
 .work-feature {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -2035,11 +2042,15 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
 }
 
 .work-feature-title {
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .work-feature-title em {
-  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
 }
@@ -2097,6 +2108,19 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.formation-degree strong {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.formation-degree {
+  padding-bottom: 1rem;
+  margin-bottom: 0.15rem;
+  border-bottom: 1px solid var(--line-strong);
 }
 
 @media (max-width: 900px) {

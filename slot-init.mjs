@@ -4,16 +4,16 @@ const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const slotWords = {
   es: {
-    badge: ["Xalapa", "Veracruz", "2026", "IA clínica"],
-    preloader: ["Ingeniero de IA clínica", "Seguridad clínica", "PoncePretelin"],
-    focus: ["IA responsable", "MCP · agentes"],
-    project: ["IA clínica", "Claude · MCP"],
+    badge: ["Xalapa", "Veracruz", "2026", "Salud digital"],
+    preloader: ["Fisioterapeuta", "Salud digital", "Sistemas clínicos"],
+    focus: ["Rehabilitación", "Evidencia", "Herramientas clínicas"],
+    project: ["Fisioterapia", "Salud digital"],
   },
   en: {
-    badge: ["Xalapa", "Veracruz", "2026", "Clinical AI"],
-    preloader: ["Clinical AI Engineer", "Clinical safety", "PoncePretelin"],
-    focus: ["Responsible AI", "MCP · agents"],
-    project: ["Clinical AI", "Claude · MCP"],
+    badge: ["Xalapa", "Veracruz", "2026", "Digital health"],
+    preloader: ["Physical therapist", "Digital health", "Clinical systems"],
+    focus: ["Rehabilitation", "Evidence", "Clinical tools"],
+    project: ["Physical therapy", "Digital health"],
   },
 };
 
