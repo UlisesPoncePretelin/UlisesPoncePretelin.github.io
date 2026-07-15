@@ -17,7 +17,7 @@ Clinical manager for physical therapy (v1 in active development). Free clinical 
 | **Terminology** | IASP / WHO ICF clinical language corrector in notes and reports |
 | **AI support** | Live SOAP organizer, evidence atlas and imaging with explicit non-diagnostic limits — support, not substitute |
 
-- [Live demo](https://poncepretelin-web.vercel.app) · `demo@poncepretelin.app` / `PoncePretelinDemo2026!`
+- [Live demo](https://www.poncepretrelin.com) · `demo@poncepretelin.app` / `PoncePretelinDemo2026!`
 - [Portfolio](https://ulisesponcepretelin.github.io/)
 
 ## Dual stack
