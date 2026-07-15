@@ -47,7 +47,7 @@
     "physicalTherapy": "Physical Therapy",
     "rehab": "Rehabilitation",
     "engineer": "Digital health",
-    "claude": "Clinical systems",
+    "claude": "Applied AI",
     "clinicalSafety": "Person-centered care"
   },
   "marqueeStandards": {
@@ -69,15 +69,15 @@
   },
   "about": {
     "tag": "01 — About me",
-    "title": "Clinical care and intelligence,",
-    "titleEm": "same judgment",
+    "title": "Clinic first,",
+    "titleEm": "tools after",
     "pill1": "Physical therapy",
     "pill2": "Rehabilitation",
-    "pill3": "Clinical systems",
+    "pill3": "Inclusion",
     "pill4": "EBP",
-    "pill5": "Digital health",
-    "p1": "I trained in Physical Therapy at ICES Campus Xalapa. I have worked in interdisciplinary clinics, hospital service (ISSSTE) and inclusion with people with disabilities in Mexico and the United States.",
-    "p2": "I also studied Information Technologies in Sciences (ENES Morelia, UNAM). That grounds the applied AI side: tools for records and care, without replacing clinical judgment."
+    "pill5": "Applied AI",
+    "p1": "I work in interdisciplinary settings and have supported people with disabilities in Mexico and the United States. That practice shapes what I want to build: clarity, evidence and real support in rehabilitation.",
+    "p2": "Looking ahead, I want to keep bringing clinical care and applied AI together: tools that help records and care, in service of professional judgment."
   },
   "path": {
     "tag": "02 — Path",

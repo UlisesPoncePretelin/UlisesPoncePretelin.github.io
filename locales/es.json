@@ -47,7 +47,7 @@
     "physicalTherapy": "Terapia Física",
     "rehab": "Rehabilitación",
     "engineer": "Salud digital",
-    "claude": "Sistemas clínicos",
+    "claude": "IA aplicada",
     "clinicalSafety": "Atención centrada en la persona"
   },
   "marqueeStandards": {
@@ -69,15 +69,15 @@
   },
   "about": {
     "tag": "01 — Sobre mí",
-    "title": "Clínica e inteligencia,",
-    "titleEm": "mismo criterio",
+    "title": "Clínica primero,",
+    "titleEm": "herramientas después",
     "pill1": "Terapia física",
     "pill2": "Rehabilitación",
-    "pill3": "Sistemas clínicos",
+    "pill3": "Inclusión",
     "pill4": "EBP",
-    "pill5": "Salud digital",
-    "p1": "Me formé en Terapia Física en el ICES Campus Xalapa. He trabajado en clínica interdisciplinaria, servicio hospitalario (ISSSTE) e inclusión con personas con discapacidad en México y Estados Unidos.",
-    "p2": "También estudié Tecnologías para la Información en Ciencias (ENES Morelia, UNAM). Ahí sustento el lado de IA aplicada: herramientas para el expediente y la atención, sin sustituir el criterio clínico."
+    "pill5": "IA aplicada",
+    "p1": "Atiendo en entornos interdisciplinarios y he trabajado con personas con discapacidad en México y Estados Unidos. Esa práctica marca lo que me interesa construir: claridad, evidencia y acompañamiento real en rehabilitación.",
+    "p2": "De cara al futuro quiero seguir uniendo clínica e IA aplicada: herramientas que sumen al expediente y a la atención, al servicio del criterio profesional."
   },
   "path": {
     "tag": "02 — Trayectoria",
