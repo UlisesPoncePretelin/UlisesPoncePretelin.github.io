@@ -32,7 +32,7 @@
     "kicker": "Portfolio · 2026",
     "tagline": "Physical therapist · digital health",
     "geoLine": "Xalapa, Mexico · Physical therapy · applied AI",
-    "text": "Physical therapist in Xalapa with clinical, community and international experience. I build digital tools for rehabilitation, using AI when it helps day-to-day work.",
+    "text": "Physical therapist in Xalapa with clinical, community and international experience. I build digital tools for rehabilitation.",
     "exploreAbout": "About me",
     "viewWork": "My work",
     "focusPrefix": "Focus ·",
@@ -64,7 +64,6 @@
     "tag": "Share",
     "title": "Know someone",
     "titleEm": "interested?",
-    "lead": "Copy the portfolio link to share background, training or collaborate on physical therapy and digital health.",
     "hint": "Tap to copy link",
     "done": "Copied to clipboard!"
   },

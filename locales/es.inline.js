@@ -32,7 +32,7 @@ window.__LOCALE_ES__={
     "kicker": "Portafolio · 2026",
     "tagline": "Fisioterapeuta · salud digital",
     "geoLine": "Xalapa, México · Fisioterapia · IA aplicada",
-    "text": "Fisioterapeuta en Xalapa con experiencia clínica, comunitaria e internacional. Construyo herramientas digitales para rehabilitación, usando IA cuando suma al trabajo diario.",
+    "text": "Fisioterapeuta en Xalapa con experiencia clínica, comunitaria e internacional. Construyo herramientas digitales para rehabilitación.",
     "exploreAbout": "Sobre mí",
     "viewWork": "Mis trabajos",
     "focusPrefix": "Enfoque ·",
@@ -64,7 +64,6 @@ window.__LOCALE_ES__={
     "tag": "Compartir",
     "title": "¿Conoces a alguien",
     "titleEm": "interesado?",
-    "lead": "Copia el enlace del portafolio para compartir trayectoria, formación o colaborar en fisioterapia y salud digital.",
     "hint": "Toca para copiar enlace",
     "done": "¡Copiado al portapapeles!"
   },
