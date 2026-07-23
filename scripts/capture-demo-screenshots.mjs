@@ -1,8 +1,8 @@
-import { chromium } from "playwright";
+﻿import { chromium } from "playwright";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const BASE = process.env.DEMO_BASE_URL || "https://www.poncepretrelin.com";
+const BASE = process.env.DEMO_BASE_URL || "https://www.poncepretelin.com";
 const OUT = path.resolve("assets/demo");
 const EMAIL = process.env.DEMO_EMAIL || "demo@poncepretelin.app";
 const PASS = process.env.DEMO_PASS || "PoncePretelinDemo2026!";

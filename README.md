@@ -1,4 +1,4 @@
-# Portafolio — Ulises Antonio Ponce Pretelin
+﻿# Portafolio — Ulises Antonio Ponce Pretelin
 
 Landing personal en GitHub Pages. Presenta **PoncePretelin** y el perfil profesional de Ulises.
 
@@ -6,7 +6,7 @@ Landing personal en GitHub Pages. Presenta **PoncePretelin** y el perfil profesi
 |-------|-----|
 | **Portafolio** | https://ulisesponcepretelin.github.io |
 | **CV** | https://ulisesponcepretelin.github.io/cv.html |
-| **Demo del gestor** | https://www.poncepretrelin.com |
+| **Demo del gestor** | https://www.poncepretelin.com |
 
 ## Foto de perfil
 
