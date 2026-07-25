@@ -4,13 +4,11 @@ const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const slotWords = {
   es: {
-    badge: ["Xalapa", "Veracruz", "2026", "Salud digital"],
     preloader: ["Fisioterapeuta", "Salud digital", "IA aplicada"],
     focus: ["Rehabilitación", "Evidencia", "Herramientas clínicas"],
     project: ["Fisioterapia", "Salud digital"],
   },
   en: {
-    badge: ["Xalapa", "Veracruz", "2026", "Digital health"],
     preloader: ["Physical therapist", "Digital health", "Applied AI"],
     focus: ["Rehabilitation", "Evidence", "Clinical tools"],
     project: ["Physical therapy", "Digital health"],
@@ -21,12 +19,6 @@ const chromaticRainbow = chromatic({ from: 0, spread: 320, saturation: 90, light
 const chromaticTeal = chromatic({ from: 168, spread: 80, saturation: 62, lightness: 42 });
 
 const slotConfigs = [
-  {
-    selector: "[data-slot-badge]",
-    key: "badge",
-    interval: 2600,
-    options: { direction: "down", stagger: 40, duration: 280 },
-  },
   {
     selector: "[data-slot-preloader]",
     key: "preloader",

@@ -933,7 +933,7 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   color: var(--accent);
 }
 
-/* Marquee — static bands (no ticker); duplicates stay in DOM for markup parity but are hidden */
+/* Marquee — roles ticker active; standards band stays static */
 .marquee-section {
   padding-inline: 0;
   padding-block: 0;
@@ -958,27 +958,19 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
 
 .marquee-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  animation: none;
+  width: max-content;
+  animation: marquee 36s linear infinite;
 }
 
 .marquee-track:hover {
-  animation-play-state: unset;
+  animation-play-state: paused;
 }
 
 .marquee-group {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   flex-shrink: 0;
   padding-inline: 0.5rem;
-}
-
-.marquee-group[aria-hidden="true"] {
-  display: none;
 }
 
 .marquee-item {
@@ -999,6 +991,15 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   padding-inline: 0.5rem;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .marquee-section--standards {
   background: color-mix(in srgb, var(--accent) 6%, var(--surface));
 }
@@ -1007,8 +1008,22 @@ body.is-loaded .hero-left .reveal:nth-child(2) {
   border-block-color: color-mix(in srgb, var(--accent) 18%, var(--line-strong));
 }
 
+/* Standards marquee: static (no ticker) */
 .marquee-track--reverse {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   animation: none;
+}
+
+.marquee-section--standards .marquee-group {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.marquee-section--standards .marquee-group[aria-hidden="true"] {
+  display: none;
 }
 
 .marquee-group--standards {
