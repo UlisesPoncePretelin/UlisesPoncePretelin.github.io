@@ -38,7 +38,13 @@
         switchTheme();
         return;
       }
-      document.startViewTransition(switchTheme);
+
+      const root = document.documentElement;
+      root.classList.add("theme-transitioning");
+      const transition = document.startViewTransition(switchTheme);
+      transition.finished.finally(() => {
+        root.classList.remove("theme-transitioning");
+      });
     });
   });
 })();

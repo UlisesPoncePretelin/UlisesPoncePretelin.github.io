@@ -1,0 +1,24 @@
+{
+  "name": "Ulises Ponce Pretelin",
+  "short_name": "Ulises Ponce",
+  "description": "Fisioterapeuta · salud digital · Xalapa, México",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eaf3f1",
+  "theme_color": "#1d8e82",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

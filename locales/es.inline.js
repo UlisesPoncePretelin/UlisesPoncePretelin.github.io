@@ -64,8 +64,12 @@ window.__LOCALE_ES__={
     "tag": "Compartir",
     "title": "¿Conoces a alguien",
     "titleEm": "interesado?",
+    "lead": "Copia el enlace del portafolio para compartir trayectoria, formación o colaborar en fisioterapia y salud digital.",
     "hint": "Toca para copiar enlace",
-    "done": "¡Copiado al portapapeles!"
+    "done": "¡Copiado al portapapeles!",
+    "native": "Compartir...",
+    "x": "Compartir en X",
+    "xLabel": "Compartir portafolio en X"
   },
   "about": {
     "tag": "01 — Sobre mí",

@@ -64,8 +64,12 @@
     "tag": "Share",
     "title": "Know someone",
     "titleEm": "interested?",
+    "lead": "Copy the portfolio link to share background, training or collaborate on physical therapy and digital health.",
     "hint": "Tap to copy link",
-    "done": "Copied to clipboard!"
+    "done": "Copied to clipboard!",
+    "native": "Share...",
+    "x": "Share on X",
+    "xLabel": "Share portfolio on X"
   },
   "about": {
     "tag": "01 — About me",

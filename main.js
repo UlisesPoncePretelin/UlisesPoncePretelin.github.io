@@ -427,39 +427,94 @@
   }
 
   const initShareCopy = () => {
-    const btn = document.querySelector("[data-copy-url]");
-    if (!btn) return;
-
-    const hint = btn.querySelector(".share-copy-hint");
-    const done = btn.querySelector(".share-copy-done");
     const portfolioUrl = "https://ulisesponcepretelin.github.io/";
+    const shareTitle = "Ulises Ponce Pretelin — Fisioterapeuta · salud digital";
+    const btn = document.querySelector("[data-copy-url]");
+    const nativeBtn = document.querySelector("[data-native-share]");
 
-    btn.addEventListener("click", async () => {
+    const copyWithFallback = async (text) => {
       try {
-        await navigator.clipboard.writeText(portfolioUrl);
+        await navigator.clipboard.writeText(text);
+        return true;
       } catch {
         const fallback = document.createElement("textarea");
-        fallback.value = portfolioUrl;
+        fallback.value = text;
         fallback.setAttribute("readonly", "");
         fallback.style.position = "fixed";
+        fallback.style.opacity = "0";
         fallback.style.left = "-9999px";
         document.body.appendChild(fallback);
         fallback.select();
-        document.execCommand("copy");
-        document.body.removeChild(fallback);
+        const ok = document.execCommand("copy");
+        fallback.remove();
+        return ok;
       }
+    };
 
-      btn.classList.add("is-copied");
-      if (hint) hint.hidden = true;
-      if (done) done.hidden = false;
+    if (btn) {
+      const hint = btn.querySelector(".share-copy-hint");
+      const done = btn.querySelector(".share-copy-done");
 
-      window.setTimeout(() => {
-        btn.classList.remove("is-copied");
-        if (hint) hint.hidden = false;
-        if (done) done.hidden = true;
-      }, 2400);
+      btn.addEventListener("click", async () => {
+        await copyWithFallback(portfolioUrl);
+
+        btn.classList.add("is-copied");
+        if (hint) hint.hidden = true;
+        if (done) done.hidden = false;
+
+        window.setTimeout(() => {
+          btn.classList.remove("is-copied");
+          if (hint) hint.hidden = false;
+          if (done) done.hidden = true;
+        }, 2400);
+      });
+    }
+
+    if (nativeBtn && typeof navigator.share === "function") {
+      nativeBtn.hidden = false;
+      nativeBtn.addEventListener("click", async () => {
+        try {
+          await navigator.share({
+            title: shareTitle,
+            text: shareTitle,
+            url: portfolioUrl,
+          });
+        } catch {
+          /* user cancelled */
+        }
+      });
+    }
+  };
+
+  const initImageFallback = () => {
+    const applyNext = (img) => {
+      const remaining = img.dataset.imgFallback;
+      if (!remaining) return;
+      const [next, ...rest] = remaining.split("|");
+      img.dataset.imgFallback = rest.join("|");
+      if (next === "remove") {
+        img.remove();
+        return;
+      }
+      if (next) img.src = next;
+    };
+
+    document.addEventListener(
+      "error",
+      (event) => {
+        const target = event.target;
+        if (target instanceof HTMLImageElement && target.dataset.imgFallback != null) {
+          applyNext(target);
+        }
+      },
+      true
+    );
+
+    document.querySelectorAll("img[data-img-fallback]").forEach((img) => {
+      if (img.complete && img.naturalWidth === 0) applyNext(img);
     });
   };
 
   initShareCopy();
+  initImageFallback();
 })();

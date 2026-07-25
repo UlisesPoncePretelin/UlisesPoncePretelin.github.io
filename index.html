@@ -13,6 +13,8 @@
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d8e82" />
+    <meta name="view-transition" content="same-origin" />
     <meta
       name="description"
       content="Ulises Antonio Ponce Pretelin, fisioterapeuta en Xalapa. Sistemas y herramientas digitales para rehabilitación, con formación en UNAM (TIC) y capacitación en IA aplicada."
@@ -40,6 +42,8 @@
     <meta name="twitter:image" content="https://ulisesponcepretelin.github.io/assets/og-image.jpg" />
     <meta name="twitter:image:alt" content="Ulises Antonio Ponce Pretelin, fisioterapeuta · salud digital" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="canonical" href="https://ulisesponcepretelin.github.io/" id="canonical-link" />
     <link rel="alternate" hreflang="es" href="https://ulisesponcepretelin.github.io/" id="hreflang-es" />
     <link rel="alternate" hreflang="en" href="https://ulisesponcepretelin.github.io/?lang=en" id="hreflang-en" />
@@ -152,7 +156,14 @@
       }
     </script>
     <title>Ulises Ponce Pretelin — Fisioterapeuta · salud digital</title>
-    <link rel="preload" href="assets/portrait.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      imagesrcset="assets/portrait.avif"
+      imagesizes="(max-width: 720px) 72vw, 360px"
+      fetchpriority="high"
+    />
     <link rel="preload" href="assets/fonts/syne-normal-600.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/fonts.css" />
     <link rel="stylesheet" href="vendor/slot-text/style.css" />
@@ -231,7 +242,7 @@
           </div>
           <a
             class="nav-cta magnetic"
-            href="https://www.poncepretelin.com"
+            href="https://www.poncepretelin.com/?utm_source=portfolio&amp;utm_medium=nav&amp;utm_campaign=ulises-ponce"
             target="_blank"
             rel="noopener noreferrer"
             data-magnetic
@@ -259,17 +270,19 @@
                 <div class="portrait-ring" aria-hidden="true"></div>
                 <div class="portrait-inner">
                   <picture>
+                    <source type="image/avif" srcset="assets/portrait.avif" />
                     <source type="image/webp" srcset="assets/portrait.webp" />
                     <img
                       class="portrait"
                       src="assets/portrait.jpg"
                       alt="Ulises Antonio Ponce Pretelin, fisioterapeuta"
                       data-i18n-attr="alt:hero.portraitAlt"
-                      width="720"
-                      height="900"
+                      width="1440"
+                      height="1440"
                       loading="eager"
                       fetchpriority="high"
-                      decoding="sync"
+                      decoding="async"
+                      data-img-fallback="assets/portrait.webp|assets/portrait.jpg"
                     />
                   </picture>
                 </div>
@@ -669,7 +682,7 @@
                 <div class="work-feature-actions">
                   <a
                     class="btn btn-fill magnetic"
-                    href="https://www.poncepretelin.com"
+                    href="https://www.poncepretelin.com/?utm_source=portfolio&amp;utm_medium=work&amp;utm_campaign=ulises-ponce"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-magnetic
@@ -682,6 +695,7 @@
               </div>
               <figure class="work-feature-media">
                 <picture>
+                  <source type="image/avif" srcset="assets/demo/01-dashboard.avif" />
                   <source type="image/webp" srcset="assets/demo/01-dashboard.webp" />
                   <img
                     src="assets/demo/01-dashboard.png"
@@ -691,6 +705,7 @@
                     loading="lazy"
                     decoding="async"
                     data-i18n-attr="alt:project.imgAlt"
+                    data-img-fallback="assets/demo/01-dashboard.webp|assets/demo/01-dashboard.png"
                   />
                 </picture>
               </figure>
@@ -708,32 +723,80 @@
               </p>
             </div>
           </div>
-          <dl class="faq-list reveal-stagger">
-            <div class="faq-item">
-              <dt data-i18n="faq.q1">¿Quién es Ulises Antonio Ponce Pretelin?</dt>
-              <dd data-i18n="faq.a1">
-                Fisioterapeuta en Xalapa, Veracruz. Une atención clínica e inclusión (México y EE.UU.) con herramientas digitales e IA aplicada para rehabilitación.
-              </dd>
-            </div>
-            <div class="faq-item">
-              <dt data-i18n="faq.q2">¿Cuál es su formación?</dt>
-              <dd data-i18n="faq.a2">
-                Licenciatura en Terapia Física (ICES, Xalapa) y estudios en Tecnologías para la Información en Ciencias (ENES Morelia, UNAM), más capacitación continua en Anthropic/Claude, MCP y agentes.
-              </dd>
-            </div>
-            <div class="faq-item">
-              <dt data-i18n="faq.q3">¿Cómo combina clínica y tecnología?</dt>
-              <dd data-i18n="faq.a3">
-                Parte del razonamiento clínico y la evidencia. La tecnología apoya expediente, seguridad y flujos; no diagnostica ni sustituye al profesional.
-              </dd>
-            </div>
-            <div class="faq-item">
-              <dt data-i18n="faq.q4">¿Qué es PoncePretelin?</dt>
-              <dd data-i18n="faq.a4">
-                Uno de mis trabajos: gestor clínico para fisioterapia, con demo propia. Este portafolio habla de Ulises; el producto se ve en su demo.
-              </dd>
-            </div>
-          </dl>
+          <div
+            class="faq-list reveal-stagger"
+            itemscope
+            itemtype="https://schema.org/FAQPage"
+          >
+            <details
+              class="faq-item"
+              name="faq"
+              itemprop="mainEntity"
+              itemscope
+              itemtype="https://schema.org/Question"
+            >
+              <summary>
+                <h3 class="faq-question" itemprop="name" data-i18n="faq.q1">¿Quién es Ulises Antonio Ponce Pretelin?</h3>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-i18n="faq.a1">
+                  Fisioterapeuta en Xalapa, Veracruz. Une atención clínica e inclusión (México y EE.UU.) con herramientas digitales e IA aplicada para rehabilitación.
+                </p>
+              </div>
+            </details>
+            <details
+              class="faq-item"
+              name="faq"
+              itemprop="mainEntity"
+              itemscope
+              itemtype="https://schema.org/Question"
+            >
+              <summary>
+                <h3 class="faq-question" itemprop="name" data-i18n="faq.q2">¿Cuál es su formación?</h3>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-i18n="faq.a2">
+                  Licenciatura en Terapia Física (ICES, Xalapa) y estudios en Tecnologías para la Información en Ciencias (ENES Morelia, UNAM), más capacitación continua en Anthropic/Claude, MCP y agentes.
+                </p>
+              </div>
+            </details>
+            <details
+              class="faq-item"
+              name="faq"
+              itemprop="mainEntity"
+              itemscope
+              itemtype="https://schema.org/Question"
+            >
+              <summary>
+                <h3 class="faq-question" itemprop="name" data-i18n="faq.q3">¿Cómo combina clínica y tecnología?</h3>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-i18n="faq.a3">
+                  Parte del razonamiento clínico y la evidencia. La tecnología apoya expediente, seguridad y flujos; no diagnostica ni sustituye al profesional.
+                </p>
+              </div>
+            </details>
+            <details
+              class="faq-item"
+              name="faq"
+              itemprop="mainEntity"
+              itemscope
+              itemtype="https://schema.org/Question"
+            >
+              <summary>
+                <h3 class="faq-question" itemprop="name" data-i18n="faq.q4">¿Qué es PoncePretelin?</h3>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text" data-i18n="faq.a4">
+                  Uno de mis trabajos: gestor clínico para fisioterapia, con demo propia. Este portafolio habla de Ulises; el producto se ve en su demo.
+                </p>
+              </div>
+            </details>
+          </div>
         </section>
 
         <section class="endcap frame-block" data-endcap aria-label="Cierre del portafolio" data-i18n-attr="aria-label:endcap.label">
@@ -777,11 +840,28 @@
               <h2 class="section-title"><span data-i18n="share.title">¿Conoces a alguien</span> <em data-i18n="share.titleEm">interesado?</em></h2>
               <p class="section-lead" data-i18n="share.lead">Copia el enlace del portafolio para compartir trayectoria, formación o colaborar en fisioterapia y salud digital.</p>
             </div>
-            <button type="button" class="share-copy-btn magnetic" data-copy-url data-magnetic aria-live="polite">
-              <span class="share-copy-url">ulisesponcepretelin.github.io</span>
-              <span class="share-copy-hint" data-i18n="share.hint">Toca para copiar enlace</span>
-              <span class="share-copy-done" hidden data-i18n="share.done">¡Copiado al portapapeles!</span>
-            </button>
+            <div class="share-actions">
+              <button type="button" class="share-copy-btn magnetic" data-copy-url data-magnetic aria-live="polite">
+                <span class="share-copy-url">ulisesponcepretelin.github.io</span>
+                <span class="share-copy-hint" data-i18n="share.hint">Toca para copiar enlace</span>
+                <span class="share-copy-done" hidden data-i18n="share.done">¡Copiado al portapapeles!</span>
+              </button>
+              <div class="share-secondary">
+                <button type="button" class="btn btn-outline share-native-btn" data-native-share hidden data-i18n="share.native">
+                  Compartir...
+                </button>
+                <a
+                  class="btn btn-outline"
+                  href="https://twitter.com/intent/tweet?text=Portafolio%20de%20Ulises%20Ponce%20Pretelin%20%C2%B7%20Fisioterapeuta%20%C2%B7%20salud%20digital&amp;url=https%3A%2F%2Fulisesponcepretelin.github.io%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="share.x"
+                  data-i18n-attr="aria-label:share.xLabel"
+                >
+                  Compartir en X
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
