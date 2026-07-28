@@ -215,6 +215,7 @@ window.__LOCALE_ES__={
     "headline": "Fisioterapeuta · salud digital",
     "location": "Xalapa, Veracruz, México",
     "backPortfolio": "← Portafolio",
+    "onlineProfile": "Perfil en línea",
     "downloadPdf": "Descargar PDF",
     "print": "Imprimir",
     "summaryTitle": "Resumen",

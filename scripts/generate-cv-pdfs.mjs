@@ -55,6 +55,11 @@ const startServer = () =>
 const generatePdf = async (page, lang, outputPath) => {
   await page.goto(`http://127.0.0.1:${port}/cv.html?lang=${lang}`, { waitUntil: "networkidle" });
   await page.waitForFunction((l) => document.documentElement.lang === l, lang);
+  await page.evaluate(() => {
+    document.querySelectorAll("[data-cert-category]").forEach((group) => {
+      group.hidden = false;
+    });
+  });
   await page.emulateMedia({ media: "print" });
   await page.pdf({
     path: outputPath,

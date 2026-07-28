@@ -4386,6 +4386,47 @@ body.cv-page .chapter-nav {
   align-items: center;
 }
 
+.cv-hero-links {
+  flex: 0 1 16rem;
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.cv-hero-links-label {
+  margin: 0 0 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cv-hero-links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-hero-links-list li + li {
+  margin-top: 0.35rem;
+}
+
+.cv-hero-links-list a {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  word-break: break-all;
+}
+
+.cv-hero-links-list a:hover {
+  color: var(--accent);
+}
+
 .cv-cert-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -4453,6 +4494,7 @@ body.cv-page .chapter-nav {
   .cv-print-btn,
   .cv-download-btn,
   .cv-hero-actions,
+  .cv-cert-tabs,
   .lang-toggle,
   .theme-toggle,
   .menu-btn,
@@ -4474,12 +4516,33 @@ body.cv-page .chapter-nav {
     padding-inline: 0;
   }
 
-  .cv-entry {
-    break-inside: avoid;
+  .cv-hero-links {
+    flex: 1 1 100%;
+    max-width: none;
+    padding: 0.65rem 0 0;
+    background: transparent;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-radius: 0;
   }
 
+  .cv-hero-links-label {
+    color: #444;
+  }
+
+  .cv-hero-links-list a,
+  .cv-contact a,
+  .cv-social a,
   .cv-project-links a {
     color: #000;
+  }
+
+  .cv-cert-group[hidden] {
+    display: block !important;
+  }
+
+  .cv-entry {
+    break-inside: avoid;
   }
 }
 
