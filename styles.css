@@ -4182,6 +4182,23 @@ body.cv-page .chapter-nav {
   margin-bottom: 0;
 }
 
+.cv-entry-links {
+  margin: 0.55rem 0 0 1.1rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
+.cv-entry-links a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.cv-entry-links a:hover {
+  color: var(--ink);
+}
+
 .cv-skills-inline {
   margin: 0.85rem 0 0;
   font-size: 0.82rem;
@@ -4533,6 +4550,7 @@ body.cv-page .chapter-nav {
   .cv-hero-links-list a,
   .cv-contact a,
   .cv-social a,
+  .cv-entry-links a,
   .cv-project-links a {
     color: #000;
   }
